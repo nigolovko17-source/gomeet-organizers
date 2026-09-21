@@ -10,21 +10,21 @@ python3 -m http.server 8080
 
 Open `http://localhost:8080`.
 
-## Deploy to Netlify
+## Deploy to Cloudflare Pages
 
-The repository does not require a build step. Publish the repository root.
-`netlify.toml` contains the publish directory, redirects, and production headers.
+The repository does not require a build step. Connect the repository to
+Cloudflare Pages, leave the build command empty, and use `.` as the output
+directory. Every push to `main` publishes a new version.
 
-After connecting the repository in Netlify, add the custom domain in
-**Domain management** and configure the DNS records shown by Netlify at the
-domain registrar.
+After the first deployment, add `gomeet-organizers.ru` in **Custom domains**
+and configure the DNS records shown by Cloudflare at the domain registrar.
 
 ## Security
 
 - No secrets or environment variables are required by this site.
-- HTTPS is provisioned by Netlify after the domain is connected.
-- Security headers are defined in `netlify.toml`.
-- Never commit registrar or Netlify credentials to this repository.
+- HTTPS is provisioned by Cloudflare after the domain is connected.
+- Security headers are defined in `_headers`.
+- Never commit registrar, GitHub, or Cloudflare credentials to this repository.
 
 ## Fonts
 
