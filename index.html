@@ -34,7 +34,28 @@
 <h2 class="reveal">От билета<br><em>к сообществу.</em></h2>
 <p class="mission-text" data-word-reveal>Идея GOMEET — объединить билетный сервис и социальную сеть в одном приложении. Гости находят события, знакомятся и остаются на связи после встречи. Организаторы привлекают новых людей и собирают вокруг событий постоянную аудиторию.</p>
 <div class="mission-note reveal"><span class="note-symbol" aria-hidden="true">+</span><p>Наша миссия — развивать культуру живых событий в России.<br><strong>Помогать организаторам создавать события, которые живут дольше одного вечера.</strong></p></div>
-<figure class="event-preview reveal"><div class="preview-rings" aria-hidden="true"></div><div class="phone"><img src="assets/event.png" width="512" height="1024" alt="Событие «Четверг с GOMEET» в GOMEET: участники, организатор и билет" loading="lazy"></div><figcaption class="visual-caption">Интерфейс GOMEET · концепт нового дизайна</figcaption></figure>
+<figure class="app-demo reveal" id="app-demo" aria-label="Демонстрация экранов приложения GOMEET">
+  <div class="demo-selector" role="group" aria-label="Выберите экран приложения">
+    <button type="button" data-demo="home" aria-pressed="true" aria-controls="demo-home">Лента</button>
+    <button type="button" data-demo="event" aria-pressed="false" aria-controls="demo-event">Событие</button>
+    <button type="button" data-demo="chat" aria-pressed="false" aria-controls="demo-chat">Чат</button>
+    <button type="button" data-demo="audience" aria-pressed="false" aria-controls="demo-audience">Аудитория</button>
+    <button type="button" data-demo="create" aria-pressed="false" aria-controls="demo-create">Создание</button>
+  </div>
+  <div class="demo-stage">
+    <div class="demo-device">
+      <div class="demo-viewport" tabindex="0" role="region" aria-label="Лента событий — прокручиваемый экран" aria-describedby="demo-instructions">
+        <div class="demo-screen" id="demo-home" data-screen="home"><img src="assets/home.png" alt="Лента GOMEET: друзья, которые идут, и карточки событий" width="853" height="1844" loading="lazy" draggable="false"><button type="button" class="demo-hotspot event-hotspot" data-demo-go="event" aria-label="Открыть событие «Четверг с GOMEET»"><span>Открыть событие ↗</span></button></div>
+        <div class="demo-screen" id="demo-event" data-screen="event" hidden><img src="assets/event.png" alt="Событие «Четверг с GOMEET»: участники, организатор, место и билет" width="853" height="1844" loading="lazy" draggable="false"><button type="button" class="demo-hotspot back-hotspot" data-demo-go="home" aria-label="Вернуться к ленте"></button></div>
+        <div class="demo-screen" id="demo-chat" data-screen="chat" hidden><img src="assets/chat.png" alt="Чат события в GOMEET" width="853" height="1844" loading="lazy" draggable="false"></div>
+        <div class="demo-screen" id="demo-audience" data-screen="audience" hidden><img src="assets/audience.png" alt="Аналитика аудитории организатора: новые и постоянные гости" width="853" height="1844" loading="lazy" draggable="false"></div>
+        <div class="demo-screen" id="demo-create" data-screen="create" hidden><img src="assets/create.png" alt="Экран создания события в GOMEET" width="853" height="1844" loading="lazy" draggable="false"></div>
+      </div>
+    </div>
+  </div>
+  <div class="demo-toolbar"><span id="demo-status" aria-live="polite" aria-atomic="true">01 / 05 · Лента событий</span><button type="button" id="demo-scroll" aria-controls="demo-home">Листать ↓</button></div>
+  <figcaption><p id="demo-instructions">Выбирайте экраны и листайте внутри телефона.</p><p class="visual-caption">Демо по экранам приложения · без реальных действий</p></figcaption>
+</figure>
 </section>
 <section class="product section" id="product">
 <div class="section-meta"><p class="eyebrow">02 / ОРГАНИЗАТОРУ</p><span>Всё связано. Всё в GOMEET.</span></div>
