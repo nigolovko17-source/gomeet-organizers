@@ -23,18 +23,16 @@
 <a class="skip-link" href="#mission">К содержанию</a>
 <div class="reading-progress" aria-hidden="true"></div><header class="header"><a class="brand" href="#top" aria-label="GOMEET — наверх">GOMEET</a><span class="header-caption">Для организаторов GOMEET</span><nav aria-label="Основная навигация"><a href="#mission">Идея</a><a href="#product">Возможности</a><a class="nav-contact" href="#terms">Условия <span aria-hidden="true">↗</span></a></nav></header>
 <main>
-<section class="hero">
-<div class="hero-art" aria-hidden="true"><div class="hero-ring hero-ring-outer"></div><div class="hero-ring hero-ring-inner"></div><div class="hero-sphere"></div><span class="art-cross art-cross-top">+</span><span class="art-cross art-cross-bottom">+</span></div>
-<div class="hero-copy"><p class="eyebrow"><span class="small-line"></span> СОЦИАЛЬНАЯ СЕТЬ ЖИВЫХ СОБЫТИЙ</p><h1><span>Больше,</span><span>чем один</span><span class="warm">вечер<span class="period">.</span></span></h1><p class="hero-description">GOMEET помогает находить новых гостей.<br> И оставаться на связи с теми, кто уже с вами.</p><a class="button" href="#product">Что получает организатор <span aria-hidden="true">↗</span></a></div>
-<div class="hero-visual"><div class="orbital-label">СОБЫТИЯ / ЛЮДИ / СООБЩЕСТВА</div><div class="float-label"><span class="label-mark" aria-hidden="true">+</span><div>Уже больше, чем гости.<br> <strong>Вместе в GOMEET.</strong></div></div></div>
-<div class="hero-bottom"><span>Москва и крупные города России</span><a href="#mission">Листайте дальше <span aria-hidden="true">↓</span></a><span>Люди. События. Сообщества.</span></div>
-</section>
-<section class="mission section" id="mission">
-<div class="section-meta"><p class="eyebrow">01 / ИДЕЯ GOMEET</p><span>От встречи к сообществу</span></div>
-<h2 class="reveal">От билета<br><em>к сообществу.</em></h2>
-<p class="mission-text" data-word-reveal>Идея GOMEET — объединить билетный сервис и социальную сеть в одном приложении. Гости находят события, знакомятся и остаются на связи после встречи. Организаторы привлекают новых людей и собирают вокруг событий постоянную аудиторию.</p>
-<div class="mission-note reveal"><span class="note-symbol" aria-hidden="true">+</span><p>Наша миссия — развивать культуру живых событий в России.<br><strong>Помогать организаторам создавать события, которые живут дольше одного вечера.</strong></p></div>
-<figure class="app-demo reveal" id="app-demo" aria-label="Демонстрация экранов приложения GOMEET">
+<section class="hero" aria-labelledby="hero-title">
+<div class="hero-copy">
+  <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> GOMEET ДЛЯ ОРГАНИЗАТОРОВ</p>
+  <h1 id="hero-title">Ваше событие.<br>Начало<br><em>сообщества.</em></h1>
+  <p class="hero-description">GOMEET помогает находить новых гостей. И оставаться на связи с теми, кто уже с вами.</p>
+  <div class="hero-actions"><a class="button button-primary" href="#product">Что получает организатор <span aria-hidden="true">↗</span></a><a class="text-link" href="#app-demo">Посмотреть приложение <span aria-hidden="true">↓</span></a></div>
+  <div class="hero-path" aria-label="От события к сообществу"><span>Событие</span><span aria-hidden="true">→</span><span>Встреча</span><span aria-hidden="true">→</span><span>Сообщество</span></div>
+</div>
+<figure class="app-demo" id="app-demo" aria-label="Демонстрация экранов приложения GOMEET">
+  <p class="demo-kicker">ПОПРОБУЙТЕ GOMEET <span>ИНТЕРАКТИВНОЕ ДЕМО</span></p>
   <div class="demo-selector" role="group" aria-label="Выберите экран приложения">
     <button type="button" data-demo="home" aria-pressed="true" aria-controls="demo-home">Лента</button>
     <button type="button" data-demo="event" aria-pressed="false" aria-controls="demo-event">Событие</button>
@@ -45,7 +43,7 @@
   <div class="demo-stage">
     <div class="demo-device">
       <div class="demo-viewport" tabindex="0" role="region" aria-label="Лента событий — прокручиваемый экран" aria-describedby="demo-instructions">
-        <div class="demo-screen" id="demo-home" data-screen="home"><img src="assets/home.png" alt="Лента GOMEET: друзья, которые идут, и карточки событий" width="853" height="1844" loading="lazy" draggable="false"><button type="button" class="demo-hotspot event-hotspot" data-demo-go="event" aria-label="Открыть событие «Четверг с GOMEET»"><span>Открыть событие ↗</span></button></div>
+        <div class="demo-screen" id="demo-home" data-screen="home"><img src="assets/home.png" alt="Лента GOMEET: друзья, которые идут, и карточки событий" width="853" height="1844" fetchpriority="high" draggable="false"><button type="button" class="demo-hotspot event-hotspot" data-demo-go="event" aria-label="Открыть событие «Четверг с GOMEET»"><span>Открыть событие ↗</span></button></div>
         <div class="demo-screen" id="demo-event" data-screen="event" hidden><img src="assets/event.png" alt="Событие «Четверг с GOMEET»: участники, организатор, место и билет" width="853" height="1844" loading="lazy" draggable="false"><button type="button" class="demo-hotspot back-hotspot" data-demo-go="home" aria-label="Вернуться к ленте"></button></div>
         <div class="demo-screen" id="demo-chat" data-screen="chat" hidden><img src="assets/chat.png" alt="Чат события в GOMEET" width="853" height="1844" loading="lazy" draggable="false"></div>
         <div class="demo-screen" id="demo-audience" data-screen="audience" hidden><img src="assets/audience.png" alt="Аналитика аудитории организатора: новые и постоянные гости" width="853" height="1844" loading="lazy" draggable="false"></div>
@@ -56,6 +54,13 @@
   <div class="demo-toolbar"><span id="demo-status" aria-live="polite" aria-atomic="true">01 / 05 · Лента событий</span><button type="button" id="demo-scroll" aria-controls="demo-home">Листать ↓</button></div>
   <figcaption><p id="demo-instructions">Выбирайте экраны и листайте внутри телефона.</p><p class="visual-caption">Демо по экранам приложения · без реальных действий</p></figcaption>
 </figure>
+<div class="hero-foot"><span>Социальная сеть живых событий</span><a href="#mission">От встречи к сообществу <span aria-hidden="true">↓</span></a></div>
+</section>
+<section class="mission section" id="mission">
+<div class="section-meta"><p class="eyebrow">01 / ИДЕЯ GOMEET</p><span>От встречи к сообществу</span></div>
+<h2 class="reveal">От билета<br><em>к сообществу.</em></h2>
+<p class="mission-text">Идея GOMEET — объединить билетный сервис и социальную сеть в одном приложении. Гости находят события, знакомятся и остаются на связи после встречи. Организаторы привлекают новых людей и собирают вокруг событий постоянную аудиторию.</p>
+<div class="mission-note reveal"><span class="note-symbol" aria-hidden="true">↗</span><p>Наша миссия — развивать культуру живых событий в России.<br><strong>Помогать организаторам создавать события, которые живут дольше одного вечера.</strong></p></div>
 </section>
 <section class="product section" id="product">
 <div class="section-meta"><p class="eyebrow">02 / ОРГАНИЗАТОРУ</p><span>Всё связано. Всё в GOMEET.</span></div>

@@ -2,8 +2,6 @@
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const qs = selector => document.querySelector(selector);
   const qsa = selector => [...document.querySelectorAll(selector)];
-  const hero = qs('.hero');
-  const sphere = qs('.hero-sphere');
   const progress = qs('.reading-progress');
   let observer;
 
@@ -12,7 +10,6 @@
     document.body.classList.toggle('motion-enabled', !reduced.matches);
     if (reduced.matches || !('IntersectionObserver' in window)) {
       qsa('.reveal').forEach(element => element.classList.add('visible'));
-      sphere.style.transform = '';
       return;
     }
     observer = new IntersectionObserver(entries => {
@@ -142,11 +139,6 @@
   function updateScroll() {
     const range = document.documentElement.scrollHeight - window.innerHeight;
     progress.style.transform = `scaleX(${range > 0 ? Math.min(1, Math.max(0, window.scrollY / range)) : 0})`;
-    if (!reduced.matches && window.innerWidth > 760 && window.scrollY < hero.offsetHeight + 100) {
-      sphere.style.transform = `translate3d(0,${Math.min(window.scrollY * .07, 45)}px,0)`;
-    } else {
-      sphere.style.transform = '';
-    }
     ticking = false;
   }
   function onScroll() {
