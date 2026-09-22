@@ -24,9 +24,9 @@
   configureMotion();
 
   const screens = {
-    audience: { src: 'assets/audience.png', alt: 'Новые и постоянные гости в аналитике GOMEET', label: 'Ваша аудитория в одном экране' },
-    growth: { src: 'assets/home.png', alt: 'Лента событий в приложении GOMEET', label: 'Ваше событие в ленте GOMEET' },
-    events: { src: 'assets/create.png', alt: 'Создание события в приложении GOMEET', label: 'События под вашим контролем' },
+    audience: { src: 'assets/audience.png', alt: 'Макет аналитики аудитории организатора GOMEET', label: 'Ваша аудитория в одном экране' },
+    growth: { src: 'assets/event.png', alt: 'Макет события «Четверг с GOMEET»', label: 'Ваше событие в GOMEET' },
+    events: { src: 'assets/create.png', alt: 'Макет создания события в GOMEET', label: 'События под вашим контролем' },
   };
   const tabs = qsa('[role="tab"]');
   const image = qs('#product-screen');
@@ -84,56 +84,6 @@
       }
     });
   });
-
-  // Screenshot-based demo: native scrolling, no login or real transactions.
-  const demoButtons = qsa('[data-demo]');
-  const demoViewport = qs('.demo-viewport');
-  const demoScroll = qs('#demo-scroll');
-  const demoNames = { home: 'Лента событий', event: 'Событие', chat: 'Чат события', audience: 'Аудитория', create: 'Создание события' };
-  function updateDemoScroll() {
-    const overflow = demoViewport.scrollHeight - demoViewport.clientHeight;
-    demoScroll.disabled = overflow < 2;
-    demoScroll.textContent = demoViewport.scrollTop >= overflow - 2 && overflow > 0 ? 'К началу ↑' : 'Листать ↓';
-  }
-  function selectDemo(name, focus = false) {
-    if (!Object.hasOwn(demoNames, name)) return;
-    demoButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.demo === name)));
-    qsa('.demo-screen').forEach(screen => {
-      screen.hidden = screen.dataset.screen !== name;
-      screen.classList.toggle('is-entering', !screen.hidden && !reduced.matches);
-    });
-    demoViewport.scrollTop = 0;
-    demoViewport.setAttribute('aria-label', `${demoNames[name]} — прокручиваемый экран`);
-    demoScroll.setAttribute('aria-controls', `demo-${name}`);
-    qs('#demo-status').textContent = `0${Object.keys(demoNames).indexOf(name) + 1} / 05 · ${demoNames[name]}`;
-    if (focus) demoViewport.focus({ preventScroll: true });
-    updateDemoScroll();
-  }
-  demoButtons.forEach((button, index) => {
-    button.addEventListener('click', () => selectDemo(button.dataset.demo));
-    button.addEventListener('keydown', event => {
-      let next;
-      if (event.key === 'ArrowRight') next = (index + 1) % demoButtons.length;
-      if (event.key === 'ArrowLeft') next = (index + demoButtons.length - 1) % demoButtons.length;
-      if (event.key === 'Home') next = 0;
-      if (event.key === 'End') next = demoButtons.length - 1;
-      if (next !== undefined) {
-        event.preventDefault();
-        demoButtons[next].focus();
-        selectDemo(demoButtons[next].dataset.demo);
-      }
-    });
-  });
-  qsa('[data-demo-go]').forEach(button => button.addEventListener('click', () => selectDemo(button.dataset.demoGo, true)));
-  demoScroll.addEventListener('click', () => {
-    const end = demoViewport.scrollHeight - demoViewport.clientHeight;
-    const top = demoViewport.scrollTop >= end - 2 ? 0 : Math.min(end, demoViewport.scrollTop + demoViewport.clientHeight * .7);
-    demoViewport.scrollTo({ top, behavior: reduced.matches ? 'instant' : 'smooth' });
-  });
-  demoViewport.addEventListener('scroll', updateDemoScroll, { passive: true });
-  window.addEventListener('resize', updateDemoScroll, { passive: true });
-  qsa('.demo-screen img').forEach(img => img.addEventListener('load', updateDemoScroll));
-  updateDemoScroll();
 
   let ticking = false;
   function updateScroll() {

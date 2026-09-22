@@ -10,21 +10,20 @@ python3 -m http.server 8080
 
 Open `http://localhost:8080`.
 
-## Deploy to Cloudflare Pages
+## Deploy with GitHub Pages
 
-The repository does not require a build step. Connect the repository to
-Cloudflare Pages, leave the build command empty, and use `.` as the output
-directory. Every push to `main` publishes a new version.
+The site is published from the root of the `main` branch. GitHub Pages does
+not require a build step for this repository. Every push to `main` publishes
+the latest version.
 
-After the first deployment, add `gomeet-organizers.ru` in **Custom domains**
-and configure the DNS records shown by Cloudflare at the domain registrar.
+The custom domain is stored in `CNAME`. At the DNS provider, the apex domain
+uses GitHub Pages A records and `www` points to `nigolovko17-source.github.io`.
 
 ## Security
 
 - No secrets or environment variables are required by this site.
-- HTTPS is provisioned by Cloudflare after the domain is connected.
-- Security headers are defined in `_headers`.
-- Never commit registrar, GitHub, or Cloudflare credentials to this repository.
+- HTTPS is provisioned by GitHub Pages after the domain is connected.
+- Never commit registrar or GitHub credentials to this repository.
 
 ## Fonts
 
