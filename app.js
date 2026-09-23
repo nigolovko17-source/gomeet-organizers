@@ -24,9 +24,9 @@
   configureMotion();
 
   const screens = {
-    audience: { src: 'assets/audience.png', alt: 'Макет аналитики аудитории организатора GOMEET', label: 'Ваша аудитория в одном экране' },
-    growth: { src: 'assets/event.png', alt: 'Макет события «Четверг с GOMEET»', label: 'Ваше событие в GOMEET' },
-    events: { src: 'assets/create.png', alt: 'Макет создания события в GOMEET', label: 'События под вашим контролем' },
+    audience: { src: 'assets/audience.png', alt: 'Макет аналитики аудитории организатора GOMEET' },
+    growth: { src: 'assets/event.png', alt: 'Макет события «Четверг с GOMEET»' },
+    events: { src: 'assets/create.png', alt: 'Макет создания события в GOMEET' },
   };
   const tabs = qsa('[role="tab"]');
   const image = qs('#product-screen');
@@ -50,7 +50,6 @@
       panel.classList.toggle('is-entering', active && !reduced.matches);
     });
     const screen = screens[tab.dataset.tab];
-    qs('#screen-label').textContent = screen.label;
     const showImage = () => {
       if (version !== selection) return;
       image.src = screen.src;
