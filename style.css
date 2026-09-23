@@ -63,7 +63,7 @@ em{font-style:normal;color:var(--accent)}strong{font-weight:600}
 .product,.terms{position:relative;isolation:isolate}
 .product:before,.terms:before{content:'';position:absolute;inset-block:24px;left:max(12px,calc((100vw - (var(--max) + 96px))/2));right:max(12px,calc((100vw - (var(--max) + 96px))/2));border-radius:48px;z-index:-1}
 .product:before{background:var(--surface);border:1px solid var(--line)}
-.product .product-visual{background:var(--bg)}.product .tab.active{background:var(--bg)}
+.product .product-visual{background:var(--accent);border-color:var(--accent)}.product .tab.active{background:var(--bg)}
 .product-heading{display:grid;grid-template-columns:1.5fr 1fr;gap:12%;align-items:end;margin-bottom:clamp(72px,7vw,108px)}.product-heading>p{max-width:290px;font-size:17px;line-height:1.8;color:var(--muted)}
 .product-heading h2{font-size:clamp(44px,4.7vw,70px)}
 .organizer-promise{display:grid;grid-template-columns:1fr 1fr;gap:12%;margin-bottom:clamp(90px,9vw,132px)}
