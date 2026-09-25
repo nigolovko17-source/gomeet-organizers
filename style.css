@@ -81,8 +81,19 @@ em{font-style:normal;color:var(--accent)}strong{font-weight:600}
 .terms{min-height:clamp(600px,70vh,780px);display:flex;flex-direction:column;justify-content:center;color:var(--bg)}.terms:before{background:var(--accent)}
 .terms .section-meta{width:100%;color:var(--surface)}.terms .section-meta .eyebrow{color:var(--bg)}.terms h2{max-width:1100px;font-size:clamp(44px,5.5vw,82px);margin-bottom:48px}.terms h2 em{color:var(--bg)}.terms-copy{max-width:680px;font-size:clamp(18px,1.7vw,24px);line-height:1.8;color:var(--surface)}
 .footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px;padding-top:32px;padding-bottom:32px;background:var(--surface)}.footer .brand{font-size:54px}.back-top{font-size:12px}
-.motion-enabled .reveal{transform:translateY(16px);transition:transform .55s var(--ease)}.motion-enabled .reveal.visible{transform:none}
-@keyframes panel-in{from{transform:translateY(7px)}to{transform:none}}
+.hero-line{display:block}
+.hero-copy,.product-controls{min-width:0}
+.button,.tab{transition:transform .24s var(--ease),background-color .24s ease,border-color .24s ease,box-shadow .24s ease}
+.button:active,.tab:active{transform:scale(.97)}
+.header nav a,.back-top{position:relative}
+.header nav a:after,.back-top:after{content:'';position:absolute;left:0;right:0;bottom:5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.header nav a:hover:after,.header nav a:focus-visible:after,.back-top:hover:after,.back-top:focus-visible:after{transform:scaleX(1)}
+@media(hover:hover) and (pointer:fine){
+  .motion-enabled .app-demo .demo-device,.motion-enabled .product-visual .phone{transform:perspective(1100px) translateY(var(--drift,0px)) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transition:transform .45s var(--ease);box-shadow:0 18px 32px #0f0f0e26}
+  .button:hover{transform:translateY(-3px);box-shadow:0 8px 24px #d7c2ab1a}
+  .tab:hover{transform:translateY(-2px)}
+}
+@keyframes panel-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 
 @media(min-width:1500px){.hero{column-gap:10%}.hero h1{font-size:100px}.app-demo{max-width:440px}.demo-device{width:414px}}
 @media(max-width:1100px) and (min-width:761px){.hero{grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:6%;padding-top:54px}.hero h1{font-size:7vw}.hero-description{font-size:16px}.mission,.product-heading,.product-layout,.guest-layout{gap:7%}.mission h2{font-size:5.6vw}.product-heading h2{font-size:5vw}.tab{padding:10px}.guest-copy h2{font-size:5vw}}

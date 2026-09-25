@@ -3,25 +3,79 @@
   const qs = selector => document.querySelector(selector);
   const qsa = selector => [...document.querySelectorAll(selector)];
   const progress = qs('.reading-progress');
+  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+  const animated = new WeakSet();
+  const running = new Set();
+  const entrances = qsa('.reveal, .section-meta, .mission-text, .product-visual, .product-tabs');
+  const scenes = qsa('.app-demo, .product-visual');
+  const visibleScenes = new Set();
   let observer;
+  let sceneObserver;
+
+  function enter(element, delay = 0) {
+    if (animated.has(element)) return;
+    animated.add(element);
+    if (reduced.matches || !element.animate) return;
+    const animation = element.animate([
+      { opacity: 0, transform: 'translateY(24px)' },
+      { opacity: 1, transform: 'translateY(0)' },
+    ], { duration: 760, delay, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'backwards' });
+    running.add(animation);
+    animation.finished.catch(() => {}).finally(() => running.delete(animation));
+  }
 
   function configureMotion() {
     observer?.disconnect();
+    sceneObserver?.disconnect();
+    visibleScenes.clear();
+    running.forEach(animation => animation.cancel());
+    scenes.forEach(scene => {
+      scene.style.removeProperty('--drift');
+      scene.style.removeProperty('--tilt-x');
+      scene.style.removeProperty('--tilt-y');
+    });
     document.body.classList.toggle('motion-enabled', !reduced.matches);
     if (reduced.matches || !('IntersectionObserver' in window)) {
-      qsa('.reveal').forEach(element => element.classList.add('visible'));
       return;
     }
     observer = new IntersectionObserver(entries => {
+      let delay = 0;
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
+        enter(entry.target, delay);
+        delay = Math.min(delay + 70, 210);
         observer.unobserve(entry.target);
       });
-    }, { threshold: .08 });
-    qsa('.reveal:not(.visible)').forEach(element => observer.observe(element));
+    }, { threshold: .08, rootMargin: '0px 0px -24px 0px' });
+    entrances.forEach(element => observer.observe(element));
+    qsa('.hero-line, .hero-description, .hero-actions, .app-demo').forEach((element, index) => enter(element, index * 85));
+    sceneObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) visibleScenes.add(entry.target);
+        else visibleScenes.delete(entry.target);
+      });
+      onScroll();
+    });
+    scenes.forEach(scene => sceneObserver.observe(scene));
   }
-  configureMotion();
+
+  scenes.forEach(scene => {
+    let pointerFrame;
+    scene.addEventListener('pointermove', event => {
+      if (reduced.matches || !finePointer.matches) return;
+      cancelAnimationFrame(pointerFrame);
+      pointerFrame = requestAnimationFrame(() => {
+        const rect = scene.getBoundingClientRect();
+        scene.style.setProperty('--tilt-x', `${((event.clientY - rect.top) / rect.height - .5) * -5}deg`);
+        scene.style.setProperty('--tilt-y', `${((event.clientX - rect.left) / rect.width - .5) * 6}deg`);
+      });
+    });
+    scene.addEventListener('pointerleave', () => {
+      cancelAnimationFrame(pointerFrame);
+      scene.style.setProperty('--tilt-x', '0deg');
+      scene.style.setProperty('--tilt-y', '0deg');
+    });
+  });
 
   const screens = {
     audience: { src: 'assets/audience.png', alt: 'Макет аналитики аудитории организатора GOMEET' },
@@ -88,6 +142,13 @@
   function updateScroll() {
     const range = document.documentElement.scrollHeight - window.innerHeight;
     progress.style.transform = `scaleX(${range > 0 ? Math.min(1, Math.max(0, window.scrollY / range)) : 0})`;
+    if (!reduced.matches && finePointer.matches) {
+      visibleScenes.forEach(scene => {
+        const rect = scene.getBoundingClientRect();
+        const amount = (window.innerHeight / 2 - rect.top - rect.height / 2) / window.innerHeight;
+        scene.style.setProperty('--drift', `${Math.max(-10, Math.min(10, amount * 18))}px`);
+      });
+    }
     ticking = false;
   }
   function onScroll() {
@@ -98,5 +159,7 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll, { passive: true });
   reduced.addEventListener('change', () => { configureMotion(); onScroll(); });
+  finePointer.addEventListener('change', () => { configureMotion(); onScroll(); });
+  configureMotion();
   updateScroll();
 })();
