@@ -6,31 +6,37 @@
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
   const animated = new WeakSet();
   const running = new Set();
+  const prepared = new Map();
   const entrances = qsa('.reveal, .section-meta, .mission-text, .product-visual, .product-tabs');
   const scenes = qsa('.app-demo, .product-visual');
-  const visibleScenes = new Set();
   let observer;
-  let sceneObserver;
 
-  function enter(element, delay = 0) {
+  function enter(element, delay = 0, paused = false) {
     if (animated.has(element)) return;
     animated.add(element);
     if (reduced.matches || !element.animate) return;
     const animation = element.animate([
-      { opacity: 0, transform: 'translateY(24px)' },
+      { opacity: 0, transform: 'translateY(12px)' },
       { opacity: 1, transform: 'translateY(0)' },
-    ], { duration: 760, delay, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'backwards' });
+    ], { duration: 600, delay, easing: 'cubic-bezier(.25,.46,.45,.94)', fill: 'both' });
+    if (paused) {
+      animation.pause();
+      animation.currentTime = 0;
+      prepared.set(element, animation);
+    }
     running.add(animation);
-    animation.finished.catch(() => {}).finally(() => running.delete(animation));
+    animation.finished.catch(() => {}).finally(() => {
+      running.delete(animation);
+      prepared.delete(element);
+      animation.cancel();
+    });
   }
 
   function configureMotion() {
     observer?.disconnect();
-    sceneObserver?.disconnect();
-    visibleScenes.clear();
     running.forEach(animation => animation.cancel());
+    prepared.clear();
     scenes.forEach(scene => {
-      scene.style.removeProperty('--drift');
       scene.style.removeProperty('--tilt-x');
       scene.style.removeProperty('--tilt-y');
     });
@@ -39,24 +45,23 @@
       return;
     }
     observer = new IntersectionObserver(entries => {
-      let delay = 0;
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
-        enter(entry.target, delay);
-        delay = Math.min(delay + 70, 210);
+        prepared.get(entry.target)?.play();
         observer.unobserve(entry.target);
       });
-    }, { threshold: .08, rootMargin: '0px 0px -24px 0px' });
-    entrances.forEach(element => observer.observe(element));
-    qsa('.hero-line, .hero-description, .hero-actions, .app-demo').forEach((element, index) => enter(element, index * 85));
-    sceneObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) visibleScenes.add(entry.target);
-        else visibleScenes.delete(entry.target);
-      });
-      onScroll();
+    }, { threshold: 0, rootMargin: '0px 0px 100px 0px' });
+    entrances.forEach(element => {
+      // Never hide content already on screen (including restored scroll positions).
+      if (element.getBoundingClientRect().top < window.innerHeight) {
+        animated.add(element);
+        return;
+      }
+      enter(element, 0, true);
+      observer.observe(element);
     });
-    scenes.forEach(scene => sceneObserver.observe(scene));
+    // One entrance for the headline prevents its lines from moving independently.
+    qsa('#hero-title, .hero-description, .hero-actions, .app-demo').forEach((element, index) => enter(element, index * 45));
   }
 
   scenes.forEach(scene => {
@@ -142,13 +147,6 @@
   function updateScroll() {
     const range = document.documentElement.scrollHeight - window.innerHeight;
     progress.style.transform = `scaleX(${range > 0 ? Math.min(1, Math.max(0, window.scrollY / range)) : 0})`;
-    if (!reduced.matches && finePointer.matches) {
-      visibleScenes.forEach(scene => {
-        const rect = scene.getBoundingClientRect();
-        const amount = (window.innerHeight / 2 - rect.top - rect.height / 2) / window.innerHeight;
-        scene.style.setProperty('--drift', `${Math.max(-10, Math.min(10, amount * 18))}px`);
-      });
-    }
     ticking = false;
   }
   function onScroll() {
@@ -159,7 +157,6 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll, { passive: true });
   reduced.addEventListener('change', () => { configureMotion(); onScroll(); });
-  finePointer.addEventListener('change', () => { configureMotion(); onScroll(); });
   configureMotion();
   updateScroll();
 })();
