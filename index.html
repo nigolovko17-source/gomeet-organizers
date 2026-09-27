@@ -18,24 +18,36 @@
 <link rel="canonical" href="https://gomeet-organizers.ru/">
 <link rel="preload" href="assets/onest-400Regular.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="preload" href="assets/oswald-700Bold.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="hero-film.css?v=5"><script src="app.js" defer></script><script src="hero-film.js?v=5" defer></script>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="tour.css?v=6"><script src="app.js" defer></script><script src="tour.js?v=6" defer></script>
 </head>
 <body id="top">
 <a class="skip-link" href="#mission">К содержанию</a>
 <div class="reading-progress" aria-hidden="true"></div><header class="header"><a class="brand" href="#top" aria-label="GOMEET — наверх">GOMEET</a><nav aria-label="Основная навигация"><a href="#mission">Идея</a><a href="#product">Возможности</a><a class="nav-contact" href="#terms">Условия <span aria-hidden="true">↗</span></a></nav></header>
 <main>
-<section class="film-hero" id="experience" aria-labelledby="film-title">
- <div class="film-copy">
-  <h1 id="film-title"><span class="film-title-first">Ваше событие —</span><br><em>начало сообщества.</em></h1>
-  <p>События, продажи и аудитория — в одном кабинете организатора.</p>
+<section class="product-tour" id="experience" aria-labelledby="tour-title">
+<div class="tour-sticky">
+ <div class="tour-intro"><h1 id="tour-title">Ваше событие —<br><em>начало сообщества.</em></h1></div>
+ <div class="tour-backdrop" aria-hidden="true"></div>
+ <div class="tour-copy">
+  <h2 id="tour-heading">Все события.<br><em>Перед глазами.</em></h2>
+  <p id="tour-description">Билеты, заполненность и статус каждой встречи.</p>
  </div>
- <div class="film-stage">
-  <div class="film-device">
-   <video id="organizer-film" autoplay muted loop playsinline preload="metadata" poster="assets/tour-events.png" aria-label="Видео работы кабинета организатора: события, продажи и аудитория">
-    <source src="assets/organizer-tour.mp4" type="video/mp4">
-   </video>
+ <div class="tour-device-position"><div class="tour-device"><div class="tour-viewport">
+  <div class="tour-screens" id="tour-screens">
+   <img class="tour-screen" src="assets/tour-events.png" width="1170" height="2532" alt="Кабинет организатора: события, билеты и заполненность" fetchpriority="high">
+   <img class="tour-screen" src="assets/tour-sales.png" width="1170" height="2532" alt="Сводка организатора с графиком продаж" style="opacity:0" aria-hidden="true">
+   <img class="tour-screen" src="assets/tour-audience.png" width="1170" height="2532" alt="Аналитика новых и вернувшихся покупателей" style="opacity:0" aria-hidden="true">
   </div>
+ </div></div></div>
+ <div class="tour-navigation" aria-label="Этапы презентации">
+  <button class="tour-step" aria-pressed="true" data-step="0"><span>01</span> События<i></i></button>
+  <button class="tour-step" aria-pressed="false" data-step="1"><span>02</span> Продажи<i></i></button>
+  <button class="tour-step" aria-pressed="false" data-step="2"><span>03</span> Аудитория<i></i></button>
  </div>
+ <div class="tour-actions">
+ <p class="tour-hint" id="tour-hint">Листайте вниз — экраны меняются вместе с прокруткой ↓</p>
+ <p class="tour-disclaimer">Демонстрационные данные</p></div>
+</div>
 </section>
 <section class="mission section" id="mission">
 <div class="section-meta"><p class="eyebrow">01 / ИДЕЯ GOMEET</p></div>

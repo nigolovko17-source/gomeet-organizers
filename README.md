@@ -2,10 +2,9 @@
 
 Static landing page for GOMEET organizers.
 
-The hero plays a short, silent recording of the organizer interface. It shows
-events, sales and audience with demonstration data. `hero-film.css` and
-`hero-film.js` contain the presentation and playback behavior. The video pauses
-outside the viewport and stays still when reduced motion is requested.
+The product tour in the hero changes between events, sales and audience as the
+visitor scrolls. `tour.css` and `tour.js` contain the presentation. The screens
+use demonstration data and have no production backend access.
 
 ## Local preview
 
