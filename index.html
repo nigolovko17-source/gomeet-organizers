@@ -18,27 +18,38 @@
 <link rel="canonical" href="https://gomeet-organizers.ru/">
 <link rel="preload" href="assets/onest-400Regular.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="preload" href="assets/oswald-700Bold.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="style.css?v=20260925-smooth"><script src="app.js?v=20260925-smooth" defer></script>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="tour.css?v=4"><script src="app.js" defer></script><script src="tour.js?v=4" defer></script>
 </head>
 <body id="top">
 <a class="skip-link" href="#mission">К содержанию</a>
 <div class="reading-progress" aria-hidden="true"></div><header class="header"><a class="brand" href="#top" aria-label="GOMEET — наверх">GOMEET</a><nav aria-label="Основная навигация"><a href="#mission">Идея</a><a href="#product">Возможности</a><a class="nav-contact" href="#terms">Условия <span aria-hidden="true">↗</span></a></nav></header>
 <main>
-<section class="hero" aria-labelledby="hero-title">
-<div class="hero-copy">
-  <h1 id="hero-title"><span class="hero-line">Ваше событие</span> <span class="hero-line">— начало</span> <em class="hero-line">сообщества.</em></h1>
-  <p class="hero-description">GOMEET помогает находить новых гостей. И оставаться на связи с теми, кто уже с вами.</p>
-  <div class="hero-actions"><a class="button button-primary" href="#product">Что получает организатор <span aria-hidden="true">↗</span></a></div>
-</div>
-<figure class="app-demo" id="app-demo" aria-label="Событие в приложении GOMEET">
-  <div class="demo-stage">
-    <div class="demo-device">
-      <div class="demo-viewport">
-        <div class="demo-screen" id="demo-event"><img src="assets/event.png" alt="Макет события «Четверг с GOMEET»" width="853" height="1844" fetchpriority="high" draggable="false"></div>
-      </div>
-    </div>
+<section class="product-tour" id="experience" aria-labelledby="tour-title">
+<div class="tour-sticky">
+ <div class="tour-intro"><h1 id="tour-title">Ваше событие —<br><em>начало сообщества.</em></h1></div>
+ <div class="tour-backdrop" aria-hidden="true"></div>
+ <div class="tour-copy">
+  <h2 id="tour-heading">Все события.<br><em>Перед глазами.</em></h2>
+  <p id="tour-description">Билеты, заполненность и статус каждой встречи.</p>
+ </div>
+ <div class="tour-device-position"><div class="tour-device"><div class="tour-viewport">
+  <div class="tour-screens" id="tour-screens">
+   <img class="tour-screen" src="assets/tour-events.png" width="1170" height="2532" alt="Кабинет организатора: события, билеты и заполненность" fetchpriority="high">
+   <img class="tour-screen" src="assets/tour-sales.png" width="1170" height="2532" alt="Сводка организатора с графиком продаж" style="opacity:0" aria-hidden="true">
+   <img class="tour-screen" src="assets/tour-audience.png" width="1170" height="2532" alt="Аналитика новых и вернувшихся покупателей" style="opacity:0" aria-hidden="true">
   </div>
-</figure>
+  <iframe id="tour-demo" title="Демонстрационный кабинет организатора GOMEET" hidden tabindex="-1" allow="camera 'none'; microphone 'none'; geolocation 'none'; payment 'none'"></iframe>
+  <div id="tour-loading" hidden role="status">Открываем кабинет…</div>
+ </div></div></div>
+ <div class="tour-navigation" aria-label="Этапы презентации">
+  <button class="tour-step" aria-pressed="true" data-step="0"><span>01</span> События<i></i></button>
+  <button class="tour-step" aria-pressed="false" data-step="1"><span>02</span> Продажи<i></i></button>
+  <button class="tour-step" aria-pressed="false" data-step="2"><span>03</span> Аудитория<i></i></button>
+ </div>
+ <div class="tour-actions"><button class="button button-primary" id="tour-try">Попробовать самому <span>↗</span></button><button class="tour-close" id="tour-close" hidden>Закрыть кабинет <span>×</span></button>
+ <p class="tour-hint" id="tour-hint">Листайте вниз — экраны меняются вместе с прокруткой ↓</p>
+ <p class="tour-disclaimer">Демонстрационные данные</p></div>
+</div>
 </section>
 <section class="mission section" id="mission">
 <div class="section-meta"><p class="eyebrow">01 / ИДЕЯ GOMEET</p></div>
@@ -86,4 +97,4 @@
 <p class="terms-copy reveal">Организатор не теряет процент с продаж: комиссия включена в цену билета. Ваши расходы — только банковский эквайринг, который ниже, чем у других билетных сервисов.</p>
 </section>
 </main><footer class="footer"><a class="brand" href="#top">GOMEET</a><a href="#top" class="back-top">Наверх ↑</a></footer>
-</body></html>
+<div class="tour-toast" role="status" aria-live="polite" hidden></div></body></html>
