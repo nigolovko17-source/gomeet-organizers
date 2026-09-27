@@ -2,10 +2,10 @@
 
 Static landing page for GOMEET organizers.
 
-The product tour in the hero changes between events, sales and audience as the
-visitor scrolls. `tour.css` and `tour.js` contain the presentation; `demo/` is a
-static, offline export of the organizer interface opened by “Попробовать самому”.
-It uses demonstration data and does not connect to the production backend.
+The hero plays a short, silent recording of the organizer interface. It shows
+events, sales and audience with demonstration data. `hero-film.css` and
+`hero-film.js` contain the presentation and playback behavior. The video pauses
+outside the viewport and stays still when reduced motion is requested.
 
 ## Local preview
 
