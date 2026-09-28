@@ -7,6 +7,13 @@
   const heading = section.querySelector('#tour-heading');
   const description = section.querySelector('#tour-description');
   const hint = section.querySelector('#tour-hint');
+  const device = section.querySelector('.tour-device-position');
+  const backdrop = section.querySelector('.tour-backdrop');
+  const navigation = section.querySelector('.tour-navigation');
+  const actions = section.querySelector('.tour-actions');
+  const status = section.querySelector('.tour-status');
+  const ready = images.map(() => false);
+  const mix = [0, 0, 0];
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const scenes = [
     { title: 'Все события.<br><em>Перед глазами.</em>', description: 'Билеты, заполненность и статус каждой встречи.' },
@@ -15,7 +22,7 @@
   ];
   const stops = [.23, .48, .73];
   let current = 0, target = 0, frame = 0, previousTime = 0, selected = 0, copyTimer;
-  let start = 0, range = 1;
+  let start = 0, range = 1, travel = 0, startScale = .66, exitScale = .08;
   const clamp = value => Math.max(0, Math.min(1, value));
   function smooth(from, to, value) {
     const t = clamp((value - from) / (to - from));
@@ -41,23 +48,42 @@
     }
   }
 
-  function render() {
-    // Long still intervals separate the two dissolves. The last 18% is an exit.
-    section.style.setProperty('--zoom', reduced.matches ? '1' : String(smooth(0, .15, current)));
-    section.style.setProperty('--exit', reduced.matches ? '0' : String(smooth(.82, 1, current)));
-    images[0].style.opacity = '1';
-    images[1].style.opacity = String(smooth(.30, .40, current));
-    images[2].style.opacity = String(smooth(.56, .66, current));
-    label(current < .35 ? 0 : current < .61 ? 1 : 2);
+  function setStyle(element, property, value) {
+    if (element.style[property] !== value) element.style[property] = value;
+  }
+  function render(dt = 16) {
+    // One composited transform; no inherited CSS variables or layout reads per frame.
+    const zoom = smooth(0, .15, current);
+    const exit = smooth(.82, 1, current);
+    const scale = startScale + zoom * (1 - startScale) - exit * exitScale;
+    setStyle(device, 'transform', reduced.matches ? 'translate3d(-50%,0,0) scale(.8)' :
+      `translate3d(-50%,${(-zoom * travel - exit * 24).toFixed(3)}px,0) scale(${scale.toFixed(5)})`);
+    setStyle(backdrop, 'opacity', reduced.matches ? '0' : (zoom * (1 - exit * .22)).toFixed(4));
+    setStyle(backdrop, 'transform', `scaleX(${(.72 + zoom * .28).toFixed(5)})`);
+    setStyle(copy, 'opacity', (clamp(zoom * 3 - 2) * (1 - exit * .3)).toFixed(4));
+    setStyle(copy, 'transform', `translate3d(0,${((1 - zoom) * 12 - exit * 12).toFixed(3)}px,0)`);
+    setStyle(navigation, 'opacity', reduced.matches ? '1' : (1 - exit * .25).toFixed(4));
+    setStyle(actions, 'opacity', reduced.matches ? '1' : (1 - exit).toFixed(4));
+    const desired = [1, smooth(.30, .40, current), smooth(.56, .66, current)];
+    let pending = false;
+    for (let i = 1; i < images.length; i++) {
+      const goal = ready[i] ? desired[i] : 0;
+      // If an image arrives late, dissolve it in instead of exposing an empty frame.
+      mix[i] = reduced.matches ? goal : mix[i] + Math.max(-dt / 260, Math.min(dt / 260, goal - mix[i]));
+      setStyle(images[i], 'opacity', mix[i].toFixed(4));
+      pending ||= Math.abs(goal - mix[i]) > .0001;
+    }
+    label(mix[2] >= .5 ? 2 : mix[1] >= .5 ? 1 : 0);
+    return pending;
   }
 
   function tick(time) {
-    const dt = Math.min(50, previousTime ? time - previousTime : 16);
+    const dt = Math.min(32, previousTime ? time - previousTime : 16);
     previousTime = time;
     current = reduced.matches ? target : current + (target - current) * (1 - Math.exp(-dt / 220));
     if (Math.abs(target - current) < .0002) current = target;
-    render();
-    if (current !== target) frame = requestAnimationFrame(tick);
+    const pending = render(dt);
+    if (current !== target || pending) frame = requestAnimationFrame(tick);
     else { frame = 0; previousTime = 0; }
   }
   function schedule() {
@@ -67,6 +93,10 @@
   function measure() {
     start = scrollY + section.getBoundingClientRect().top;
     range = Math.max(1, section.offsetHeight - stage.offsetHeight);
+    const style = getComputedStyle(section);
+    travel = stage.offsetHeight * parseFloat(style.getPropertyValue('--travel-ratio'));
+    startScale = parseFloat(style.getPropertyValue('--start-scale'));
+    exitScale = parseFloat(style.getPropertyValue('--exit-scale'));
     schedule();
   }
 
@@ -89,6 +119,28 @@
   measure();
   current = target = reduced.matches ? stops[0] : scrollProgress();
   if (reduced.matches) hint.textContent = 'Выберите раздел';
-  images.forEach(image => image.decode?.().catch(() => {}));
+  status.hidden = images[0].complete && images[0].naturalWidth > 0;
+  images.forEach((image, index) => {
+    let retried = false;
+    const loaded = async () => {
+      if (!image.naturalWidth) return;
+      try { await image.decode(); } catch (_) { /* A loaded image remains usable. */ }
+      ready[index] = true;
+      if (index === 0) status.hidden = true;
+      schedule();
+    };
+    const failed = () => {
+      if (!retried && image.dataset.fallback) {
+        retried = true;
+        image.src = image.dataset.fallback;
+      } else if (index === 0) {
+        status.hidden = false;
+        status.textContent = 'Не удалось загрузить экран. Проверьте соединение и обновите страницу.';
+      }
+    };
+    image.addEventListener('load', loaded);
+    image.addEventListener('error', failed);
+    if (image.complete) image.naturalWidth ? loaded() : failed();
+  });
   render();
 })();

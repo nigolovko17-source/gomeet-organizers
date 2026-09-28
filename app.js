@@ -83,14 +83,40 @@
   });
 
   const screens = {
-    audience: { src: 'assets/audience.png', alt: 'Макет аналитики аудитории организатора GOMEET' },
-    growth: { src: 'assets/event.png', alt: 'Макет события «Четверг с GOMEET»' },
-    events: { src: 'assets/create.png', alt: 'Макет создания события в GOMEET' },
+    audience: { src: 'assets/audience.webp', alt: 'Макет аналитики аудитории организатора GOMEET' },
+    growth: { src: 'assets/event.webp', alt: 'Макет события «Четверг с GOMEET»' },
+    events: { src: 'assets/create.webp', alt: 'Макет создания события в GOMEET' },
   };
   const tabs = qsa('[role="tab"]');
   const image = qs('#product-screen');
-  let imageTimer;
+  let imageAnimation;
   let selection = 0;
+
+  // Keep the current screen visible until its replacement is fully loaded.
+  const preload = screen => new Promise(resolve => {
+    const next = new Image();
+    let retried = false;
+    next.onload = async () => {
+      try { await next.decode(); } catch (_) { /* onload already confirmed success. */ }
+      resolve(next.src);
+    };
+    next.onerror = () => {
+      if (!retried) { retried = true; next.src = screen.src.replace('.webp', '.png'); }
+      else resolve(null);
+    };
+    next.src = screen.src;
+  });
+  const loadedScreens = new Map(Object.entries(screens).map(([key, screen]) => [key, preload(screen)]));
+  qsa('img[data-fallback]:not(.tour-screen)').forEach(item => {
+    const fallback = () => {
+      if (!item.dataset.fallback) return;
+      const src = item.dataset.fallback;
+      delete item.dataset.fallback;
+      item.src = src;
+    };
+    item.addEventListener('error', fallback);
+    if (item.complete && !item.naturalWidth) fallback();
+  });
 
   function selectTab(tab, focus = false) {
     if (tab.getAttribute('aria-selected') === 'true') {
@@ -98,7 +124,7 @@
       return;
     }
     const version = ++selection;
-    clearTimeout(imageTimer);
+    imageAnimation?.cancel();
     tabs.forEach(item => {
       const active = item === tab;
       item.classList.toggle('active', active);
@@ -109,23 +135,19 @@
       panel.classList.toggle('is-entering', active && !reduced.matches);
     });
     const screen = screens[tab.dataset.tab];
-    const showImage = () => {
+    image.setAttribute('aria-busy', 'true');
+    loadedScreens.get(tab.dataset.tab).then(src => {
       if (version !== selection) return;
-      image.src = screen.src;
+      image.setAttribute('aria-busy', 'false');
+      if (!src) {
+        loadedScreens.set(tab.dataset.tab, preload(screen));
+        return;
+      }
+      image.src = src;
       image.alt = screen.alt;
-      const revealImage = () => {
-        if (version === selection) image.classList.remove('switching');
-      };
-      if (typeof image.decode === 'function') image.decode().catch(() => {}).then(revealImage);
-      else revealImage();
-    };
-    if (reduced.matches) {
-      image.classList.remove('switching');
-      showImage();
-    } else {
-      image.classList.add('switching');
-      imageTimer = setTimeout(showImage, 160);
-    }
+      delete image.dataset.fallback;
+      if (!reduced.matches) imageAnimation = image.animate([{ opacity: .8 }, { opacity: 1 }], { duration: 200, easing: 'ease-out' });
+    });
     if (focus) tab.focus();
   }
   tabs.forEach((tab, index) => {
