@@ -2,9 +2,9 @@
 
 Static landing page for GOMEET organizers.
 
-The text-only hero is followed by a product tour that changes between events,
-sales and audience as the visitor scrolls, with longer reading intervals and a
-gradual exit. `tour.css` and `tour.js` contain the presentation. The screens
+The product tour now appears before the organizer terms. It changes between
+events, sales and audience as the visitor scrolls, with a subtle entrance and
+a gradual exit. `tour.css` and `tour.js` contain the presentation. The screens
 use demonstration data and have no production backend access.
 
 ## Local preview

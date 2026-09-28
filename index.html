@@ -19,7 +19,7 @@
 <link rel="preload" href="assets/onest-400Regular.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="preload" href="assets/oswald-700Bold.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="preload" href="assets/tour-events.webp" as="image" fetchpriority="high">
-<link rel="stylesheet" href="style.css?v=10"><link rel="stylesheet" href="tour.css?v=10"><script src="app.js?v=10" defer></script><script src="tour.js?v=10" defer></script>
+<link rel="stylesheet" href="style.css?v=10"><link rel="stylesheet" href="tour.css?v=13"><script src="app.js?v=10" defer></script><script src="tour.js?v=14" defer></script>
 </head>
 <body id="top">
 <a class="skip-link" href="#mission">К содержанию</a>
@@ -34,30 +34,6 @@
     <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5h16v5a2 2 0 0 0 0 4v5H4v-5a2 2 0 0 0 0-4V5Z"/><path d="M14 8v2m0 4v2"/></svg>Билеты</li>
     <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 20V10m7 10V4m7 16v-7"/></svg>Аналитика</li>
   </ul>
-</div>
-</section>
-<section class="product-tour" id="experience" aria-label="Презентация функций организатора">
-<div class="tour-sticky">
- <div class="tour-backdrop" aria-hidden="true"></div>
- <div class="tour-copy">
-  <h2 id="tour-heading">Все события.<br><em>Перед глазами.</em></h2>
-  <p id="tour-description">Билеты, заполненность и статус каждой встречи.</p>
- </div>
- <div class="tour-device-position"><div class="tour-device"><div class="tour-viewport">
-  <div class="tour-screens" id="tour-screens">
-   <img class="tour-screen" src="assets/tour-events.webp" data-fallback="assets/tour-events.png" width="1170" height="2532" alt="Кабинет организатора: события, билеты и заполненность" decoding="async" fetchpriority="high">
-   <img class="tour-screen" src="assets/tour-sales.webp" data-fallback="assets/tour-sales.png" width="1170" height="2532" alt="Сводка организатора с графиком продаж" decoding="async" style="opacity:0" aria-hidden="true">
-   <img class="tour-screen" src="assets/tour-audience.webp" data-fallback="assets/tour-audience.png" width="1170" height="2532" alt="Аналитика новых и вернувшихся покупателей" decoding="async" style="opacity:0" aria-hidden="true">
-  </div>
- <p class="tour-status" role="status" hidden>Загружаем интерфейс…</p></div></div></div>
- <div class="tour-navigation" aria-label="Этапы презентации">
-  <button class="tour-step" aria-pressed="true" data-step="0"><span>01</span> События<i></i></button>
-  <button class="tour-step" aria-pressed="false" data-step="1"><span>02</span> Продажи<i></i></button>
-  <button class="tour-step" aria-pressed="false" data-step="2"><span>03</span> Аудитория<i></i></button>
- </div>
- <div class="tour-actions">
- <p class="tour-hint" id="tour-hint">Листайте вниз — экраны меняются вместе с прокруткой ↓</p>
- <p class="tour-disclaimer">Демонстрационные данные</p></div>
 </div>
 </section>
 <section class="mission section" id="mission">
@@ -98,6 +74,27 @@
 <div class="guest-layout">
 <div class="guest-screen reveal"><div class="phone"><img src="assets/chat.webp" data-fallback="assets/chat.png" width="853" height="1844" alt="Макет чата события в GOMEET, демонстрационная переписка" decoding="async"></div><span class="guest-caption">Связь продолжается<br><strong>после встречи.</strong></span></div>
 <div class="guest-copy"><h2 class="reveal">Есть куда пойти.<br>Есть <em>с кем.</em></h2><div class="guest-item reveal"><span>01</span><div><h3>Находит интересное</h3><p>События по интересам, в ленте и через знакомых.</p></div></div><div class="guest-item reveal"><span>02</span><div><h3>Приходит с друзьями</h3><p>Видит, кто идёт. Зовёт друзей и находит компанию для встречи.</p></div></div><div class="guest-item reveal"><span>03</span><div><h3>Остаётся на связи</h3><p>Чаты и подписки сохраняют связь после встречи. Награды и бейджи за участие дают повод возвращаться в GOMEET и звать друзей.</p></div></div></div>
+</div>
+</section>
+<section class="product-tour" id="experience" aria-label="Презентация функций организатора">
+<div class="tour-sticky">
+ <div class="tour-backdrop" aria-hidden="true"></div>
+ <div class="tour-copy">
+  <h2 id="tour-heading">Все события.<br><em>Перед глазами.</em></h2>
+  <p id="tour-description">Билеты, заполненность и статус каждой встречи.</p>
+ </div>
+ <div class="tour-device-position"><div class="tour-device"><div class="tour-viewport">
+  <div class="tour-screens" id="tour-screens">
+   <img class="tour-screen" src="assets/tour-events.webp" data-fallback="assets/tour-events.png" width="1170" height="2532" alt="Кабинет организатора: события, билеты и заполненность" decoding="async" fetchpriority="high">
+   <img class="tour-screen" src="assets/tour-sales.webp" data-fallback="assets/tour-sales.png" width="1170" height="2532" alt="Сводка организатора с графиком продаж" decoding="async" style="opacity:0" aria-hidden="true">
+   <img class="tour-screen" src="assets/tour-audience.webp" data-fallback="assets/tour-audience.png" width="1170" height="2532" alt="Аналитика новых и вернувшихся покупателей" decoding="async" style="opacity:0" aria-hidden="true">
+  </div>
+ <p class="tour-status" role="status" hidden>Загружаем интерфейс…</p></div></div></div>
+ <div class="tour-navigation" aria-label="Этапы презентации">
+  <button class="tour-step" aria-pressed="true" data-step="0"><span>01</span> События<i></i></button>
+  <button class="tour-step" aria-pressed="false" data-step="1"><span>02</span> Продажи<i></i></button>
+  <button class="tour-step" aria-pressed="false" data-step="2"><span>03</span> Аудитория<i></i></button>
+ </div>
 </div>
 </section>
 <section class="terms section" id="terms" aria-labelledby="terms-title">
