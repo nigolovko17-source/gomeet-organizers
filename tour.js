@@ -1,30 +1,94 @@
 (() => {
- const section=document.querySelector('.product-tour'),stage=document.querySelector('.tour-sticky');
- const images=[...document.querySelectorAll('.tour-screen')],steps=[...document.querySelectorAll('.tour-step')];
- const copy=document.querySelector('.tour-copy'),heading=document.querySelector('#tour-heading'),description=document.querySelector('#tour-description'),hint=document.querySelector('#tour-hint');
- const reduced=matchMedia('(prefers-reduced-motion: reduce)');
- const scenes=[{title:'Все события.<br><em>Перед глазами.</em>',description:'Билеты, заполненность и статус каждой встречи.'},{title:'Как идут<br><em>продажи?</em>',description:'Общая картина и динамика по дням — в одной сводке.'},{title:'Кто пришёл.<br><em>Кто вернулся.</em>',description:'Новые и постоянные покупатели вашей встречи.'}];
- let current=0,target=0,raf=0,lastTime=0,selected=0,copyTimer;
- const clamp=v=>Math.max(0,Math.min(1,v));
- const smooth=(a,b,v)=>{const t=clamp((v-a)/(b-a));return t*t*(3-2*t)};
- function scrollProgress(){const r=section.getBoundingClientRect();return clamp(-r.top/Math.max(1,section.offsetHeight-stage.offsetHeight))}
- function label(index){if(index===selected)return;selected=index;steps.forEach((step,i)=>step.setAttribute('aria-pressed',String(i===index)));images.forEach((img,i)=>img.setAttribute('aria-hidden',String(i!==index)));
-  clearTimeout(copyTimer);copy.classList.add('is-changing');
-  if(reduced.matches){heading.innerHTML=scenes[index].title;description.textContent=scenes[index].description;copy.classList.remove('is-changing');return}
-  copyTimer=setTimeout(()=>{heading.innerHTML=scenes[index].title;description.textContent=scenes[index].description;copy.classList.remove('is-changing')},170);
- }
- function render(){const zoom=reduced.matches?1:smooth(0,.36,current);section.style.setProperty('--zoom',String(zoom));
-  const sales=smooth(.33,.53,current),audience=smooth(.65,.85,current);
-  // Stable base prevents a dark flash while the next crisp screen dissolves over it.
-  images[0].style.opacity='1';images[1].style.opacity=String(sales);images[2].style.opacity=String(audience);
-  label(current<.43?0:current<.75?1:2);
- }
- function tick(time){const dt=Math.min(50,lastTime?time-lastTime:16);lastTime=time;current=reduced.matches?target:current+(target-current)*(1-Math.exp(-dt/220));if(Math.abs(target-current)<.0003)current=target;render();if(current!==target)raf=requestAnimationFrame(tick);else{raf=0;lastTime=0}}
- function schedule(){if(!reduced.matches)target=scrollProgress();if(!raf)raf=requestAnimationFrame(tick)}
- addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule,{passive:true});
- const stops=[.20,.57,.90];
- steps.forEach((step,i)=>step.addEventListener('click',()=>{if(reduced.matches){current=target=stops[i];render()}else scrollTo({top:section.offsetTop+(section.offsetHeight-stage.offsetHeight)*stops[i],behavior:'smooth'})}));
- reduced.addEventListener('change',()=>{target=reduced.matches?stops[selected]:scrollProgress();current=target;hint.textContent=reduced.matches?'Выберите раздел':'Листайте вниз — экраны меняются вместе с прокруткой ↓';render()});
- if(reduced.matches){current=target=stops[0];hint.textContent='Выберите раздел'}else current=target=scrollProgress();
- images.forEach(img=>img.decode?.().catch(()=>{}));render();
+  const section = document.querySelector('.product-tour');
+  const stage = section.querySelector('.tour-sticky');
+  const images = [...section.querySelectorAll('.tour-screen')];
+  const steps = [...section.querySelectorAll('.tour-step')];
+  const copy = section.querySelector('.tour-copy');
+  const heading = section.querySelector('#tour-heading');
+  const description = section.querySelector('#tour-description');
+  const hint = section.querySelector('#tour-hint');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const scenes = [
+    { title: 'Все события.<br><em>Перед глазами.</em>', description: 'Билеты, заполненность и статус каждой встречи.' },
+    { title: 'Как идут<br><em>продажи?</em>', description: 'Общая картина и динамика по дням — в одной сводке.' },
+    { title: 'Кто пришёл.<br><em>Кто вернулся.</em>', description: 'Новые и постоянные покупатели вашей встречи.' }
+  ];
+  const stops = [.23, .48, .73];
+  let current = 0, target = 0, frame = 0, previousTime = 0, selected = 0, copyTimer;
+  let start = 0, range = 1;
+  const clamp = value => Math.max(0, Math.min(1, value));
+  function smooth(from, to, value) {
+    const t = clamp((value - from) / (to - from));
+    return t * t * (3 - 2 * t);
+  }
+  const scrollProgress = () => clamp((scrollY - start) / range);
+
+  function label(index) {
+    if (selected === index) return;
+    selected = index;
+    steps.forEach((step, i) => step.setAttribute('aria-pressed', String(i === index)));
+    images.forEach((image, i) => image.setAttribute('aria-hidden', String(i !== index)));
+    clearTimeout(copyTimer);
+    const update = () => {
+      heading.innerHTML = scenes[index].title;
+      description.textContent = scenes[index].description;
+      copy.classList.remove('is-changing');
+    };
+    if (reduced.matches) update();
+    else {
+      copy.classList.add('is-changing');
+      copyTimer = setTimeout(update, 170);
+    }
+  }
+
+  function render() {
+    // Long still intervals separate the two dissolves. The last 18% is an exit.
+    section.style.setProperty('--zoom', reduced.matches ? '1' : String(smooth(0, .15, current)));
+    section.style.setProperty('--exit', reduced.matches ? '0' : String(smooth(.82, 1, current)));
+    images[0].style.opacity = '1';
+    images[1].style.opacity = String(smooth(.30, .40, current));
+    images[2].style.opacity = String(smooth(.56, .66, current));
+    label(current < .35 ? 0 : current < .61 ? 1 : 2);
+  }
+
+  function tick(time) {
+    const dt = Math.min(50, previousTime ? time - previousTime : 16);
+    previousTime = time;
+    current = reduced.matches ? target : current + (target - current) * (1 - Math.exp(-dt / 220));
+    if (Math.abs(target - current) < .0002) current = target;
+    render();
+    if (current !== target) frame = requestAnimationFrame(tick);
+    else { frame = 0; previousTime = 0; }
+  }
+  function schedule() {
+    if (!reduced.matches) target = scrollProgress();
+    if (!frame) frame = requestAnimationFrame(tick);
+  }
+  function measure() {
+    start = scrollY + section.getBoundingClientRect().top;
+    range = Math.max(1, section.offsetHeight - stage.offsetHeight);
+    schedule();
+  }
+
+  steps.forEach((step, index) => step.addEventListener('click', () => {
+    if (reduced.matches) { current = target = stops[index]; render(); }
+    else scrollTo({ top: start + range * stops[index], behavior: 'smooth' });
+  }));
+  addEventListener('scroll', schedule, { passive: true });
+  addEventListener('resize', measure, { passive: true });
+  const resize = new ResizeObserver(measure);
+  resize.observe(stage);
+  resize.observe(document.querySelector('.hero'));
+  document.fonts.ready.then(measure);
+  reduced.addEventListener('change', () => {
+    measure();
+    current = target = reduced.matches ? stops[selected] : scrollProgress();
+    hint.textContent = reduced.matches ? 'Выберите раздел' : 'Листайте вниз — экраны меняются вместе с прокруткой ↓';
+    render();
+  });
+  measure();
+  current = target = reduced.matches ? stops[0] : scrollProgress();
+  if (reduced.matches) hint.textContent = 'Выберите раздел';
+  images.forEach(image => image.decode?.().catch(() => {}));
+  render();
 })();
