@@ -2,10 +2,16 @@
 
 Static landing page for GOMEET organizers.
 
-The product tour now appears before the organizer terms. It changes between
-events, sales and audience as the visitor scrolls, with a subtle entrance and
-a gradual exit. `tour.css` and `tour.js` contain the presentation. The screens
+The product tour appears after the organizer terms as chapter 05. Its scroll
+track is limited to 2.4 viewport heights on desktop and 2 on mobile.
+It changes between events, sales and audience as the
+visitor scrolls. `tour.css` and `tour.js` contain the presentation. The screens
 use demonstration data and have no production backend access.
+
+Below-the-fold images use native lazy loading. Inactive product tabs load
+their screen only on selection. The sales and audience tour screens load
+shortly before their scroll transition or when their navigation button is
+clicked; they are not fetched on initial page load.
 
 ## Local preview
 

@@ -1,5 +1,6 @@
 (() => {
   const section = document.querySelector('.product-tour');
+  const track = section.querySelector('.tour-track');
   const stage = section.querySelector('.tour-sticky');
   const images = [...section.querySelectorAll('.tour-screen')];
   const steps = [...section.querySelectorAll('.tour-step')];
@@ -27,6 +28,15 @@
     return t * t * (3 - 2 * t);
   }
   const scrollProgress = () => clamp((scrollY - start) / range);
+
+  function requestScreen(index) {
+    const image = images[index];
+    if (!image.dataset.src) return;
+    // A scene approaching its transition needs to load even before it is visible.
+    image.loading = 'eager';
+    image.src = image.dataset.src;
+    delete image.dataset.src;
+  }
 
   function label(index) {
     if (selected === index) return;
@@ -59,6 +69,8 @@
     setStyle(copy, 'transform', `translate3d(0,${(-exit * 12).toFixed(3)}px,0)`);
     setStyle(navigation, 'opacity', reduced.matches ? '1' : (1 - exit * .25).toFixed(4));
     const desired = [1, smooth(.30, .40, current), smooth(.56, .66, current)];
+    if (current >= .20) requestScreen(1);
+    if (current >= .46) requestScreen(2);
     let pending = false;
     for (let i = 1; i < images.length; i++) {
       const goal = ready[i] ? desired[i] : 0;
@@ -85,12 +97,13 @@
     if (!frame) frame = requestAnimationFrame(tick);
   }
   function measure() {
-    start = scrollY + section.getBoundingClientRect().top;
-    range = Math.max(1, section.offsetHeight - stage.offsetHeight);
+    start = scrollY + track.getBoundingClientRect().top;
+    range = Math.max(1, track.offsetHeight - stage.offsetHeight);
     schedule();
   }
 
   steps.forEach((step, index) => step.addEventListener('click', () => {
+    requestScreen(index);
     if (reduced.matches) { current = target = stops[index]; render(); }
     else scrollTo({ top: start + range * stops[index], behavior: 'smooth' });
   }));
@@ -132,7 +145,7 @@
     };
     image.addEventListener('load', loaded);
     image.addEventListener('error', failed);
-    if (image.complete) image.naturalWidth ? loaded() : failed();
+    if (image.getAttribute('src') && image.complete) image.naturalWidth ? loaded() : failed();
   });
   render();
 })();

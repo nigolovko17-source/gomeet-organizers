@@ -106,7 +106,12 @@
     };
     next.src = screen.src;
   });
-  const loadedScreens = new Map(Object.entries(screens).map(([key, screen]) => [key, preload(screen)]));
+  // Fetch an inactive screen only when its tab is selected.
+  const loadedScreens = new Map();
+  function loadScreen(key) {
+    if (!loadedScreens.has(key)) loadedScreens.set(key, preload(screens[key]));
+    return loadedScreens.get(key);
+  }
   qsa('img[data-fallback]:not(.tour-screen)').forEach(item => {
     const fallback = () => {
       if (!item.dataset.fallback) return;
@@ -115,7 +120,7 @@
       item.src = src;
     };
     item.addEventListener('error', fallback);
-    if (item.complete && !item.naturalWidth) fallback();
+    if (item.complete && item.currentSrc && !item.naturalWidth) fallback();
   });
 
   function selectTab(tab, focus = false) {
@@ -136,11 +141,11 @@
     });
     const screen = screens[tab.dataset.tab];
     image.setAttribute('aria-busy', 'true');
-    loadedScreens.get(tab.dataset.tab).then(src => {
+    loadScreen(tab.dataset.tab).then(src => {
       if (version !== selection) return;
       image.setAttribute('aria-busy', 'false');
       if (!src) {
-        loadedScreens.set(tab.dataset.tab, preload(screen));
+        loadedScreens.delete(tab.dataset.tab);
         return;
       }
       image.src = src;
