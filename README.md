@@ -3,7 +3,7 @@
 Static landing page for GOMEET organizers.
 
 The product tour appears after the organizer terms as chapter 05. Its scroll
-track is limited to 2.4 viewport heights on desktop and 2 on mobile.
+track is limited to 2.8 viewport heights on desktop and 2.3 on mobile.
 It changes between events, sales and audience as the
 visitor scrolls. `tour.css` and `tour.js` contain the presentation. The screens
 use demonstration data and have no production backend access.
