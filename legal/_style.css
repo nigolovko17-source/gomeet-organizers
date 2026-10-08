@@ -1,0 +1,36 @@
+@font-face{font-family:Oswald;src:url('/fonts/oswald-700Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:Onest;src:url('/fonts/onest-400Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:Onest;src:url('/fonts/onest-600SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+/* Общий вид документов «своих». Тёмная тема как в приложении: страница
+   открывается из него, и белая вспышка посреди ночного экрана — плохой стык. */
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #0B0B0F;
+  color: #F2EFE6;
+  font: 16px/1.65 Onest, Arial, sans-serif;
+  padding: 40px 20px 96px;
+}
+main { max-width: 42rem; margin: 0 auto; }
+.brand { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: #8A8A96; }
+h1 { font-size: clamp(28px, 6vw, 38px); line-height: 1.12; letter-spacing: -.02em; margin: 12px 0 6px; }
+.upd { color: #8A8A96; font-size: 14px; margin: 0 0 32px; }
+h2 { font-size: 20px; margin: 34px 0 8px; }
+p, li { color: #ADA9A0; }
+ul { padding-left: 20px; }
+li { margin: 6px 0; }
+a { color: #C6FF00; }
+.note {
+  border-left: 3px solid #C6FF00; background: #131318;
+  padding: 14px 18px; border-radius: 0 6px 6px 0; margin: 24px 0;
+}
+.note p { margin: 0; }
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 15px; }
+th, td { text-align: left; padding: 10px 12px 10px 0; border-bottom: 1px solid #2A2A33; vertical-align: top; }
+th { color: #8A8A96; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; }
+footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #2A2A33; color: #8A8A96; font-size: 14px; }
+
+h1,h2,h3,.brand{font-family:Oswald,Arial,sans-serif;font-weight:700;letter-spacing:0}
+strong,b{font-weight:600}
+.brand{font-size:24px}
