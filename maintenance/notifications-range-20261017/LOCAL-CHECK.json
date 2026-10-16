@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-17",
+  "environment": "http://127.0.0.1:43198/profile/",
+  "baseCommit": "26cea873cb321020c9558068f037a867162171e9",
+  "buildReceipt": "BUILD.json",
+  "bundle": "_expo/static/js/web/index-598bfabd144a8f76d8e41265ad372d14.js",
+  "status": "PASS_WITH_SCOPE_LIMITS",
+  "unit": {"passed": 10, "failed": 0, "filters": 7, "notifications": 3},
+  "browser": {
+    "dualPriceFieldsAndRanges": "PASS",
+    "inclusive1000to1500": {"status": "PASS", "currentEventCount": 2},
+    "applyAndReopen": "PASS",
+    "closeDiscardsDraft": "PASS",
+    "minCrossesMaxClampsOnBlur": "PASS",
+    "maxCrossesMinClampsOnBlur": "PASS",
+    "max25000Clamps20000": "PASS",
+    "pointerTrackAndThumbDrag": "PASS",
+    "keyboardHomeEnd": "PASS",
+    "filter390px": {"status": "PASS", "viewport": 390, "horizontalOverflow": false},
+    "notificationsFinalBundle": {"status": "PASS", "currentRows": 17, "dateGroups": 10, "streakRows": 0, "awardPlaceholder": 1},
+    "notifications390px": {"status": "PASS", "viewport": 390, "documentWidth": 390, "feedWidth": 342}
+  },
+  "limits": [
+    "Event and notification counts describe current existing site data, not fixed acceptance fixtures.",
+    "All-ten-kind synthetic fixtures were rendered only in unit tests and local concepts, not injected into the published hook.",
+    "Web streak generation and defensive list exclusion verified; native scheduler/backend/email/push were not changed or verified.",
+    "Existing loading/error/read/navigation contracts retained; individual destination screens, consent/ACL and legal compliance not requalified.",
+    "Publication and live browser results recorded separately after deployment."
+  ]
+}
