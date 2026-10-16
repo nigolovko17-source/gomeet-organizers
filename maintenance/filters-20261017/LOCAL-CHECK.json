@@ -1,0 +1,23 @@
+{
+  "checkedAtUTC": "2026-10-16T17:25:55.762444+00:00",
+  "target": "localhost:43193; exact candidate for organizers domain",
+  "status": "PASS",
+  "maxTicketPriceRUB": 20000,
+  "unitTests": 5,
+  "browser": {
+    "default": "range+field 20000; apply16",
+    "custom1375": "range synchronized; apply13",
+    "applyAndReopen": "1375 retained",
+    "cancelDraft": "zero draft discarded; reopened1375",
+    "zeroPrice": "apply12",
+    "overLimit": "input25000 clamps range/field20000",
+    "desktop": "rounded groups, dates, price and footer visible",
+    "narrow390": {
+      "viewport": 390,
+      "priceWidth": 340,
+      "documentOverflow": false
+    }
+  },
+  "build": "BUILD.json",
+  "productionPublication": "not performed at time of this local check"
+}
