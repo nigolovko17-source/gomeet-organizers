@@ -1,0 +1,18 @@
+{
+  "baseCommit": "fa1ba0837bc1daf38c0fb40231dfa399db312deb",
+  "baseBundle": "_expo/static/js/web/index-b872a31afaf359bc1e905b9ee4c2df80.js",
+  "baseSha256": "b07333d909eaca8be7c5b99f434f471c9a936fc44e8cdb9fdc8cb5f2ddabb6b1",
+  "bundle": "_expo/static/js/web/index-f1aaf73ec226919a3ea33ef39cdd10e4.js",
+  "sha256": "62a5cf98d386bbe2c4395654bdee79fe900d35ef85c6a96e23e3c71e0b0fb828",
+  "changedModules": [
+    1033,
+    1583
+  ],
+  "untouchedModules": 1638,
+  "localOnly": true,
+  "retainedOldBundle": true,
+  "sourceHashes": {
+    "SearchScreen.tsx": "526d52cc7bf6690c07bee01deac02d19d659df6ff07d948c43748f0c099e7bb2",
+    "build.cjs": "68e331f8ae635a637c5021eddb694c3660f5ffabb0b333d07f94914ae81541de"
+  }
+}

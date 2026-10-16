@@ -1,0 +1,82 @@
+{
+  "task": "UI-SEARCH-20261017",
+  "date": "2026-10-17",
+  "environment": "local organizers web candidate",
+  "preview": "http://127.0.0.1:43200/Search",
+  "build": {
+    "baseCommit": "fa1ba0837bc1daf38c0fb40231dfa399db312deb",
+    "baseBundle": "_expo/static/js/web/index-b872a31afaf359bc1e905b9ee4c2df80.js",
+    "baseSha256": "b07333d909eaca8be7c5b99f434f471c9a936fc44e8cdb9fdc8cb5f2ddabb6b1",
+    "bundle": "_expo/static/js/web/index-f1aaf73ec226919a3ea33ef39cdd10e4.js",
+    "sha256": "62a5cf98d386bbe2c4395654bdee79fe900d35ef85c6a96e23e3c71e0b0fb828",
+    "changedModules": [
+      1033,
+      1583
+    ],
+    "untouchedModules": 1638,
+    "localOnly": true,
+    "retainedOldBundle": true,
+    "sourceHashes": {
+      "SearchScreen.tsx": "526d52cc7bf6690c07bee01deac02d19d659df6ff07d948c43748f0c099e7bb2",
+      "build.cjs": "68e331f8ae635a637c5021eddb694c3660f5ffabb0b333d07f94914ae81541de"
+    }
+  },
+  "checks": [
+    {
+      "id": "ENTRY",
+      "result": "PASS",
+      "evidence": "Cold direct Search and Home → Search: activeElement is not the input; no autofocus attribute. Direct URL/reload uses existing Search route."
+    },
+    {
+      "id": "MANUAL-FOCUS",
+      "result": "PASS",
+      "evidence": "Pointer and Tab explicitly focus input; outline rgba(0,0,0,0) none 0px; wrapper uses existing rgb(244,240,232) focus border."
+    },
+    {
+      "id": "CHIPS",
+      "result": "PASS",
+      "evidence": "Popular heading and six genre/query chips absent from rendered screen."
+    },
+    {
+      "id": "QUERY",
+      "result": "PASS",
+      "evidence": "Свои finds Свои на районе: знакомство; opens existing event c7c44c74-6cf1-3197-84a2-97b4a4201cce; browser Back retains query without input focus."
+    },
+    {
+      "id": "CLEAR-EMPTY",
+      "result": "PASS",
+      "evidence": "Clear restores recommendations; zzzxxyy123 shows Ничего не найдено / Попробуй другой запрос. Own temporary recent query removed through UI."
+    },
+    {
+      "id": "RESPONSIVE",
+      "result": "PASS",
+      "evidence": "360 and390px: document width equals viewport; no categories and input unfocused. Recommendation rail remains scrollable."
+    },
+    {
+      "id": "BUILD",
+      "result": "PASS",
+      "evidence": "JS syntax and git diff --check; factories1033/1583 changed; other1638 byte-exact; base/output SHA recorded in BUILD.json."
+    },
+    {
+      "id": "VISUAL",
+      "result": "PASS",
+      "evidence": "Mobile PNG inspected at390×844; desktop capture also saved. Existing asynchronous event artwork not changed."
+    }
+  ],
+  "limits": [
+    "Physical handset and software keyboard not run; DOM focus, explicit input actions and responsive browser emulation checked.",
+    "No backend/RLS/consent/privacy qualification. Existing feed, social proof and query functions retained.",
+    "Empty-state first wait used a heading locator although title is plain text; AX confirmed expected state.",
+    "No new unit tests for reversible UI-only change; syntax, module boundaries and working browser scenarios used."
+  ],
+  "publication": {
+    "status": "NOT RUN",
+    "remoteMainObserved": "fa1ba0837bc1daf38c0fb40231dfa399db312deb",
+    "gitPush": false
+  },
+  "baseline": {
+    "GOV-001…003/RT-001": "DEC: source/build/environment and evidence separated from publication",
+    "PD-06/07": "DOC: existing participant/social-proof query unchanged; not a compliance claim",
+    "PD-10": "DOC: people username search outside this event-search change"
+  }
+}
