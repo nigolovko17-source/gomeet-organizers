@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-17",
+  "target": "http://127.0.0.1:43200/Notifications",
+  "baseCommit": "a7088272bf3e8779a9e5c33fd95dc5d52b7f3e5b",
+  "bundle": "_expo/static/js/web/index-b872a31afaf359bc1e905b9ee4c2df80.js",
+  "status": "LOCAL_PASS_WITH_SCOPE_LIMITS",
+  "unit": {
+    "passed": 17,
+    "failed": 0,
+    "filters": 7,
+    "notificationListAndStreak": 3,
+    "detailDataRoutesStatesAndIdentity": 7
+  },
+  "browser": {
+    "existingListCount": 17,
+    "listToDetailToActualTicket": "PASS",
+    "ticketBackToDetailToList": "PASS",
+    "awardDetailToProfileAch": "PASS",
+    "directLinkAndReload": "PASS",
+    "directEntryBackToList": "PASS",
+    "missingIdUnavailableAndBack": "PASS",
+    "lowerListCardKeyboardOpenBackFocusScroll": {
+      "status": "PASS",
+      "listScrollTop": 1642
+    },
+    "viewport390": {
+      "status": "PASS",
+      "documentWidth": 390,
+      "ctaHeight": 52,
+      "ctaBottom": 820,
+      "screenHeight": 844
+    },
+    "viewport360": {
+      "status": "PASS",
+      "documentWidth": 360,
+      "ctaHeight": 52,
+      "ctaVisible": true
+    }
+  },
+  "resolvedFindings": [
+    "Notifications was missing from explicit linking config; initial direct entry fell back to profile. Added only existing route path binding in1033 and retested actual direct entry/reload."
+  ],
+  "limits": [
+    "Only ticket/badge exist in this current account; other eight kinds, failure/retry/stale-owner cases verified locally with isolated synthetic unit fixtures.",
+    "No synthetic fixture is inserted in production feed; support reply text remains in existing thread because notification payload does not include it.",
+    "SELECT/RPC/role/consent policies and monetary logic retained; full server/native/financial/legal acceptance not performed.",
+    "Existing tickets/achievements hooks keep their original internal error contracts; new retryable server-notification read errors tested."
+  ],
+  "publication": "PENDING"
+}

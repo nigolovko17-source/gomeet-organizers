@@ -1,0 +1,22 @@
+{
+  "baseCommit": "a7088272bf3e8779a9e5c33fd95dc5d52b7f3e5b",
+  "baseBundle": "_expo/static/js/web/index-598bfabd144a8f76d8e41265ad372d14.js",
+  "baseSha256": "f3f1e950c58f96dc9e42092913daaccde30f7909f62d1a15015117c2fbf9d405",
+  "bundle": "_expo/static/js/web/index-b872a31afaf359bc1e905b9ee4c2df80.js",
+  "sha256": "b07333d909eaca8be7c5b99f434f471c9a936fc44e8cdb9fdc8cb5f2ddabb6b1",
+  "changedModules": [
+    1033,
+    1478,
+    1577
+  ],
+  "untouchedModules": 1637,
+  "retainedOldBundle": true,
+  "sourceHashes": {
+    "NotificationsScreen.tsx": "33d51c3c4f9546feba9a0301284f2273cf2fe72141568e1b8a452ac56280aaa8",
+    "notification-detail.tsx": "c2158da6af836593715060b941df4fe6eb1b9752d8bb2e399d3c57f0c5816e5b",
+    "notification-detail.css": "6698ce888aec0d39efe3bc9f442e819ac6fdd2267b4d72007a2034d0465bdd40",
+    "notification-data.js": "6f7e2dcbf1423ebd5b81dbd14c12ab737fd2c165aea6019aa57c6b1792b1d17f",
+    "linking-route.js": "b62904aa71f1e487a3e7cd1ebf7062897aba68705377d5fb6deaebf6d9335286",
+    "build.cjs": "a6d38a0844e896ae27268e16dc3def23ce07b0fcb6d7ea4c1ad9b5756fdbaa3e"
+  }
+}
