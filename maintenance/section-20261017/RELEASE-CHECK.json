@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-17T17:02:57.592Z",
+  "task": "UI-COLLECTION-20261017",
+  "baseCommit": "c8e25e6799f10bdd762f6bb1765f75db8cae06fe",
+  "baseBundle": "_expo/static/js/web/index-137ea609a783e6c924012753bc993cda.js",
+  "baseSha256": "51bef1daaa843d761b8ea5a2a3a6facb66309d15a18f63bb1478a63437bea9d6",
+  "candidateBundle": "maintenance/section-20261017/candidate.js",
+  "sha256": "5523ad4d3aa7670c17074d6e654678dbcbd79e5a9b83165cbd924fafe0198b5c",
+  "sourceSha256": "c7f462dc818d7fcf7df783338e85df793e9835611fe600902a25caf81b506c93",
+  "acceptedPreviewSha256": "9aa3010ae60909014cefb8917c349e68c09a54d632a800ce008b3e58698b9ced",
+  "acceptedJSXAndStylesUnchanged": true,
+  "previewAbsent": true,
+  "favoriteCallback": "existing useSaved.toggle",
+  "changedModules": [
+    1580
+  ],
+  "changedDependencyMaps": [
+    1580
+  ],
+  "addedSectionDependencies": [
+    36,
+    1022
+  ],
+  "untouchedModules": 1639,
+  "publication": "PENDING",
+  "commit": "NOT RUN",
+  "publishedBundle": "_expo/static/js/web/index-a5dce012da44fb7cfb8fcc03da5f7da7.js",
+  "entryFiles": [
+    "index.html",
+    "profile/index.html",
+    "404.html"
+  ],
+  "authorization": "Explicit user acceptance and request to publish18.10.2026 Asia/Novosibirsk",
+  "acceptedSourceMatches": true,
+  "rollbackCommit": "c8e25e6799f10bdd762f6bb1765f75db8cae06fe",
+  "syntax": "PASS",
+  "localProductionReady": "PASS:actual hashed runtime,5 events,unchanged prices,body width532==scrollWidth532",
+  "diffCheck": "PASS",
+  "excludedFromCommit": [
+    "concept.js",
+    "candidate.js",
+    "index.html viewer",
+    "preview.html",
+    "release-preview.html"
+  ],
+  "localEventDetailAndBack": "PASS"
+}

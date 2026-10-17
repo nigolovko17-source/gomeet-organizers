@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-10-17T17:00:51.728024+00:00",
+  "localCompletionDate": "2026-10-18",
+  "timezone": "Asia/Novosibirsk",
+  "task": "UI-COLLECTION-20261017",
+  "revision": "r1",
+  "baseCommit": "c8e25e6799f10bdd762f6bb1765f75db8cae06fe",
+  "runtimeSha256": "9aa3010ae60909014cefb8917c349e68c09a54d632a800ce008b3e58698b9ced",
+  "sourceSha256": "c7f462dc818d7fcf7df783338e85df793e9835611fe600902a25caf81b506c93",
+  "viewerSha256": "382168a3eb03ac83e819fc3946afd8a845b595bae21f94c78b9340abf535b5db",
+  "environment": "local concept, IAB, localhost:43200",
+  "checks": {
+    "babelAndBundleSyntax": "PASS",
+    "moduleBoundary": "PASS: only1580; its deps append React36/Icon1022;1639 other factories/deps unchanged",
+    "ready": "PASS:5 current events; unchanged prices and order",
+    "party": "PASS:9 current events",
+    "other": "PASS:1 current event; singular counter",
+    "empty": "PASS:0 events; message and Home action; empty icon corrected to existing feed icon",
+    "loading": "PASS:skeleton cards and loading label",
+    "errorRetry": "PASS:message,Retry and return to5 events",
+    "favorite": "PASS:changes label and local state; mutation callback bypassed in preview",
+    "eventNavigationAndBack": "PASS:actual existing EventDetail and normal Back to collection",
+    "responsive320": "PASS:iframe clientWidth320 == scrollWidth320; PNG inspected",
+    "viewer390": "PASS:device390/frame388; clientWidth388 == scrollWidth388; PNG inspected",
+    "defaultWindow": "PASS:1280x720; device390x576 fully visible;scrollY0",
+    "currentRuntimeApplicationErrors": "0 errors with final rev9aa3010ae609 in browser log",
+    "references": "PASS",
+    "existingTrackedDiffCheck": "PASS"
+  },
+  "verificationNotes": [
+    "Heart/event/Back/errorRetry checked before final sole runtime correction of unused empty icon calendar to existing feed. Empty/loading/three sections/widths/ready final revision inspected afterward.",
+    "Early unsupported empty glyph was caught and fixed during QA; prior error is not reported as final PASS.",
+    "Outer reviewer fitted to viewport after iframe focus previously moved large parent page; normal window verified after fix."
+  ],
+  "evidence": {
+    "PREVIEW.png": "f39fd3bbb6422af2f133ded86ef9049f46ba10f86f7f2b4db706c7d2ffb56a35",
+    "MOBILE-320.png": "ba771d46f02d6c91c92222f44b54d97686887d8a71b7e4b77483b85206486b7c"
+  },
+  "limitations": [
+    "Concept acceptance pending user review",
+    "Physical handset, native implementation, server/privacy/consent and payment acceptance NOT RUN",
+    "No real subscriptions, reports, messages or financial operations run"
+  ],
+  "commit": "NOT RUN",
+  "push": "NOT RUN",
+  "publication": "NOT RUN"
+}
