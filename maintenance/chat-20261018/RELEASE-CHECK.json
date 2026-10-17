@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-17T19:03:24.328516+00:00",
+  "task": "UI-DM-20261018",
+  "acceptedRevision": "r2",
+  "environment": "isolated production renderer and local empty-only browser check; no real conversation history",
+  "sourceSha256": "70a99a8037ca4a9bbff5a0e4a56669cffb1445b2c421117aa458c1a03f49e435",
+  "bundleSha256": "0cf046d3bf7b7c7dd4b1d7775026ce5b6f92b2913513faba6f86674b9d4ad34a",
+  "acceptedHeaderComposerStylesUnchanged": true,
+  "changedModules": [
+    1579
+  ],
+  "changedDependencyMaps": [
+    1579
+  ],
+  "untouchedFactoriesAndDeps": 1639,
+  "fixtureCodeAbsent": true,
+  "fixtureMessagesOrWrites": 0,
+  "rendererTests": {
+    "passed": 11,
+    "evidence": "RELEASE-TEST.json"
+  },
+  "browserEmptyOnly": {
+    "event390": "PASS390/scrollWidth390, empty phrase/no greeting, initialBODY/no autofocus, send disabled",
+    "dm320": "PASS320/scrollWidth320, empty personal template, initialBODY/no autofocus",
+    "focus": "PASS transparent none0px outline, boxShadow none",
+    "transport": "local check replaces1493 with empty-only/no-network stubs; actual production1579 factory unchanged; helper not published"
+  },
+  "realChatHistoryVerification": "NOT RUN per user instruction; no chats loaded to demonstrate populated layout",
+  "dataContracts": "1493/backend/RLS unchanged; existing hooks restore original data contracts without seeded data",
+  "notRun": [
+    "real history/send/report/follow/block/delete/payment",
+    "physical handset/native/screen-reader matrix",
+    "server privacy/RLS/consent acceptance"
+  ],
+  "publication": "PENDING"
+}

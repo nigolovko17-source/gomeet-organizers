@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-17T19:00:20.426Z",
+  "task": "UI-DM-20261018",
+  "acceptedRevision": "r2",
+  "baseCommit": "8ba4fb426e4edebc0eea4933aa5940bc6a61f1ca",
+  "baseBundle": "_expo/static/js/web/index-740a15432ce86e284f71b0be06950427.js",
+  "baseSha256": "61df28c13e2637705f016411a4d6863f8b58b0536c1d9b07044669c461312a03",
+  "sourceSha256": "70a99a8037ca4a9bbff5a0e4a56669cffb1445b2c421117aa458c1a03f49e435",
+  "sha256": "0cf046d3bf7b7c7dd4b1d7775026ce5b6f92b2913513faba6f86674b9d4ad34a",
+  "candidateBundle": "maintenance/chat-20261018/candidate.js",
+  "acceptedHeaderComposerStylesUnchanged": true,
+  "visualHash": "5dfcac4adc74269bce9669f61726cf0dbd3126afe9b964545554a608b3a99a74",
+  "changedModules": [
+    1579
+  ],
+  "changedDependencyMaps": [
+    1579
+  ],
+  "untouchedModules": 1639,
+  "addedExistingDependencies": [
+    430,
+    1022
+  ],
+  "fixtureCodeAbsent": true,
+  "fixtureMessagesOrWrites": 0,
+  "backend1493": "byte-exact; original read/send contracts",
+  "failureHandling": "local queue for actual hook errors, retry calls same hook, ref guard prevents parallel sends; route key isolates draft",
+  "states": "loader/disabled templates retained as inactive UI code because original hook has no state contract; no fabricated online/read flags",
+  "publication": "PENDING",
+  "commit": "NOT RUN"
+}

@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-17T19:01:09.185Z",
+  "task": "UI-DM-20261018",
+  "environment": "isolated React renderer with transport stubs; no network",
+  "passed": 11,
+  "checks": [
+    "empty personal/no invented history",
+    "whitespace disabled",
+    "parallel-send guard/pending locked",
+    "success clears/unlocks",
+    "separate failed payloads retained",
+    "retry removes only selected failure",
+    "rejected retry retained/unlocked",
+    "route change isolates draft/failure",
+    "renderer covers existing hook message types",
+    "original back callback",
+    "existing ReportSheet retained"
+  ],
+  "backendWrites": 0,
+  "historyFetches": 0,
+  "publication": "PENDING"
+}

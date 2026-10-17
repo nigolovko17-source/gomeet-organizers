@@ -1,0 +1,13 @@
+{
+  "task": "UI-DM-20261018",
+  "baseCommit": "8ba4fb426e4edebc0eea4933aa5940bc6a61f1ca",
+  "releaseBundle": "_expo/static/js/web/index-3f184a8d1d715491d9c16baa5b039059.js",
+  "sha256": "0cf046d3bf7b7c7dd4b1d7775026ce5b6f92b2913513faba6f86674b9d4ad34a",
+  "fixtureMessagesOrWrites": 0,
+  "activationFiles": [
+    "profile/index.html",
+    "404.html",
+    "index.html"
+  ],
+  "publication": "PENDING"
+}
