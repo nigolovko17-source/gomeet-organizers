@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-17T18:20:21.596Z",
+  "task": "UI-FEED-20261018",
+  "acceptedRevision": "r4",
+  "baseCommit": "1985dffdb1f0a8803659464086f3b7916d966b4e",
+  "baseBundle": "_expo/static/js/web/index-3f09737ae0b42f8beae091abc358a75c.js",
+  "baseSha256": "06f53256fcc8a5bf29386b8d5f53f73e18873da4f616752f03abef772576a9a4",
+  "sourceSha256": "f5ed7e967d110ecc9e97565de43d7bcf143303e2753f0a80ae3bdb88c59798b8",
+  "acceptedPreviewSha256": "ceddd074a92a21c8c9dd5f4afafbf1b5a4f8c0c0b87687b4a0ffb29bd3e1abda",
+  "candidateBundle": "maintenance/feed-20261018/candidate.js",
+  "sha256": "b6dd9878780dc95ae853c5194bdbcc056634f49659a0baac786e1d2adaaeae84",
+  "acceptedJSXAndStylesUnchanged": true,
+  "visualHash": "2e0a5b5382ba25e5748fee884b30adb8d52f9a2cf62d36fadc4887f09def6009",
+  "previewAbsent": true,
+  "changes": [
+    "preview",
+    "notice",
+    "scenario",
+    "loading",
+    "failed",
+    "events",
+    "refresh",
+    "attend preview branch",
+    "localSaved",
+    "saved",
+    "toggleSaved"
+  ],
+  "changedModules": [
+    1483
+  ],
+  "changedDependencyMaps": [],
+  "untouchedModules": 1639,
+  "favorite": "existing useSaved.toggle",
+  "attend": "existing Purchase route, no order created by navigation",
+  "refresh": "original feed.refresh",
+  "data": "original hooks, ordering, price, artwork and visibility",
+  "publication": "PENDING",
+  "commit": "NOT RUN",
+  "releaseBundle": "_expo/static/js/web/index-d6a27665769a523daff6a4cab6549879.js"
+}

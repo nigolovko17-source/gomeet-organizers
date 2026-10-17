@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-17T18:21:39.380725+00:00",
+  "task": "UI-FEED-20261018",
+  "environment": "local production candidate",
+  "sourceSha256": "f5ed7e967d110ecc9e97565de43d7bcf143303e2753f0a80ae3bdb88c59798b8",
+  "bundleSha256": "b6dd9878780dc95ae853c5194bdbcc056634f49659a0baac786e1d2adaaeae84",
+  "acceptedRevision": "r4",
+  "acceptedJSXAndStylesUnchanged": true,
+  "changedModules": [
+    1483
+  ],
+  "allDependencyMapsUnchanged": true,
+  "untouchedFactories": 1639,
+  "previewAbsent": true,
+  "ready": "PASS original14 events, no top labels/counter/live; old information block; new action row",
+  "about": "PASS original date/time/place inside; open/close",
+  "swipe": "PASS two native wheel pages -> third event, height771 scrollTop1542",
+  "purchaseEntry": "PASS existing /buy route and Tickets sheet open/close; no order/payment submitted",
+  "eventAndBack": "PASS event detail and Back returns third event, scrollTop1542",
+  "mobile": {
+    "width390": {
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    "width320": {
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "actionWidth": 222,
+      "actionHeight": 48
+    }
+  },
+  "favorite": "restored original useSaved.toggle; real toggle not performed",
+  "states": "accepted historical r1 loading/empty/error/retry, unchanged source hook branches; production backend failures not forced",
+  "syntax": "PASS Babel parse; node --check",
+  "notRun": [
+    "real save/follow/report/block/message/order/payment",
+    "physical handset/native",
+    "screen-reader/reduced-motion matrix",
+    "server privacy/RLS/consent/financial acceptance"
+  ],
+  "publication": "PENDING"
+}

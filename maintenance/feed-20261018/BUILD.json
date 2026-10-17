@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-17T18:18:10.894Z",
+  "task": "UI-FEED-20261018",
+  "revision": "r4",
+  "baseCommit": "1985dffdb1f0a8803659464086f3b7916d966b4e",
+  "baseBundle": "_expo/static/js/web/index-3f09737ae0b42f8beae091abc358a75c.js",
+  "baseSha256": "06f53256fcc8a5bf29386b8d5f53f73e18873da4f616752f03abef772576a9a4",
+  "localBundle": "maintenance/feed-20261018/concept.js",
+  "sha256": "ceddd074a92a21c8c9dd5f4afafbf1b5a4f8c0c0b87687b4a0ffb29bd3e1abda",
+  "sourceSha256": "f5ed7e967d110ecc9e97565de43d7bcf143303e2753f0a80ae3bdb88c59798b8",
+  "changedModules": [
+    1483
+  ],
+  "changedDependencyMaps": [],
+  "untouchedModules": 1639,
+  "sourceData": "original useFeed/useEvent/useGoing/useSaved read hooks; no fixture data",
+  "previewActions": "favorite local state only; purchase CTA notice only; event/organizer navigation unchanged",
+  "environment": "local only",
+  "commit": "NOT RUN",
+  "publication": "NOT RUN"
+}
