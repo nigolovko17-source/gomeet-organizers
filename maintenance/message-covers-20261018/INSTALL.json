@@ -1,0 +1,12 @@
+{
+  "task": "UI-MESSAGE-COVERS-20261018",
+  "baseCommit": "17490225dba9afc996f31208a670cadcc00c0e5b",
+  "releaseBundle": "_expo/static/js/web/index-17699c7e23bbd0cfea0c451b81beedb1.js",
+  "sha256": "695e9ef6c8b37029de14fae57e2158095c2151a6ad27a7aa1f5bf239e3a63c1a",
+  "activationFiles": [
+    "profile/index.html",
+    "404.html",
+    "index.html"
+  ],
+  "publication": "PENDING"
+}

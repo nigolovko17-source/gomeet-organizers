@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-17T19:12:30.763Z",
+  "task": "UI-MESSAGE-COVERS-20261018",
+  "passed": 7,
+  "checks": [
+    "1493 AST differs only by imageUri projection",
+    "past and future retain covers independent of end date",
+    "missing cover remains absent for existing fallback",
+    "existing fetchByIds and preview query counts unchanged",
+    "renderer uses chat poster and never useFeed",
+    "personal avatar unchanged",
+    "search and clear keep correct poster association"
+  ],
+  "environment": "isolated actual-source projection + React renderer; no network",
+  "backendMutations": 0,
+  "realConversationHistoryRequests": 0
+}

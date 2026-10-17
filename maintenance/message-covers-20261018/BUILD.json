@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-17T19:11:45.791Z",
+  "task": "UI-MESSAGE-COVERS-20261018",
+  "baseCommit": "17490225dba9afc996f31208a670cadcc00c0e5b",
+  "baseBundle": "_expo/static/js/web/index-3f184a8d1d715491d9c16baa5b039059.js",
+  "baseSha256": "0cf046d3bf7b7c7dd4b1d7775026ce5b6f92b2913513faba6f86674b9d4ad34a",
+  "candidateBundle": "maintenance/message-covers-20261018/candidate.js",
+  "sha256": "695e9ef6c8b37029de14fae57e2158095c2151a6ad27a7aa1f5bf239e3a63c1a",
+  "sourceHashes": {
+    "MessagesScreen.jsx": "29269f9279879d51e0106c3759d1bb398838165e672745e8231f3929a2cc8062",
+    "ChatHooks.js": "be83369c62c5ebbc2ad0dc7158cfc237eae5a1a83394f8168784cfa9d334f1d6"
+  },
+  "changedModules": [
+    1487,
+    1493
+  ],
+  "changedDependencyMaps": [],
+  "untouchedModules": 1638,
+  "stylesUnchanged": true,
+  "queryChanges": "no new requests; imageUri retained from existing fetchEventsByIds; useFeed removed from Messages",
+  "chatDetails1579Unchanged": true,
+  "publication": "PENDING"
+}

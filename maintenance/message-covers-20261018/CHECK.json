@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-17T19:13:50.566158+00:00",
+  "task": "UI-MESSAGE-COVERS-20261018",
+  "environment": "local production candidate",
+  "baseCommit": "17490225dba9afc996f31208a670cadcc00c0e5b",
+  "bundleSha256": "695e9ef6c8b37029de14fae57e2158095c2151a6ad27a7aa1f5bf239e3a63c1a",
+  "tests": {
+    "passed": 7,
+    "evidence": "TEST.json"
+  },
+  "sourceScope": "only1487/1493;1638 other factories/all deps unchanged;1493 AST only imageUri field;1579 unchanged",
+  "localBrowser": {
+    "before": "live1749022:2 image rows out of9",
+    "after": "candidate:9/9 event chat rows have loaded images",
+    "representativePastRow": "Осенний сбор GOMEET: before0 images, after1 loaded image",
+    "searchClear": "PASS Осенний -> correct loaded cover; clear restores9",
+    "width390": "PASS screenshot, unchanged geometry",
+    "width320": "PASS320/scrollWidth320,9 images58x58 loaded"
+  },
+  "newApiRequests": "none; existing fetchByIds/event preview flow retained, unrelated useFeed removed",
+  "chatHistoriesOpened": 0,
+  "backendMutations": 0,
+  "fixtureMessagesAdded": 0,
+  "legal": "GOV-001/002 RT-001 DEC; PD-04/05 RT-005 DOC scope preserved; PD-08/09/server/RLS/consent/native acceptance not claimed",
+  "publication": "PENDING"
+}
