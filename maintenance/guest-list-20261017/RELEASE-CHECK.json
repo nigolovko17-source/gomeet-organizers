@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-17T15:52:46.828Z",
+  "target": "https://gomeet-organizers.ru",
+  "tasks": [
+    "UI-EVENT-POSTER-20261017",
+    "UI-GUEST-LIST-20261017"
+  ],
+  "authorization": "Explicit user request: one combined commit and publish both accepted screens",
+  "baseCommit": "e96b88243852c8c969b5d7f039675be0c83164ed",
+  "bundle": "_expo/static/js/web/index-45de94030c2598305a570ed785268fa4.js",
+  "sha256": "cbbb4199e60cdc86cd63bf985fe204716c5b5de7c18a6da6a3af12c6aac24fd5",
+  "acceptedRuntimeUnchanged": true,
+  "changedModules": [
+    1033,
+    1539,
+    1603
+  ],
+  "untouchedModules": 1637,
+  "dependencyMapsUnchanged": true,
+  "syntheticFixtureAbsent": true,
+  "goingMessageEntryAbsent": true,
+  "sourceHashesMatch": true,
+  "syntax": "PASS",
+  "diffCheck": "PASS",
+  "localRealData": {
+    "total": 94,
+    "visibleProfiles": 0,
+    "directGoingReload": "PASS",
+    "noSyntheticProfiles": true
+  },
+  "priorChecks": [
+    "maintenance/event-poster-20261017/LOCAL-CHECK.json",
+    "maintenance/guest-list-20261017/LOCAL-CHECK.json"
+  ],
+  "excludedFromCommit": [
+    "local synthetic preview sources",
+    "viewer index.html",
+    "preview-only.js",
+    "preview-app.html",
+    "superseded guest-list bundles"
+  ],
+  "publication": "PENDING",
+  "limitations": [
+    "No physical handset/native acceptance",
+    "Actual photos not runtime-tested with current zero-visible-profile account",
+    "Existing privacy/RLS/consent and financial controls not requalified"
+  ]
+}

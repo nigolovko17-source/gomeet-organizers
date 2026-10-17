@@ -1,0 +1,24 @@
+{
+  "publishedBaseCommit": "e96b88243852c8c969b5d7f039675be0c83164ed",
+  "baseLocalBundle": "_expo/static/js/web/index-2781ead8cadad3db0811270a50d5317e.js",
+  "baseLocalSha256": "273f0dc0ba26e7b5a9b8878ae50877f7ada062a643969e8d569b5d38ad6182e6",
+  "bundle": "_expo/static/js/web/index-45de94030c2598305a570ed785268fa4.js",
+  "sha256": "cbbb4199e60cdc86cd63bf985fe204716c5b5de7c18a6da6a3af12c6aac24fd5",
+  "changedModules": [
+    1033,
+    1539,
+    1603
+  ],
+  "untouchedModules": 1637,
+  "unchangedDependencyMaps": true,
+  "localOnly": true,
+  "fixtureAbsentFromCandidate": true,
+  "sourceHashes": {
+    "avatar-stack.tsx": "2ffba595c697c40034d80a139df8c2dc52080b2550cfa5a9c9c124083d507961",
+    "poster-guests.tsx": "a3dbb0763bf5ef0e0d973f3e797b64f97367360da1088fb39b7d29e4e7dd2584",
+    "GoingView.tsx": "be5c095cdb8877085e8cb0f80c416d4581c77258e7b0e4990f3bd59feb32819a",
+    "GoingScreen.tsx": "5d122530817d26223d478379824d27bb5bc92cf0b77409ab7581f3d3501512f8",
+    "build.cjs": "13cb5db0231c8eed91b35b4f0b89af8ebf4c222122216bc12d0eec0aec86a499"
+  },
+  "preview": null
+}

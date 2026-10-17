@@ -1,0 +1,69 @@
+{
+  "task": "UI-GUEST-LIST-20261017",
+  "revision": "r5",
+  "date": "2026-10-17",
+  "build": {
+    "publishedBaseCommit": "e96b88243852c8c969b5d7f039675be0c83164ed",
+    "baseLocalBundle": "_expo/static/js/web/index-2781ead8cadad3db0811270a50d5317e.js",
+    "baseLocalSha256": "273f0dc0ba26e7b5a9b8878ae50877f7ada062a643969e8d569b5d38ad6182e6",
+    "bundle": "_expo/static/js/web/index-45de94030c2598305a570ed785268fa4.js",
+    "sha256": "cbbb4199e60cdc86cd63bf985fe204716c5b5de7c18a6da6a3af12c6aac24fd5",
+    "changedModules": [
+      1033,
+      1539,
+      1603
+    ],
+    "untouchedModules": 1637,
+    "unchangedDependencyMaps": true,
+    "localOnly": true,
+    "fixtureAbsentFromCandidate": true,
+    "sourceHashes": {
+      "avatar-stack.tsx": "2ffba595c697c40034d80a139df8c2dc52080b2550cfa5a9c9c124083d507961",
+      "poster-guests.tsx": "a3dbb0763bf5ef0e0d973f3e797b64f97367360da1088fb39b7d29e4e7dd2584",
+      "GoingView.tsx": "be5c095cdb8877085e8cb0f80c416d4581c77258e7b0e4990f3bd59feb32819a",
+      "GoingScreen.tsx": "5d122530817d26223d478379824d27bb5bc92cf0b77409ab7581f3d3501512f8",
+      "build.cjs": "e590bc90780a1e83fc7512c7d6f25a62545c9280e689c8b95bf6d1ce37236f31"
+    },
+    "preview": {
+      "file": "maintenance/guest-list-20261017/preview-only.js",
+      "sha256": "e4844186b7ec79ba0d6a93d2ed33aeea7334f5a05c8e2be68f74c3c8e599e3aa",
+      "syntheticOnly": true,
+      "sourceHashes": {
+        "preview-data.ts": "7ea622e3591d750af89b4ccf1d84231db16b6c3ba1bafb15e6d86b00c2e1c9fd",
+        "PreviewGoingScreen.tsx": "7bc97881d93b551527cb7f42506f6dfa9a194765034499dfe7770271c74aa1af"
+      }
+    }
+  },
+  "checks": {
+    "listPlaceholderCircles": {
+      "summary": 4,
+      "rows": 4,
+      "summarySize": 40,
+      "rowSize": 48,
+      "fill": "rgb(9, 9, 9)",
+      "text": ""
+    },
+    "posterPlaceholderCircles": {
+      "count": 4,
+      "size": 40,
+      "step": 28,
+      "overlap": 12,
+      "text": ""
+    },
+    "demoListImages": 0,
+    "writeButtons": 0,
+    "namesAndUsernames": "PASS",
+    "total": 94,
+    "remainder": 90,
+    "posterToGoing": "PASS",
+    "visual": "390x1000 PNG inspected",
+    "syntaxAndDiff": "PASS",
+    "realAvatarSupport": "Original Avatar path retained, placeholderAvatars defaults false; actual photo runtime not exercised"
+  },
+  "priorChecks": "../r1/CHECK.json and ../r4/CHECK.json; unchanged states not repeated",
+  "scope": "Plain placeholder circles only in synthetic preview; no message entry, query, visibility, backend, consent, or native changes",
+  "commit": "NOT RUN",
+  "publication": "NOT RUN",
+  "head": "e96b88243852c8c969b5d7f039675be0c83164ed",
+  "screenshotSha256": "7e9bbe7210e767e05db426ec6a0b1a264dd22b4a458b3b93a8d44d2f2eda0f00"
+}

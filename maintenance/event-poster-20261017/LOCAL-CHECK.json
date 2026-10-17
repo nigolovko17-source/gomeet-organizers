@@ -1,0 +1,140 @@
+{
+  "task": "UI-EVENT-POSTER-20261017",
+  "date": "2026-10-17",
+  "environment": "local organizers web candidate",
+  "preview": "http://127.0.0.1:43200/event/38cca4f8-59db-ad99-e7b3-21862fcd87c8",
+  "build": {
+    "baseCommit": "e96b88243852c8c969b5d7f039675be0c83164ed",
+    "baseBundle": "_expo/static/js/web/index-f1aaf73ec226919a3ea33ef39cdd10e4.js",
+    "baseSha256": "62a5cf98d386bbe2c4395654bdee79fe900d35ef85c6a96e23e3c71e0b0fb828",
+    "bundle": "_expo/static/js/web/index-2781ead8cadad3db0811270a50d5317e.js",
+    "sha256": "273f0dc0ba26e7b5a9b8878ae50877f7ada062a643969e8d569b5d38ad6182e6",
+    "changedModules": [
+      1539
+    ],
+    "untouchedModules": 1639,
+    "unchangedDependencyMaps": true,
+    "localOnly": true,
+    "retainedOldBundle": true,
+    "sourceHashes": {
+      "event-detail.js": "f78c3e08ad9292ec9ea064013d016fe733d4673d6082edbbb5e99defc701cee8",
+      "poster-like.tsx": "00c0deccb0ca48a34745135529fee9f9c33972bc930005aeb6a8476e512d0c9e",
+      "build.cjs": "aa61dd0f02282e65f007b908513cb73e4a1b0d54e97347220c5d3e657f82c085"
+    }
+  },
+  "checks": {
+    "geometrySource": {
+      "result": "PASS",
+      "unchangedSections": [
+        "hero",
+        "heroStyle",
+        "heroBarStyle",
+        "heroTitleStyle",
+        "titleStyle",
+        "dateRowStyle"
+      ]
+    },
+    "geometryBrowser": {
+      "result": "PASS",
+      "viewport": [
+        390,
+        844
+      ],
+      "baseHeading": {
+        "x": 24,
+        "y": 631,
+        "width": 342,
+        "height": 76
+      },
+      "candidateHeading": {
+        "x": 24,
+        "y": 631,
+        "width": 342,
+        "height": 76
+      },
+      "backButtonUnchanged": {
+        "x": 24,
+        "y": 16,
+        "width": 52,
+        "height": 52
+      },
+      "footerReservedRowHeight": 52
+    },
+    "guestCard": {
+      "result": "PASS",
+      "order": "divider, people, organizer/place, divider, description",
+      "height": 72,
+      "width390": 342,
+      "width360": 312,
+      "background": "rgb(25,25,25)",
+      "border": "1px solid rgb(66,66,66)",
+      "existingCountObserved": [
+        68,
+        94
+      ],
+      "destination": "Going?eventId=c7c44c74-6cf1-3197-84a2-97b4a4201cce",
+      "browserBack": "PASS"
+    },
+    "buttons": {
+      "result": "PASS",
+      "ownedTicketHeight": 44,
+      "paidGoHeight": 44,
+      "likeSize": [
+        44,
+        44
+      ],
+      "paidDetailVisible": "1800 RUB",
+      "likeKeyboardFocus": true,
+      "likeFocusOutline": "rgb(244,240,232) auto 2px",
+      "ticketPurchaseCallbacksAndLoadingDisabled": "Preserved source, no monetary action performed"
+    },
+    "categories": {
+      "result": "PASS",
+      "eventCategoryTagAbsent": true,
+      "ageLabelsRetained": [
+        "0+",
+        "18+"
+      ]
+    },
+    "responsive": {
+      "result": "PASS",
+      "viewportAndDocumentWidth": [
+        [
+          360,
+          360
+        ],
+        [
+          390,
+          390
+        ]
+      ],
+      "directRouteReload": "PASS"
+    },
+    "build": "JS syntax/diff checks PASS; only1539 changed, other1639 factories and dependency maps unchanged",
+    "visual": "Final paid-details PNG captured through CDP and inspected; ordinary screenshot capture had incomplete layers and a scaled frame, so those captures are not acceptance evidence"
+  },
+  "limits": [
+    "No physical handset, screen-reader/200% acceptance or native release tested.",
+    "Guest list screen itself unchanged; only route opening/back checked. Existing privacy/query/RLS/consent matrix not requalified.",
+    "Zero participants, loading/sold-out/archive/owner states preserved in source, not independently browser-exercised by this UI change.",
+    "No new unit tests for reversible UI-only change; meaningful source-boundary, geometry and browser checks used."
+  ],
+  "publication": {
+    "status": "NOT RUN",
+    "gitPush": false,
+    "remoteMainObserved": "e96b88243852c8c969b5d7f039675be0c83164ed"
+  },
+  "baseline": {
+    "GOV-001…003/RT-001": "DEC; version/environment/evidence separation",
+    "PD-06/07/RT-005": "DOC; existing social-proof and list visibility retained, no compliance assertion",
+    "LAW-RU-016/017": "Conditional LAW applicability; price/age/organizer/place retained, no financial/legal acceptance"
+  },
+  "screenshot": {
+    "file": "PREVIEW-PAID-DETAILS.png",
+    "sha256": "e4cdf335f47698b1b667324405083ab7efc9e5aaf7809dbb7f414ec1f47f8291",
+    "size": [
+      390,
+      844
+    ]
+  }
+}
