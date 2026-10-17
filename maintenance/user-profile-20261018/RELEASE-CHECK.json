@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-18",
+  "task": "UI-USER-PROFILE-20261018",
+  "environment": "local production candidate, existing authenticated public profile",
+  "bundleSha256": "06f53256fcc8a5bf29386b8d5f53f73e18873da4f616752f03abef772576a9a4",
+  "acceptedR2SourceUnchanged": true,
+  "profileMenuShareJSXAndStylesUnchanged": true,
+  "changedFactories": [
+    1584
+  ],
+  "otherFactoriesAndDepsUnchanged": 1639,
+  "previewAbsent": true,
+  "readyProfile": "PASS actual public data, no synthetic fixture",
+  "mobile320": "PASS clientWidth=scrollWidth=320; buttons/menu/QR visible",
+  "message": "PASS original Chat dm route, empty composer, send disabled; Back to profile; no message sent",
+  "share": "PASS menu entry only, QR/open/close; copy success text shown; clipboard bridge readback retained previous organizer value, not qualified locally",
+  "report": "PASS existing ReportSheet1541 opens/closes, no reason submitted",
+  "block": "PASS explicit confirmation opens/cancels; existing blockUser1325; no block submitted",
+  "errors": "none from candidate runtime in CUA logs",
+  "previousStateChecks": "accepted local r1/r2 historical CHECK; unchanged auth/loading/error/unavailable branches not forced on production backend",
+  "notRun": [
+    "real follow/unfollow",
+    "real report/block",
+    "message send",
+    "native/physical handset",
+    "server privacy/RLS/consent acceptance"
+  ],
+  "publication": "PENDING"
+}

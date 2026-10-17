@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-17T17:27:15.864Z",
+  "task": "UI-USER-PROFILE-20261018",
+  "revision": "r2",
+  "baseCommit": "3c7ab34ddaf74178a19545e493aca055ace9c38e",
+  "baseBundle": "_expo/static/js/web/index-a5dce012da44fb7cfb8fcc03da5f7da7.js",
+  "baseSha256": "5523ad4d3aa7670c17074d6e654678dbcbd79e5a9b83165cbd924fafe0198b5c",
+  "localBundle": "maintenance/user-profile-20261018/concept.js",
+  "sha256": "a4c7fd82c250c59dd547e30011d9e94ce831e8490d81d4d770937682281b9c77",
+  "sourceSha256": "0ca762eac5fa42184d86b15cfcb599d1cb1a7de848feac7d79fb37ab3e2e132f",
+  "changedModules": [
+    1584
+  ],
+  "changedDependencyMaps": [
+    1584
+  ],
+  "addedDependencies": [
+    1422,
+    1495
+  ],
+  "untouchedModules": 1639,
+  "profileData": "original usePublicProfile RPC; no fixture injection",
+  "follow": "local React state in preview",
+  "messages": "restored button and original Chat route; preview notice only, no sends",
+  "share": "entry moved to ellipsis menu only",
+  "copy": "notice only in preview",
+  "menuSafety": "mock entry and explanation; no report/block writes",
+  "achievements": "original returned badge data and artwork/rules; layout only",
+  "environment": "local only",
+  "commit": "NOT RUN",
+  "publication": "NOT RUN"
+}

@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-17T17:29:43.574386+00:00",
+  "clientDate": "2026-10-18",
+  "task": "UI-USER-PROFILE-20261018",
+  "decision": "D-046",
+  "revision": "r2",
+  "baseCommit": "3c7ab34ddaf74178a19545e493aca055ace9c38e",
+  "sourceSha256": "0ca762eac5fa42184d86b15cfcb599d1cb1a7de848feac7d79fb37ab3e2e132f",
+  "runtimeSha256": "a4c7fd82c250c59dd547e30011d9e94ce831e8490d81d4d770937682281b9c77",
+  "environment": "local concept only",
+  "checks": {
+    "requestedActions": "PASS:Подписаться/Написать/ellipsis;no standalone Share",
+    "message": "PASS:button shows preview notice;original Chat params restored in callback;no send",
+    "shareMenu": "PASS:one neutral Share entry,then existing safety entries",
+    "menuToShare": "PASS:switches to same QR/copy sheet,close returns to profile",
+    "followNarrow": "PASS:Вы подписаны and Написать each48px high on320",
+    "width320": "PASS:clientWidth320==scrollWidth320;PNG inspected",
+    "viewer390": "PASS:frame388==scrollWidth388;PNG inspected",
+    "scope": "PASS:only1584/deps;1639 other factories/deps unchanged",
+    "syntaxHashDiff": "PASS",
+    "finalRuntimeErrors": "0 logs for reva4c7fd82c250"
+  },
+  "evidence": {
+    "PREVIEW.png": "e0707198e2e1aaa896979abfbb98ca358f804432144d3dc57f8014302beba13c",
+    "MENU.png": "fd422dde1cacb8cd603192b7db8a0691b57e0b2fe1217e50a383b33e2a3b49a7",
+    "SHARE.png": "472cf4d34a549d55f4949cdd798efdbe9547746ecfd9f2f918f8d4265bcd3db7",
+    "MOBILE-320.png": "aa99a0753ce1ecc01debe74bd52cd6b941eaece7bd05f2174678a22c6f2ef931"
+  },
+  "inspection": "PREVIEW/MENU/MOBILE-320 visually inspected;Share entry and sheet checked in AX",
+  "inheritedChecks": "r1 loading/error/retry/unavailable/anon/data/awards/safety remain unchanged;not repeated",
+  "limitations": [
+    "No real chat send or server DM/consent/privacy acceptance",
+    "Message navigation is demonstration notice in preview",
+    "Production/native/publication not performed"
+  ],
+  "commit": "NOT RUN",
+  "push": "NOT RUN",
+  "publication": "NOT RUN"
+}
