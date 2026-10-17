@@ -1,0 +1,12 @@
+{
+  "task": "UI-MESSAGES-20261018",
+  "baseCommit": "f62a2410f5eba5a60e5054234f013de650ab7791",
+  "releaseBundle": "_expo/static/js/web/index-740a15432ce86e284f71b0be06950427.js",
+  "sha256": "61df28c13e2637705f016411a4d6863f8b58b0536c1d9b07044669c461312a03",
+  "activationFiles": [
+    "profile/index.html",
+    "404.html",
+    "index.html"
+  ],
+  "publication": "PENDING"
+}

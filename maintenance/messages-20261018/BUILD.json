@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-17T18:37:32.995Z",
+  "task": "UI-MESSAGES-20261018",
+  "revision": "r2",
+  "baseCommit": "f62a2410f5eba5a60e5054234f013de650ab7791",
+  "baseBundle": "_expo/static/js/web/index-d6a27665769a523daff6a4cab6549879.js",
+  "baseSha256": "b6dd9878780dc95ae853c5194bdbcc056634f49659a0baac786e1d2adaaeae84",
+  "localBundle": "maintenance/messages-20261018/concept.js",
+  "sha256": "279f498f8c7e0672bd135266a52ad453acc296656ba0ed1b33b04a6c9e4f8deb",
+  "sourceSha256": "f7f2d94ebaef8ef2a79133b391b6f0697090c87059d86a5394b091a601359a26",
+  "changedModules": [
+    1487
+  ],
+  "changedDependencyMaps": [
+    1487
+  ],
+  "addedExistingDependencies": [
+    1320,
+    1370,
+    1400
+  ],
+  "untouchedModules": 1639,
+  "sourceData": "original useDmChats/useEventChats/searchPeople; existing useFeed for event poster lookup",
+  "examples": "four fictional rows only in preview examples mode; no fake online/unread/delivery flags",
+  "previewActions": "Chat navigation and follow actions intercepted to notice; actual Chat factory untouched",
+  "environment": "local only",
+  "commit": "NOT RUN",
+  "publication": "NOT RUN"
+}

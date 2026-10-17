@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-17T18:41:20.874706+00:00",
+  "task": "UI-MESSAGES-20261018",
+  "acceptedRevision": "r2",
+  "environment": "local production candidate",
+  "sourceSha256": "f7f2d94ebaef8ef2a79133b391b6f0697090c87059d86a5394b091a601359a26",
+  "bundleSha256": "61df28c13e2637705f016411a4d6863f8b58b0536c1d9b07044669c461312a03",
+  "acceptedNormalJSXAndStylesUnchanged": true,
+  "changedModules": [
+    1487
+  ],
+  "changedDependencyMaps": [
+    1487
+  ],
+  "untouchedFactoriesAndDependencyMaps": 1639,
+  "previewAbsent": true,
+  "ready": "PASS9 original event chats;0 tabs;8 subtle dividers; original heading/search",
+  "manualSearch": "PASS Новый -> Новый круг знакомств; clear restores complete list",
+  "focus": "PASS initial BODY/no autofocus; manual focus outline rgba(0,0,0,0) none 0px; box-shadow none",
+  "chatEntryBack": "PASS existing event Chat route with original name/sub; disabled send with blank composer; Back returns Messages. No composition or send.",
+  "widths": {
+    "390": {
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    "320": {
+      "clientWidth": 320,
+      "scrollWidth": 320
+    }
+  },
+  "screenshots": [
+    "RELEASE-LOCAL-390.png",
+    "RELEASE-LOCAL-320.png"
+  ],
+  "syntax": "PASS Babel parse/node --check",
+  "restoredCallbacks": "original Chat payload, dmWith auto-open and people follow/unfollow handler; actual follow/DM send not tested",
+  "states": "original hooks/loading/AuthGate; forced preview error removed; inherited source does not expose list errors or DM avatar_url in row; unchanged",
+  "notRun": [
+    "real follow/message/delete/order/payment",
+    "physical handset/native/screen-reader matrix",
+    "server privacy/RLS/consent/legal acceptance"
+  ],
+  "publication": "PENDING"
+}

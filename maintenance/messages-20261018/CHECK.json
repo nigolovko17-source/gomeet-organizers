@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-17T18:38:46.659633+00:00",
+  "task": "UI-MESSAGES-20261018",
+  "revision": "r2",
+  "environment": "local only",
+  "baseCommit": "f62a2410f5eba5a60e5054234f013de650ab7791",
+  "localBundleSha256": "279f498f8c7e0672bd135266a52ad453acc296656ba0ed1b33b04a6c9e4f8deb",
+  "commit": "NOT RUN",
+  "push": "NOT RUN",
+  "publication": "NOT RUN",
+  "changes": "Keep title/search; remove all/personal/events tabs; add subtle row dividers; input outline none/transparent",
+  "checks": {
+    "syntax": "PASS node --check concept.js",
+    "moduleScope": "PASS only1487 factory/deps,1639 other factories/deps byte-exact",
+    "header": "PASS unchanged heading/search geometry/type; filters absent",
+    "searchFocus": "PASS manual input focus computed outline rgba(0,0,0,0) none 0px, box-shadow none; neutral container focus border",
+    "unifiedList": "PASS9 real rows,0 tabs,8 dividers at1px height, left71px; last row without divider",
+    "widths": "PASS320/390: body width matches scrollWidth",
+    "searchClear": "PASS4 examples, Марк filters to chat, clear/reset restores complete list",
+    "screenshots": [
+      "LOCAL.png",
+      "FOCUS.png",
+      "LOCAL-320.png"
+    ]
+  },
+  "inheritedEvidence": "../r1/CHECK.json: loading/error/retry/empty/preview interception/auth boundary; unchanged, not repeated",
+  "limitations": "r1 source error/avatar/search projection and auth refresh/backend/privacy/native limitations remain; styling does not close server/consent acceptance",
+  "legal": "GOV-001/002 RT-001 DEC; same PD-04/05/08/09/10 RT-005 DOC applicability as r1"
+}
