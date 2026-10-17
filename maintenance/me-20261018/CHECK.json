@@ -1,0 +1,25 @@
+{
+  "task": "UI-ME-20261018",
+  "revision": "r5",
+  "date": "2026-10-18",
+  "change": "Use GOMEET typography in achievements card and structural collection",
+  "source": "Existing DesignTypography from950/Text1016/Button1017; sectionTitle/label/caption variants, custom synthetic fontWeight600 removed",
+  "gui": "PASS: main card/section MursGothic_WideDark; actions Onest_600SemiBold; subtitle/filters Onest_500Medium; see FONTS.json",
+  "width320": {
+    "clientWidth": 320,
+    "scrollWidth": 320,
+    "headerButtonsRightEdges": [
+      56,
+      308
+    ]
+  },
+  "screenshots": [
+    "LOCAL-390.png",
+    "COLLECTION-320.png"
+  ],
+  "syntax": "PASS node --check concept.js",
+  "scope": "PASS only1529/1639 others/all deps/shared exports unchanged",
+  "dataRules": "Unchanged; achievements art/system stays D-038",
+  "commit": "NOT RUN",
+  "publication": "NOT RUN"
+}

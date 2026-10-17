@@ -1,0 +1,20 @@
+{
+  "task": "UI-ME-20261018",
+  "revision": "r5",
+  "date": "2026-10-17T19:59:53.932Z",
+  "baseCommit": "5dea922163d9d006103f5404a0209d1f4fa15b1a",
+  "baseFile": "_expo/static/js/web/index-17699c7e23bbd0cfea0c451b81beedb1.js",
+  "baseSha256": "695e9ef6c8b37029de14fae57e2158095c2151a6ad27a7aa1f5bf239e3a63c1a",
+  "sha256": "fef3cb095f5f7c2e35bfc08d7a45b7204bf275b0c39aa27bc70773431a50307f",
+  "changedModules": [
+    1529
+  ],
+  "changedDependencyMaps": [],
+  "untouchedModules": 1639,
+  "sharedExports": "ProfileTabs / ProfileEvent AST identical",
+  "data": "original hooks and projections unchanged",
+  "achievements": "existing featured badge selection and renderer restored; collection is a structural placeholder; no new rules/artwork/progress defined",
+  "mutations": "edit/settings/pin/wallet are local notices or local React state",
+  "commit": "NOT RUN",
+  "publication": "NOT RUN"
+}
