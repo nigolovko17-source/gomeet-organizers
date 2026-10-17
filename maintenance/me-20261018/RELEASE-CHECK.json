@@ -1,0 +1,52 @@
+{
+  "task": "UI-ME-20261018",
+  "candidateSha256": "9276cb53d6eabb3896952325bc66c40c1213862f1a44038a921fe9a74b6848ce",
+  "source": "only1529/1601;1638 others/all deps unchanged;guest layout styles,old W hooks/org return/shared exports identical;editor only route ref/effect",
+  "isolatedMeTests": 10,
+  "isolatedEditorTests": 25,
+  "browser": {
+    "task": "UI-ME-20261018",
+    "candidateSha256": "9276cb53d6eabb3896952325bc66c40c1213862f1a44038a921fe9a74b6848ce",
+    "normal390": {
+      "scripts": [
+        "/maintenance/me-20261018/candidate.js?rev=9276cb53d6ea"
+      ],
+      "scrollWidth": 390,
+      "width": 390
+    },
+    "narrow320": {
+      "scrollWidth": 320,
+      "width": 320
+    },
+    "statFonts": {
+      "label": {
+        "font": "Onest_500Medium",
+        "size": "10px"
+      },
+      "number": {
+        "font": "MursGothic_WideDark",
+        "size": "24px"
+      }
+    },
+    "cardFonts": {
+      "caption": "Onest_500Medium",
+      "heading": "MursGothic_WideDark"
+    },
+    "checks": {
+      "ownReadLoaded": true,
+      "selectedAwardsVisible": true,
+      "settingsAndBack": true,
+      "pinnedEntryOpenedOldPicker": true,
+      "pickerClosedWithoutSave": true,
+      "collectionAndBack": true,
+      "walletAndBack": true,
+      "eventTabsSwitch": true
+    },
+    "realProfileWrites": 0,
+    "realRewardApplications": 0
+  },
+  "realProfileWrites": 0,
+  "serverPrivacyConsentNative": "NOT RUN",
+  "status": "PREFLIGHT PASS",
+  "publication": "PENDING"
+}

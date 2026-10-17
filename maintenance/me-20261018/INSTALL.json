@@ -1,0 +1,13 @@
+{
+  "task": "UI-ME-20261018",
+  "baseRuntimeCommit": "f712e1b4c5f42803073aa4e628b375d4f8b7df34",
+  "sourceCommit": "05aaf2d562d25acb6ace4d1bbb5b666beed98971",
+  "releaseBundle": "_expo/static/js/web/index-e5e438bf70d0618da669820a69de664c.js",
+  "sha256": "9276cb53d6eabb3896952325bc66c40c1213862f1a44038a921fe9a74b6848ce",
+  "activationFiles": [
+    "404.html",
+    "profile/index.html",
+    "index.html"
+  ],
+  "publication": "PENDING"
+}

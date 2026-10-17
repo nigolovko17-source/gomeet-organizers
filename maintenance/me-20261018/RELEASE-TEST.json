@@ -1,0 +1,18 @@
+{
+  "task": "UI-ME-20261018",
+  "date": "2026-10-17T21:30:45.737Z",
+  "passed": 10,
+  "checks": [
+    "simplified header and original featured awards retained",
+    "avatar opens published editor",
+    "gear calls real parent settings callback",
+    "featured awards and achievement card open existing guest collection",
+    "On profile opens existing guarded editor picker entry",
+    "promo entry opens existing wallet",
+    "statistics and tabs retain actual event selection callback",
+    "event cards preserve actual event ID navigation",
+    "event read failure shows real retry without fake cards",
+    "empty favorites retain appropriate empty state"
+  ],
+  "environment": "isolated React renderer with navigation/read stubs; no network or writes"
+}
