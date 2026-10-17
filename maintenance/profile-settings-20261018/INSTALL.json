@@ -1,0 +1,13 @@
+{
+  "task": "UI-PROFILE-SETTINGS-20261018",
+  "baseCommit": "ecda6a958d424df62f6852c1ac727dea939b23f9",
+  "releaseBundle": "_expo/static/js/web/index-74aa975c6472a6cdadd6b710c9d79366.js",
+  "sha256": "a1b6fdaeea0efd69aa01be6cf157ae362ec2319e9ea087c888eb7b690d4edb66",
+  "activationFiles": [
+    "profile/index.html",
+    "404.html",
+    "index.html"
+  ],
+  "rootIndex": "existing profile redirect with refreshed demo_version only",
+  "publication": "PENDING"
+}

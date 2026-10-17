@@ -1,0 +1,27 @@
+{
+  "task": "UI-PROFILE-SETTINGS-20261018",
+  "revision": "production-r2",
+  "date": "2026-10-17T21:14:41.308Z",
+  "baseCommit": "ecda6a958d424df62f6852c1ac727dea939b23f9",
+  "baseBundle": "_expo/static/js/web/index-71c79e111e8cdf7cc6527659a6b67242.js",
+  "baseSha256": "e1c4f6af2c5a9a5b72e0f5c190e8059e326a60692bc8298abcd07a4ce749fb37",
+  "sha256": "a1b6fdaeea0efd69aa01be6cf157ae362ec2319e9ea087c888eb7b690d4edb66",
+  "sourceSha256": "8fe951896d0b4a911b5d7bb436d00d79b58e361f7c1fb8eba4f3c197093f11bd",
+  "acceptedSourceSha256": "d5251a07cab5141e780c23b56156bf6f9575fb9f727e1a95a2612f9d81107b26",
+  "changedModules": [
+    1494
+  ],
+  "changedDependencyMaps": [
+    1494
+  ],
+  "untouchedModules": 1639,
+  "stylesAndSettingsRowAstIdentical": true,
+  "originalProfileReadQrCopyAccountLogicAstPreserved": true,
+  "settingsPresentation": "existing Modal now renders accepted full screen; existing close entry retained; no new route",
+  "mode": "ready-bound original setMode only for canOrganize; false navigates Verification",
+  "becomeOrganizer": "entry to existing registered Verification1624 only; no role grant or submission",
+  "editor1601AndReadGuard1602Unchanged": true,
+  "previewAbsent": true,
+  "commit": "NOT RUN",
+  "publication": "PENDING"
+}

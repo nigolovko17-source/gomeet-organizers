@@ -1,0 +1,75 @@
+{
+  "task": "UI-PROFILE-SETTINGS-20261018",
+  "baseCommit": "ecda6a958d424df62f6852c1ac727dea939b23f9",
+  "candidateSha256": "a1b6fdaeea0efd69aa01be6cf157ae362ec2319e9ea087c888eb7b690d4edb66",
+  "sourceScope": "PASS only1494/deps1494;1639 others unchanged; accepted styles/SettingsRow identical; original read/QR/copy/account logic preserved",
+  "previewAbsent": true,
+  "isolatedTestsPassed": 16,
+  "browser": "RELEASE-GUI.json in design/profile-settings-concept-20261018/r2",
+  "browserChecks": {
+    "currentProfileRead": true,
+    "openSettings": true,
+    "switchOrgThenBackGuest": true,
+    "qrOpenClose": true,
+    "editorThenBack": true,
+    "readyModeRestoredGuest": true
+  },
+  "normal390": {
+    "buttons": [
+      {
+        "height": 44,
+        "label": "Назад в профиль"
+      },
+      {
+        "height": 80,
+        "label": "Режим организатора"
+      },
+      {
+        "height": 58,
+        "label": "Редактировать профиль"
+      },
+      {
+        "height": 58,
+        "label": "Ссылка на профиль"
+      },
+      {
+        "height": 58,
+        "label": "QR-код"
+      },
+      {
+        "height": 58,
+        "label": "Мои билеты"
+      },
+      {
+        "height": 58,
+        "label": "Заблокированные"
+      },
+      {
+        "height": 58,
+        "label": "Поддержка"
+      },
+      {
+        "height": 58,
+        "label": "О приложении"
+      }
+    ],
+    "height": 844,
+    "modal": "true",
+    "scrollWidth": 390,
+    "width": 390
+  },
+  "narrow320": {
+    "scrollWidth": 320,
+    "width": 320
+  },
+  "fonts": {
+    "heading": "MursGothic_WideDark",
+    "label": "Onest_600SemiBold"
+  },
+  "realAccountWrites": 0,
+  "realSubmissions": 0,
+  "realClipboardWrites": 0,
+  "serverRlsConsentNative": "NOT RUN",
+  "status": "PREFLIGHT PASS",
+  "publication": "PENDING"
+}

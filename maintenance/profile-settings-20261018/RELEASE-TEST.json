@@ -1,0 +1,27 @@
+{
+  "task": "UI-PROFILE-SETTINGS-20261018",
+  "date": "2026-10-17T21:13:27.286Z",
+  "environment": "isolated React renderer with existing hooks/navigation/mode/clipboard stubs; no network",
+  "passed": 16,
+  "checks": [
+    "unconnected user opens existing Verification only; no mode grant; panel closes",
+    "connected guest switches to org using existing setter",
+    "connected organizer can return to guest",
+    "unknown organizer readiness disables entry",
+    "profile loading disables profile-dependent actions",
+    "actual hook failure offers real reload and blocks dependent actions",
+    "recovered read re-enables actions",
+    "five ordinary entries close panel and use original routes",
+    "existing application/moderator/payout conditions and routes preserved",
+    "restricted service rows remain absent without existing permissions",
+    "original clipboard handler copies existing guest link and closes on success",
+    "organizer sharing uses existing organizer link",
+    "clipboard failure retains panel with original retryable error",
+    "original QR renders mode-specific link and closes cleanly",
+    "Back closes settings to existing profile",
+    "hidden account actions are never exposed or invoked"
+  ],
+  "realAccountWrites": 0,
+  "realSubmissions": 0,
+  "realClipboardWrites": 0
+}
