@@ -1,0 +1,33 @@
+{
+  "task": "UI-EDIT-PROFILE-20261018",
+  "date": "2026-10-17T20:44:55.485Z",
+  "environment": "isolated React renderer, read/save/photo transport stubs; no network",
+  "passed": 23,
+  "checks": [
+    "successful RPC read hydrates fields before Save enabled",
+    "invalid name/nickname never submit",
+    "rapid duplicate submit guarded and pending fields locked",
+    "original save payload preserves avatar/pins/interests and user/mode",
+    "success uses original toast and back",
+    "server field error shown inline and cleared on change",
+    "save failure retains fields and unlocks retry",
+    "cancelled photo picker does not upload",
+    "failed upload prevents profile mutation",
+    "successful upload URL used in original profile payload",
+    "existing badge picker/limit-three/automatic-null preserved",
+    "hidden badge empty-array remains distinct from automatic",
+    "RPC error produces failed state, not successful empty profile",
+    "explicit reload recovers successful read",
+    "rejected read promise becomes retryable failure",
+    "production read-error UI blocks Save",
+    "UI Retry hydrates recovered fields",
+    "account switch discards previous upload completion and save",
+    "stale read cannot overwrite a newer account",
+    "mode switch reads matching profile and preserves org payload",
+    "missing service fails closed",
+    "direct URL Back falls back to own Profile",
+    "anonymous view cannot submit"
+  ],
+  "realProfileWrites": 0,
+  "realUploads": 0
+}

@@ -1,0 +1,9 @@
+{
+  "acceptedRevision": "r1",
+  "sourceSha256": "5aae801fd0731551cc2298f9a5b87039554e62a7b6490a8d47cfe7562ba69e6f",
+  "stylesSha256": "6d852a4ad27c50b89f79f339265acce4db8b237d2461a9bcd83403f4147ba874",
+  "helpers": {
+    "Field": "4bcaf64ab0d3c8bc801971ff35684de7ccf7d78f89bcf1d9f7d5d8a04b414e81",
+    "FormInput": "41a36319d03474a13877ee6ea9b9744a72ad297e5591ec0a1686d9c663470888"
+  }
+}

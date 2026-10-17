@@ -1,0 +1,30 @@
+{
+  "task": "UI-EDIT-PROFILE-20261018",
+  "revision": "production-r1",
+  "date": "2026-10-17T20:44:55.053Z",
+  "baseCommit": "5dea922163d9d006103f5404a0209d1f4fa15b1a",
+  "baseBundle": "_expo/static/js/web/index-17699c7e23bbd0cfea0c451b81beedb1.js",
+  "baseSha256": "695e9ef6c8b37029de14fae57e2158095c2151a6ad27a7aa1f5bf239e3a63c1a",
+  "sha256": "e1c4f6af2c5a9a5b72e0f5c190e8059e326a60692bc8298abcd07a4ce749fb37",
+  "sourceSha256": "be9dab8945bc83826920008005ebb625d63d7d4ac061d8559e1e05ca3e03533b",
+  "acceptedPreviewSha256": "5aae801fd0731551cc2298f9a5b87039554e62a7b6490a8d47cfe7562ba69e6f",
+  "changedModules": [
+    1033,
+    1601,
+    1602
+  ],
+  "changedDependencyMaps": [
+    1601
+  ],
+  "untouchedModules": 1637,
+  "acceptedStylesAndFieldHelpersIdentical": true,
+  "previewAbsent": true,
+  "linking": "only EditProfile path added",
+  "profileRead": "explicit failure/reload/ready, account/mode identity-bound, stale completion discarded",
+  "existingSaveFunctionAstUnchanged": true,
+  "awards": "original picker choices/limits through compact entry, no new rules or artwork",
+  "otherPages": "Me1529 and all other pages unchanged",
+  "realProfileMutationsDuringQA": 0,
+  "commit": "NOT RUN",
+  "publication": "PENDING"
+}

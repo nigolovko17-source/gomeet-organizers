@@ -1,0 +1,71 @@
+{
+  "task": "UI-EDIT-PROFILE-20261018",
+  "baseCommit": "5dea922163d9d006103f5404a0209d1f4fa15b1a",
+  "candidateSha256": "e1c4f6af2c5a9a5b72e0f5c190e8059e326a60692bc8298abcd07a4ce749fb37",
+  "sourceScope": "PASS 1033/1601/1602 only;1637 others/all other deps unchanged; existing saveMyProfile AST unchanged",
+  "acceptedStylesAndHelpers": "PASS",
+  "previewAbsent": "PASS",
+  "isolatedTestsPassed": 23,
+  "browser": {
+    "normal390": {
+      "width": 390,
+      "scrollWidth": 390,
+      "script": "candidate.js?rev=1f00085bcff9",
+      "profileFieldsLoaded": true,
+      "saveEnabled": true
+    },
+    "narrow320": {
+      "save": [
+        {
+          "bottom": 884,
+          "left": 32,
+          "right": 288
+        }
+      ],
+      "scrollWidth": 320,
+      "width": 320
+    },
+    "actualReadRpc": [
+      {
+        "url": "https://sqddkmoxqetvbywodyml.supabase.co/rest/v1/rpc/my_profile_for_mode",
+        "status": 200
+      },
+      {
+        "url": "https://sqddkmoxqetvbywodyml.supabase.co/rest/v1/rpc/my_profile_for_mode",
+        "status": 200
+      },
+      {
+        "url": "https://sqddkmoxqetvbywodyml.supabase.co/rest/v1/rpc/my_profile_for_mode",
+        "status": 200
+      },
+      {
+        "url": "https://sqddkmoxqetvbywodyml.supabase.co/rest/v1/rpc/my_profile_for_mode",
+        "status": 200
+      },
+      {
+        "url": "https://sqddkmoxqetvbywodyml.supabase.co/rest/v1/rpc/my_profile_for_mode",
+        "status": 200
+      },
+      {
+        "url": "https://sqddkmoxqetvbywodyml.supabase.co/rest/v1/rpc/my_profile_for_mode",
+        "status": 200
+      },
+      {
+        "url": "https://sqddkmoxqetvbywodyml.supabase.co/rest/v1/rpc/my_profile_for_mode",
+        "status": 200
+      },
+      {
+        "url": "https://sqddkmoxqetvbywodyml.supabase.co/rest/v1/rpc/my_profile_for_mode",
+        "status": 200
+      }
+    ],
+    "picker": "original five badges and automatic/hidden choices opened and closed; no selection saved",
+    "realWrites": 0,
+    "realUploads": 0
+  },
+  "manualSaveUpload": "NOT RUN; zero real profile mutations/uploads",
+  "serverRlsConsentNative": "NOT RUN",
+  "status": "PREFLIGHT PASS",
+  "publication": "PENDING",
+  "directUrlBack": "PASS installed final bundle: direct URL and profile/avatar entry both return to own Profile"
+}

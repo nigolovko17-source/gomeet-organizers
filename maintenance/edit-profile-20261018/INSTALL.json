@@ -1,0 +1,12 @@
+{
+  "task": "UI-EDIT-PROFILE-20261018",
+  "baseCommit": "5dea922163d9d006103f5404a0209d1f4fa15b1a",
+  "releaseBundle": "_expo/static/js/web/index-71c79e111e8cdf7cc6527659a6b67242.js",
+  "sha256": "e1c4f6af2c5a9a5b72e0f5c190e8059e326a60692bc8298abcd07a4ce749fb37",
+  "activationFiles": [
+    "profile/index.html",
+    "404.html",
+    "index.html"
+  ],
+  "publication": "PENDING"
+}
