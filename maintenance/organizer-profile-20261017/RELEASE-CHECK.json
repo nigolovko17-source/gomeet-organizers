@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-17T16:34:54.864Z",
+  "task": "UI-ORGANIZER-PROFILE-20261017",
+  "target": "https://gomeet-organizers.ru",
+  "authorization": "Explicit user request to publish accepted organizer profile r4",
+  "baseCommit": "d6d2f06861c306a28abb226b61e33f1e12f03239",
+  "publishedBundle": "_expo/static/js/web/index-137ea609a783e6c924012753bc993cda.js",
+  "sha256": "51bef1daaa843d761b8ea5a2a3a6facb66309d15a18f63bb1478a63437bea9d6",
+  "acceptedCandidateUnchanged": true,
+  "sourceHashesMatch": true,
+  "changedModules": [
+    1623
+  ],
+  "untouchedModules": 1639,
+  "unchangedDependencyMaps": true,
+  "previewAbsent": true,
+  "syntax": "PASS",
+  "diffCheck": "PASS",
+  "priorLocalCheck": "maintenance/organizer-profile-20261017/LOCAL-CHECK.json",
+  "excluded": [
+    "candidate.js local output",
+    "concept.js preview",
+    "preview.html",
+    "viewer index.html",
+    "discarded r1 components/references"
+  ],
+  "publication": "PENDING",
+  "rollbackCommit": "d6d2f06861c306a28abb226b61e33f1e12f03239"
+}

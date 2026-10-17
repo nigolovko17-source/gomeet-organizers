@@ -1,0 +1,68 @@
+{
+  "task": "UI-ORGANIZER-PROFILE-20261017",
+  "revision": "r4",
+  "date": "2026-10-17T16:32:32.980771+00:00",
+  "build": {
+    "date": "2026-10-17T16:30:43.982Z",
+    "revision": "r4",
+    "baseCommit": "d6d2f06861c306a28abb226b61e33f1e12f03239",
+    "baseBundle": "_expo/static/js/web/index-45de94030c2598305a570ed785268fa4.js",
+    "baseSha256": "cbbb4199e60cdc86cd63bf985fe204716c5b5de7c18a6da6a3af12c6aac24fd5",
+    "candidateBundle": "maintenance/organizer-profile-20261017/candidate.js",
+    "sha256": "51bef1daaa843d761b8ea5a2a3a6facb66309d15a18f63bb1478a63437bea9d6",
+    "changedModules": [
+      1623
+    ],
+    "untouchedModules": 1639,
+    "unchangedDependencyMaps": true,
+    "sourceHashes": {
+      "OrganizerProfileScreen.js": "b327716bc8ddca776d0214b3b0b24cf055c0499008e6b7b27d4df585b9dc3f43",
+      "build.cjs": "72fdbf67fb480c2dcd43c981a9523c3f05731d1928574263f1b80e6745e6f922",
+      "published-organizer.js": "b8e90a7e4162becbd54456a0b09a8aaeb5c24cf74d4a0c9dcf0de13b5ccca0f1"
+    },
+    "preview": {
+      "file": "maintenance/organizer-profile-20261017/concept.js",
+      "sha256": "6b151521f1ef1721ad6a91224ac566af606e1291c69fcfc71904d49ff7b79692",
+      "followSimulated": true,
+      "reportAndCopyIntercepted": true
+    },
+    "scope": "Original published layout retained; message button and Chat callback removed; follow is compact; share and menu remain 52px; sharing only in Share sheet; duplicate menu rows and QR helper caption removed",
+    "entryFilesUnchanged": true,
+    "environment": "local only",
+    "commit": "NOT RUN",
+    "publication": "NOT RUN"
+  },
+  "checks": {
+    "duplicateMenuCopyButtons": 0,
+    "duplicateMenuQrButtons": 0,
+    "menuRemaining": [
+      "notifications switch",
+      "report"
+    ],
+    "shareCaption": 0,
+    "shareCopyButton": 1,
+    "qrAndOrganizerNameRetained": true,
+    "menuCloseAndShareOpen": "PASS",
+    "syntaxAndModuleBoundaries": "PASS",
+    "gitDiffCheck": "PASS",
+    "visual": "Menu and Share 390x1000 PNG inspected"
+  },
+  "priorChecks": "../r3/CHECK.json; unchanged states/layout not repeated",
+  "scope": "Remove duplicate menu rows and helper caption only. Share and original profile retained. Data hooks, ACL, backend, global messaging unchanged. Preview remains non-mutating for profile actions.",
+  "limits": [
+    "Native clipboard, QR camera scan, server/privacy/consent/native qualification not repeated"
+  ],
+  "screenshots": [
+    {
+      "file": "MENU.png",
+      "sha256": "2a0ec799a25e02cfd5d2b8ca53ba60e879518e646a20eb9c6323b2f909c85b34"
+    },
+    {
+      "file": "SHARE.png",
+      "sha256": "c3772259f0d6786ee465c85eea7d144f0fa579c54b0362b4fb23e5bf0c7c5df1"
+    }
+  ],
+  "commit": "NOT RUN",
+  "publication": "NOT RUN",
+  "head": "d6d2f06861c306a28abb226b61e33f1e12f03239"
+}
