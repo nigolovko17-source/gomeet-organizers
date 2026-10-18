@@ -1,0 +1,27 @@
+{
+  "task": "UI-SETTINGS-RETURN-20261018",
+  "date": "2026-10-18T13:19:42.874Z",
+  "environment": "isolated React renderer with actual helper and navigation events stubs",
+  "passed": 16,
+  "checks": [
+    "fresh profile does not auto-open settings or QR",
+    "explicit settings open/close work",
+    "all9 existing settings routes hide menu on entry and restore it on same-owner focus",
+    "return consumed once; later focus does not reopen dismissed settings",
+    "nested child navigation retains return until profile actually regains focus",
+    "QR close callback restores settings",
+    "extra QR close without origin cannot reopen settings",
+    "owner change cancels route return",
+    "mode change cancels stale route return",
+    "identity change closes QR and cannot restore previous-owner settings",
+    "explicit tab departure cancels pending route return",
+    "navigation blur while QR is open cancels QR origin",
+    "intentional mode transition cancel does not trap profile in settings",
+    "fresh settings entry/close discard older return",
+    "direct editor/other source without marked entry returns to profile normally",
+    "navigation listener removed on unmount"
+  ],
+  "realProfileModeConsentClipboardWrites": 0,
+  "conditionalRoutes": "same9 route names tested through shared handler; actual role conditions unchanged in factory AST",
+  "serverNative": "NOT RUN"
+}

@@ -1,0 +1,67 @@
+{
+  "task": "UI-SETTINGS-RETURN-20261018",
+  "date": "2026-10-18T13:20:45.002Z",
+  "candidateSha256": "6eeb37ae70a06480579818d3cf535958c27117f9978e3d332ee0c308fef3204e",
+  "passed": true,
+  "checks": [
+    {
+      "case": "About → Back",
+      "passed": true
+    },
+    {
+      "case": "Редактировать профиль → Back",
+      "passed": true
+    },
+    {
+      "case": "Заблокированные → Back",
+      "passed": true
+    },
+    {
+      "case": "Мои билеты → Back",
+      "passed": true
+    },
+    {
+      "case": "Поддержка → Back",
+      "passed": true
+    },
+    {
+      "case": "About → browser Back",
+      "passed": true
+    },
+    {
+      "case": "QR → click → Settings",
+      "passed": true
+    },
+    {
+      "case": "QR → Escape → Settings",
+      "passed": true
+    },
+    {
+      "case": "QR → backdrop → Settings",
+      "passed": true
+    },
+    {
+      "case": "Copy profile link keeps Settings; previous clipboard restored",
+      "passed": true
+    },
+    {
+      "case": "Avatar→editor→Back remains Profile",
+      "passed": true
+    }
+  ],
+  "metrics390": {
+    "scrollWidth": 390,
+    "width": 390
+  },
+  "metrics320": {
+    "scrollWidth": 320,
+    "width": 320
+  },
+  "fonts": {
+    "title": "MursGothic_WideDark",
+    "body": "Onest_600SemiBold"
+  },
+  "realProfileModeConsentWrites": 0,
+  "clipboard": "Copy link retained Settings; previous full clipboard restored",
+  "serverNative": "NOT RUN"
+}

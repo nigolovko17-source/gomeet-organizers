@@ -1,0 +1,32 @@
+{
+  "task": "UI-SETTINGS-RETURN-20261018",
+  "date": "2026-10-18T13:18:26.643Z",
+  "baseCommit": "5622c657b01149843b275335171b125ab95b80df",
+  "baseFile": "_expo/static/js/web/index-6a0704eead9f05e980b1686099570828.js",
+  "baseSha256": "b0eae1a29c3ea315d044020ec865c533a0b09ae300a9f9774fe6dd05e5f7009c",
+  "sha256": "6eeb37ae70a06480579818d3cf535958c27117f9978e3d332ee0c308fef3204e",
+  "releaseBundle": "_expo/static/js/web/index-3d82274800e84d3d137035c4a04da486.js",
+  "sourceSha256": "d29416c79c4ee575dd85c15e6a71222f58a40a7d37bc7ff9b37396f739836d53",
+  "productionSourceSha256": "9fb7098bfd2468681d415099ba57301397edc8e305cab18c322d9e746b71aa84",
+  "changedModules": [
+    1494
+  ],
+  "changedDependencyMaps": [],
+  "untouchedModules": 1639,
+  "all1640DependencyMapsByteIdentical": true,
+  "anchors": {
+    "copyStays": 1,
+    "profileOpen": 1,
+    "settingsSystemClose": 1,
+    "settingsClose": 1,
+    "routeEntry": 1,
+    "qrEntry": 1,
+    "modeEntry": 1,
+    "qrSystemClose": 1,
+    "qrSheetClose": 1
+  },
+  "otherSettingsAstRestoredIdentical": true,
+  "stylesFontsQrClipboardChildRoutesBackendUnchanged": true,
+  "commit": "NOT RUN",
+  "publication": "PENDING"
+}

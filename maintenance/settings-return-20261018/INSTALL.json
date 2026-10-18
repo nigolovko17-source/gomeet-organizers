@@ -1,0 +1,13 @@
+{
+  "task": "UI-SETTINGS-RETURN-20261018",
+  "baseCommit": "5622c657b01149843b275335171b125ab95b80df",
+  "releaseBundle": "_expo/static/js/web/index-3d82274800e84d3d137035c4a04da486.js",
+  "sha256": "6eeb37ae70a06480579818d3cf535958c27117f9978e3d332ee0c308fef3204e",
+  "entries": [
+    "404.html",
+    "profile/index.html",
+    "index.html"
+  ],
+  "rollback": "5622c65 and original bundle retained",
+  "publication": "PENDING"
+}
