@@ -1,0 +1,26 @@
+{
+  "task": "UI-ABOUT-20261018",
+  "revision": "production-r2",
+  "date": "2026-10-18T12:52:09.216Z",
+  "baseCommit": "94d8d1ebfbe958f4135d3ee6d0ab7b3a7e303ee0",
+  "baseFile": "_expo/static/js/web/index-5755bc66fd8428032cf085d8956ff35b.js",
+  "baseSha256": "4c140b2d69c1144035179eb241ea3aff1d42024c867b9d70a6415fe13a5ab9ef",
+  "sha256": "a2c6d236f02284f5e6270641fb78afb972eda40c6935f4c5850a19b53ba6b9af",
+  "releaseBundle": "_expo/static/js/web/index-9bba1c50f77cbb89f35785b36da885ff.js",
+  "sourceSha256": "51f2959931d7657a50219b6a41f7120c5b4f3c45a83a51c9b69780f9667de71b",
+  "acceptedSourceSha256": "e3b793e9d7c2e056468d74985671d5db4b32f1b531d2122fc1f0429a615625e9",
+  "stylesSha256": "4c8fdd77a68dc08ccc8c9049b2b9cfa39cd5272115c1b59c7f9c63d8a8c6472d",
+  "changedModules": [
+    1588
+  ],
+  "changedDependencyMaps": [
+    1588
+  ],
+  "untouchedModules": 1639,
+  "acceptedStylesAstIdentical": true,
+  "linkingLegalUrlsVersionsDiagnosticsHookTransportByteIdentical": true,
+  "previewAbsentFromActiveUi": true,
+  "mutations": "Existing diagnostics hook set called on explicit user action only; no schema/SDK/backend change",
+  "commit": "NOT RUN",
+  "publication": "PENDING"
+}

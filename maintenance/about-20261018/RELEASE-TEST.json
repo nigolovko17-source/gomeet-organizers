@@ -1,0 +1,24 @@
+{
+  "task": "UI-ABOUT-20261018",
+  "date": "2026-10-18T12:50:50.095Z",
+  "environment": "isolated React renderer with existing-hook interface stubs; no network",
+  "passed": 14,
+  "checks": [
+    "accepted order title/documents/diagnostics; no GOMEET card or mount write",
+    "Back calls existing useGoBack",
+    "both document rows open unchanged LEGAL_URL through original Linking",
+    "explicit enable requests true; UI does not assume save success",
+    "saving status/busy/disabled prevents extra user action; documents available",
+    "confirmed hook state drives checked; explicit disable requests false",
+    "Space and Enter explicitly route toggle with preventDefault/stopPropagation",
+    "other keyboard keys do not save",
+    "actual enable error preserved; explicit retry requests true without optimistic success",
+    "pending withdrawal preserves exact hook error/fail-safe status and retries false",
+    "pending withdrawal without error still has warning and explicit off retry",
+    "loading blocks switch and retry including direct callback guard",
+    "anonymous switch unavailable and never saves; documents remain accessible",
+    "reopening existing enabled setting does not rewrite consent"
+  ],
+  "realConsentDiagnosticsWrites": 0,
+  "serverHistoryDeliveryWithdrawalNative": "NOT RUN"
+}

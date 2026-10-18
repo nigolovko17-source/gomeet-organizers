@@ -1,0 +1,88 @@
+{
+  "task": "UI-ABOUT-20261018",
+  "date": "2026-10-18T12:51:32.035Z",
+  "candidateSha256": "a2c6d236f02284f5e6270641fb78afb972eda40c6935f4c5850a19b53ba6b9af",
+  "metrics390": {
+    "brand": false,
+    "checked": "false",
+    "fonts": [
+      {
+        "font": "Arial",
+        "height": 48,
+        "label": "Назад",
+        "text": "",
+        "width": 48
+      },
+      {
+        "font": "MursGothic_WideDark",
+        "height": 33,
+        "label": null,
+        "text": "О приложении",
+        "width": 350
+      },
+      {
+        "font": "Arial",
+        "height": 68,
+        "label": "Правила сервиса",
+        "text": "Правила сервиса",
+        "width": 348
+      },
+      {
+        "font": "Arial",
+        "height": 68,
+        "label": "Что мы собираем",
+        "text": "Что мы собираем",
+        "width": 348
+      },
+      {
+        "font": "Times",
+        "height": 44,
+        "label": "отправка отчётов об ошибках",
+        "text": "",
+        "width": 52
+      }
+    ],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  "metrics320": {
+    "bodyFonts": [],
+    "controls": [
+      {
+        "height": 48,
+        "label": "Назад",
+        "width": 48
+      },
+      {
+        "height": 68,
+        "label": "Правила сервиса",
+        "width": 278
+      },
+      {
+        "height": 68,
+        "label": "Что мы собираем",
+        "width": 278
+      },
+      {
+        "height": 44,
+        "label": "отправка отчётов об ошибках",
+        "width": 52
+      }
+    ],
+    "scrollWidth": 320,
+    "titleFont": "MursGothic_WideDark",
+    "width": 320
+  },
+  "bodyFont": "Onest_600SemiBold",
+  "checks": [
+    "title/documents/diagnostics order with no GOMEET card",
+    "390/320 screenshots visually inspected; no horizontal overflow",
+    "all hit targets at least44px",
+    "MursGothic_WideDark title and Onest_600SemiBold body",
+    "actual hook off read without changing setting",
+    "direct fallback Back→Home",
+    "Home→Я→settings→About and internal Back→profile"
+  ],
+  "realConsentDiagnosticsWrites": 0,
+  "serverNative": "NOT RUN"
+}

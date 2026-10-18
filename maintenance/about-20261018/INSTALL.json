@@ -1,0 +1,13 @@
+{
+  "task": "UI-ABOUT-20261018",
+  "baseCommit": "94d8d1ebfbe958f4135d3ee6d0ab7b3a7e303ee0",
+  "releaseBundle": "_expo/static/js/web/index-9bba1c50f77cbb89f35785b36da885ff.js",
+  "sha256": "a2c6d236f02284f5e6270641fb78afb972eda40c6935f4c5850a19b53ba6b9af",
+  "activationFiles": [
+    "404.html",
+    "profile/index.html",
+    "index.html"
+  ],
+  "rollback": "94d8d1e and original hashed bundle retained",
+  "publication": "PENDING"
+}

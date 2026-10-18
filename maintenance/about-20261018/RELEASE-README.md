@@ -1,0 +1,9 @@
+# «О приложении» — выпуск r2
+
+18.10.2026 · UI-ABOUT-20261018. Прямое поручение пользователя: удалить плашку GOMEET и опубликовать принятый вариант. Порядок: заголовок → документы → диагностика. Стили/шрифты Murs Gothic/Onest сохранены. [Спецификация](RELEASE-SPEC.md).
+
+`AboutScreen.production.jsx` — конечный исходник; `OriginalAbout.js` — прежняя фабрика1588. `build-release.cjs` проверяет точную базу94d8d1e, AST стилей принятого локального r2 и byte scope:1588/deps,1639 остальных factories/прочие deps неизменны. LEGAL_URL/LEGAL_VERSION/linking/diagnostics hook/SDK/transport не менялись. Production использует прежние hook/auth/navigation, actual error и pending-off/retry(false); callback set возвращает void, UI не принимает вызов за успешное сохранение. При anonymous/loading/saving действия отключены; документы доступны.
+
+Preview/timer/postMessage/forced states в активном экране отсутствуют. Макет/панель и тестовые сценарии не входят в выпуск. `candidate.js` создаётся локально; для воспроизведения builder использует `ACCEPTED-STYLE.json` с SHA принятого source/styles, без локального preview. `install-release.cjs` ставит новый hashed bundle и три HTML entry. Старый bundle/commit сохранены. Публикация подтверждается отдельным PUBLICATION в design evidence; INSTALL PENDING — состояние до push.
+
+Проверка:14 isolated React checks (hook interface stubs, без сети) — no mount save, current state, enable/disable/Space/Enter, exact error/retry, pending-off, loading/saving/anonymous guards, доступность документов, Back. RELEASE-TEST.json. RELEASE-GUI.json и PNG в design/about-concept-20261018/r2:320/390 без overflow, исходные шрифты, controls≥44, direct/internal/back. Обе существующие юридические ссылки HTTP200; это проверка доступности, не утверждение текста. Реальные consent/diagnostics writes0. Consent history/server withdrawal/delivery/RLS/privacy/native/handset NOT RUN; общие юридические задачи этим UI не закрываются.
