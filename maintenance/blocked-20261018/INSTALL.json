@@ -1,0 +1,13 @@
+{
+  "task": "UI-BLOCKED-20261018",
+  "baseCommit": "6be8b820948a2ce864a90b9023087605eb2718f6",
+  "releaseBundle": "_expo/static/js/web/index-5755bc66fd8428032cf085d8956ff35b.js",
+  "sha256": "4c140b2d69c1144035179eb241ea3aff1d42024c867b9d70a6415fe13a5ab9ef",
+  "activationFiles": [
+    "404.html",
+    "profile/index.html",
+    "index.html"
+  ],
+  "rollback": "6be8b82 and original hashed bundle retained",
+  "publication": "PENDING"
+}

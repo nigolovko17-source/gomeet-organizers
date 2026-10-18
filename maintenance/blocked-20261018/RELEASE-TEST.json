@@ -1,0 +1,31 @@
+{
+  "task": "UI-BLOCKED-20261018",
+  "date": "2026-10-18T12:23:11.260Z",
+  "environment": "isolated React renderer and transport stubs; no network",
+  "passed": 21,
+  "checks": [
+    "pending read shows loading, no empty state or rows",
+    "real read projection renders list with no removed info panel",
+    "original Avatar receives returned name/photo and numeric40 size",
+    "Back calls existing goBack",
+    "busy ref prevents duplicate writes; row remains until acknowledgement",
+    "false result retains row, reports error and enables retry",
+    "rejected write retains row and error",
+    "true removes only requested row; last confirmed removal renders empty",
+    "failed read is not empty; explicit Retry recovers to confirmed empty",
+    "invalid read result cannot produce empty success",
+    "missing userId issues no read and exposes no mutation action",
+    "late previous-owner read cannot replace new-owner rows",
+    "previous-owner pending mutation completion cannot alter new-owner state",
+    "blur cancels read acceptance; refocus fetches current list",
+    "unmounted pending write completion is safely ignored",
+    "strict unavailable service rejects; original listBlocked default remains empty",
+    "strict read rejects returned errors, null/malformed blocks and invalid IDs",
+    "confirmed empty blocks needs one existing select only",
+    "strict profile errors/null/missing projection never masquerade as empty",
+    "strict read uses exactly original tables/columns/ID filter and image projection",
+    "original DELETE filter/capture/boolean/invalidation contract unchanged"
+  ],
+  "realBlockUnblockWrites": 0,
+  "serverRlsConsent": "NOT RUN"
+}

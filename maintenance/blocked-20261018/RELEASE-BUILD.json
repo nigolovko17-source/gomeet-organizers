@@ -1,0 +1,28 @@
+{
+  "task": "UI-BLOCKED-20261018",
+  "revision": "production-r2",
+  "date": "2026-10-18T12:23:10.801Z",
+  "baseCommit": "6be8b820948a2ce864a90b9023087605eb2718f6",
+  "baseFile": "_expo/static/js/web/index-e5e438bf70d0618da669820a69de664c.js",
+  "baseSha256": "9276cb53d6eabb3896952325bc66c40c1213862f1a44038a921fe9a74b6848ce",
+  "sha256": "4c140b2d69c1144035179eb241ea3aff1d42024c867b9d70a6415fe13a5ab9ef",
+  "releaseBundle": "_expo/static/js/web/index-5755bc66fd8428032cf085d8956ff35b.js",
+  "sourceSha256": "1e86b00fd802bd2d1b1c441c811f2d644fd45618c153ab7a93d48bd5eeeca08d",
+  "strictSourceSha256": "1944bfdbd864aeeb225ab36563aa695484fd26cc2c8414d4b63782f9d5fb7749",
+  "changedModules": [
+    1033,
+    1325,
+    1587
+  ],
+  "changedDependencyMaps": [
+    1587
+  ],
+  "untouchedModules": 1637,
+  "acceptedStylesAstIdentical": true,
+  "existingDataExportsAstIdentical": true,
+  "queries": "same blocks/profiles selects and columns; additive strict read export only",
+  "realUnblock": "unchanged original function/filter/invalidation",
+  "previewAbsentFromActiveUi": true,
+  "commit": "NOT RUN",
+  "publication": "PENDING"
+}

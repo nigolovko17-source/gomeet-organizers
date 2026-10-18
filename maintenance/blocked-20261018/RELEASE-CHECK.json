@@ -1,0 +1,22 @@
+{
+  "task": "UI-BLOCKED-20261018",
+  "baseCommit": "6be8b820948a2ce864a90b9023087605eb2718f6",
+  "sha256": "4c140b2d69c1144035179eb241ea3aff1d42024c867b9d70a6415fe13a5ab9ef",
+  "acceptedStylesAstIdentical": true,
+  "existingDataExportsAstIdentical": true,
+  "changedModules": [
+    1033,
+    1325,
+    1587
+  ],
+  "changedDependencyMaps": [
+    1587
+  ],
+  "untouchedModules": 1637,
+  "unitPassed": 21,
+  "gui": "PASS RELEASE-GUI.json actual owner empty, blocks200, initial/internal/Back,320/390/fonts",
+  "realBlockUnblockWrites": 0,
+  "fixturesPublished": false,
+  "serverRlsPrivacyConsentNative": "NOT RUN",
+  "publication": "PENDING"
+}
