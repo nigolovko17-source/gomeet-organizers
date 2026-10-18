@@ -1,0 +1,65 @@
+{
+  "task": "UI-PROFILE-QR-20261018",
+  "date": "2026-10-18T13:10:56.312Z",
+  "candidateSha256": "b0eae1a29c3ea315d044020ec865c533a0b09ae300a9f9774fe6dd05e5f7009c",
+  "metrics390": {
+    "buttons": [
+      {
+        "height": 52,
+        "label": "закрыть",
+        "width": 52
+      },
+      {
+        "height": 52,
+        "label": "Скопировать ссылку на профиль",
+        "width": 340
+      }
+    ],
+    "captionAbsent": true,
+    "qr": [
+      {
+        "height": 272,
+        "padding": "24px",
+        "svgWidth": 224,
+        "width": 272
+      }
+    ],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  "metrics320": {
+    "captionAbsent": true,
+    "qr": [
+      {
+        "height": 256,
+        "padding": "24px",
+        "svgWidth": 208,
+        "width": 256
+      }
+    ],
+    "scrollWidth": 320,
+    "width": 320
+  },
+  "fonts": {
+    "title": "MursGothic_WideDark",
+    "body": "Onest_600SemiBold"
+  },
+  "clipboard": {
+    "passed": true,
+    "originalOriginPreserved": true,
+    "profilePath": true,
+    "queryAbsent": true,
+    "previousClipboardRestored": true
+  },
+  "checks": [
+    "QR absent on initial production profile",
+    "profile→settings→QR opens new body",
+    "caption absent in final390/320",
+    "square224/208px QR with24px white frame",
+    "no horizontal overflow;52px controls; original Murs/Onest",
+    "actual clipboard fulfilled with original localhost /people/ link and no query; previous clipboard text restored",
+    "Escape closes to profile"
+  ],
+  "realProfileModeConsentWrites": 0,
+  "serverPrivacyRlsNativePhysicalCamera": "NOT RUN"
+}

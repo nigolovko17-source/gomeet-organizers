@@ -1,0 +1,8 @@
+{
+  "task": "UI-PROFILE-QR-20261018",
+  "revision": "accepted-r2",
+  "stylesSha256": "f924a357a308ab51065c197362ab006dcd39540691a312de8ea4ad45b61e39da",
+  "acceptedSourceSha256": "f5c1d8640a16ccd94ca5d688cb1a976001abd80be8a4aa3901fa6bad760c0a67",
+  "caption": "REMOVED by explicit user clarification",
+  "deltaFromR1": "Only caption JSX line removed; QRStyle unchanged"
+}

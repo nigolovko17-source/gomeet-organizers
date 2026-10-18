@@ -1,0 +1,25 @@
+{
+  "task": "UI-PROFILE-QR-20261018",
+  "date": "2026-10-18T13:10:07.151Z",
+  "environment": "isolated React renderer and clipboard stubs; no browser/server writes",
+  "passed": 14,
+  "checks": [
+    "no automatic write; original URL/owner projection and accepted224px QR render",
+    "one real clipboard request; pending busy/disabled with no optimistic success; duplicate lock",
+    "fulfilled clipboard acknowledgement alone shows copied and exact original URL",
+    "permission rejection shows error and enables retry without false success",
+    "explicit retry succeeds and clears previous copy error",
+    "missing clipboard API is a recoverable error",
+    "loading hides QR and prevents direct copy callback",
+    "failed read hides QR; Retry calls original profile reload callback",
+    "empty original link never produces a fake QR or clipboard request",
+    "previous owner completion cannot show success on current identity/link",
+    "copy after identity change uses only current original URL",
+    "mode/URL change discards stale error and renders original organizer link",
+    "read-state epoch prevents late success after reload cycle",
+    "closing/unmount ignores pending completion safely"
+  ],
+  "realProfileModeConsentWrites": 0,
+  "realClipboardWrites": 0,
+  "serverPrivacyRlsNative": "NOT RUN"
+}

@@ -1,0 +1,14 @@
+{
+  "task": "UI-PROFILE-QR-20261018",
+  "baseCommit": "a8aa2f42ad2c013f39c367f7b90129963a8fc30c",
+  "releaseBundle": "_expo/static/js/web/index-6a0704eead9f05e980b1686099570828.js",
+  "sha256": "b0eae1a29c3ea315d044020ec865c533a0b09ae300a9f9774fe6dd05e5f7009c",
+  "activationFiles": [
+    "404.html",
+    "profile/index.html",
+    "index.html"
+  ],
+  "caption": "REMOVED by explicit user clarification",
+  "rollback": "a8aa2f4 and original hashed bundle retained",
+  "publication": "PENDING"
+}

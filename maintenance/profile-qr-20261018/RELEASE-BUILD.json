@@ -1,0 +1,28 @@
+{
+  "task": "UI-PROFILE-QR-20261018",
+  "revision": "production-r2",
+  "date": "2026-10-18T13:10:06.973Z",
+  "baseCommit": "a8aa2f42ad2c013f39c367f7b90129963a8fc30c",
+  "baseFile": "_expo/static/js/web/index-9bba1c50f77cbb89f35785b36da885ff.js",
+  "baseSha256": "a2c6d236f02284f5e6270641fb78afb972eda40c6935f4c5850a19b53ba6b9af",
+  "sha256": "b0eae1a29c3ea315d044020ec865c533a0b09ae300a9f9774fe6dd05e5f7009c",
+  "releaseBundle": "_expo/static/js/web/index-6a0704eead9f05e980b1686099570828.js",
+  "sourceSha256": "2f71f07162c912721b4ef0636b8b17492eb6033a021488a8d2fe262c55ee3d2b",
+  "acceptedSourceSha256": "f5c1d8640a16ccd94ca5d688cb1a976001abd80be8a4aa3901fa6bad760c0a67",
+  "stylesSha256": "f924a357a308ab51065c197362ab006dcd39540691a312de8ea4ad45b61e39da",
+  "changedModules": [
+    1494
+  ],
+  "changedDependencyMaps": [
+    1494
+  ],
+  "untouchedModules": 1639,
+  "acceptedStylesAstIdentical": true,
+  "otherSettingsCodeAstIdentical": true,
+  "previewAutoOpenAbsent": true,
+  "linkBuildersProfileDtoHooksQrRendererByteIdentical": true,
+  "realCopy": "navigator.clipboard.writeText exact original profileLink only after explicit action; no optimistic success; duplicate/stale guards",
+  "caption": "REMOVED by explicit user clarification",
+  "commit": "NOT RUN",
+  "publication": "PENDING"
+}
