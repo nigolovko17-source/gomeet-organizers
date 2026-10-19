@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {NOW,upcoming,live,scenarios,phase,partition,remaining,rub,date} from './model.mjs';
+let checks=0;
+function check(name,fn){fn();checks++;console.log('PASS',name)}
+check('before start remains upcoming',()=>assert.equal(phase(upcoming,upcoming.start-1).key,'upcoming'));
+check('exact start becomes live',()=>assert.equal(phase(upcoming,upcoming.start).key,'live'));
+check('exact end moves to archive',()=>assert.equal(phase(upcoming,upcoming.end).archive,true));
+check('cancelled future is archived',()=>assert.equal(phase({...upcoming,status:'cancelled'}).archive,true));
+check('draft is never auto-published by clock',()=>assert.equal(phase({...upcoming,status:'draft'},upcoming.end+1).key,'draft'));
+check('pending is never auto-published by clock',()=>assert.equal(phase({...upcoming,status:'pending'},upcoming.end+1).key,'pending'));
+check('missing end does not mean indefinitely live',()=>assert.equal(phase({...live,end:null}).key,'unknown'));
+check('missing date does not invent countdown',()=>assert.equal(phase({...upcoming,start:null,end:null}).time,undefined));
+check('14 days countdown',()=>assert.equal(remaining(14*864e5),'14 дней'));
+check('less than one minute is not zero',()=>assert.equal(remaining(1000),'1 мин'));
+check('zero revenue differs from unavailable',()=>assert.notEqual(rub(0),rub(null)));
+check('rub accepts kopecks',()=>assert.match(rub(8320000),/83\s200/));
+check('explicit Moscow timezone',()=>assert.match(date(upcoming),/12:00 мск/));
+check('archive keeps cancelled and completed, live first',()=>{const s=scenarios[0],p=partition(s.events);assert.equal(p.current[0].id,'live');assert.equal(p.archive.length,2);assert.equal(p.current.length+p.archive.length,s.events.length)});
+check('time transition repartitions without duplication',()=>{const p=partition(scenarios[0].events,NOW+15*864e5);assert.equal(p.archive.length,4);assert.equal(p.current.length,0)});
+check('all scenarios have unique shareable ids',()=>assert.equal(new Set(scenarios.map(s=>s.id)).size,scenarios.length));
+console.log(`${checks} model checks passed`);

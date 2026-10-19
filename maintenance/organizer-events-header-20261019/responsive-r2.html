@@ -1,0 +1,5 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GOMEET · События · Локальный концепт</title>
+<style>body{margin:0;background:#e9e6dd;font:14px system-ui}nav{display:flex;gap:8px;justify-content:center;padding:12px}button{padding:8px 14px;font:inherit}iframe{display:block;width:390px;height:844px;border:0;margin:auto;background:#0a0a0a}</style>
+<nav aria-label="Ширина просмотра"><button type="button" data-width="320">320 px</button><button type="button" data-width="390">390 px</button><button type="button" data-width="620">620 px</button><span id="width">Ширина: 390 px</span></nav>
+<iframe id="phone" src="/maintenance/organizer-events-header-20261019/preview.html" title="Локальный концепт шапки событий"></iframe>
+<script>document.querySelectorAll('[data-width]').forEach(b=>b.onclick=()=>{document.getElementById('phone').style.width=b.dataset.width+'px';document.getElementById('width').textContent='Ширина: '+b.dataset.width+' px';});</script>

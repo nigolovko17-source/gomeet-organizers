@@ -1,0 +1,26 @@
+{
+  "task": "UI-ORG-EVENTS-HEADER-20261019",
+  "revision": "r2",
+  "baseCommit": "7c23466172c3d74f9329475dcd6fa8f2c4e9976e",
+  "baseFile": "_expo/static/js/web/index-3d82274800e84d3d137035c4a04da486.js",
+  "baseSha256": "6eeb37ae70a06480579818d3cf535958c27117f9978e3d332ee0c308fef3204e",
+  "releaseBundle": "_expo/static/js/web/index-6476975e0c1822a99409220a326b88fe.js",
+  "sha256": "8655d473646d66f7f33cc2f0fe4b11ef8b05f13f996d0540152b6f303b67c910",
+  "sourceSha256": "c0d8ca229e4778247c6e56ce21446200c110e83fc5c8c6ef22530829a2118a85",
+  "changedModules": [
+    1331,
+    1335
+  ],
+  "changedDependencyMaps": [
+    1331
+  ],
+  "unchangedModules": 1638,
+  "totalModules": 1640,
+  "restoredOriginalAstVerified": true,
+  "originalSharedHeader1332ByteIdentical": true,
+  "ticketProgressRemoved": true,
+  "brandNameRemoved": true,
+  "cardMetricsFooterActionsAndTabsPreserved": true,
+  "notificationAction": "Existing Notifications navigation route",
+  "publication": "NOT RUN"
+}

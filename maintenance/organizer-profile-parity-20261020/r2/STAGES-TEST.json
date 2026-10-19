@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "states": [
+    {
+      "stage": "approved",
+      "identityExternal": true,
+      "connectionOnly": true,
+      "noConfirmationPage": true,
+      "handoffOnly": true
+    },
+    {
+      "stage": "bank",
+      "identityExternal": true,
+      "connectionOnly": true,
+      "noConfirmationPage": true,
+      "handoffOnly": true
+    },
+    {
+      "stage": "review",
+      "identityExternal": true,
+      "connectionOnly": true,
+      "noConfirmationPage": true,
+      "handoffOnly": true
+    },
+    {
+      "stage": "correction",
+      "identityExternal": true,
+      "connectionOnly": true,
+      "noConfirmationPage": true,
+      "handoffOnly": true
+    },
+    {
+      "stage": "documents",
+      "identityExternal": true,
+      "connectionOnly": true,
+      "noConfirmationPage": true,
+      "handoffOnly": true
+    },
+    {
+      "stage": "waiting",
+      "identityExternal": true,
+      "connectionOnly": true,
+      "noConfirmationPage": true,
+      "handoffOnly": true
+    },
+    {
+      "stage": "loading",
+      "identityExternal": true,
+      "connectionOnly": true,
+      "noConfirmationPage": true,
+      "handoffOnly": true
+    },
+    {
+      "stage": "error",
+      "identityExternal": true,
+      "connectionOnly": true,
+      "noConfirmationPage": true,
+      "handoffOnly": true
+    }
+  ],
+  "limitedSettingsHideConfirmationRoutes": true,
+  "backendMutation": 0,
+  "published": false
+}

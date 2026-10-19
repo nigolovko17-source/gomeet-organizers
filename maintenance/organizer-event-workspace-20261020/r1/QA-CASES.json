@@ -1,0 +1,625 @@
+[
+  {
+    "id": "C01",
+    "title": "Доступ проверяется",
+    "view": "workspace",
+    "expected": "Проверяем доступ",
+    "archive": false
+  },
+  {
+    "id": "C02",
+    "title": "Нет входа / сессия закончилась",
+    "view": "workspace",
+    "expected": "Войдите в свой аккаунт",
+    "archive": false
+  },
+  {
+    "id": "C03",
+    "title": "Загрузка события",
+    "view": "workspace",
+    "expected": "Загружаем событие",
+    "archive": false
+  },
+  {
+    "id": "C04",
+    "title": "Ошибка загрузки → повтор",
+    "view": "workspace",
+    "expected": "Не удалось загрузить событие",
+    "archive": false
+  },
+  {
+    "id": "C05",
+    "title": "Событие не найдено",
+    "view": "workspace",
+    "expected": "Событие недоступно",
+    "archive": false
+  },
+  {
+    "id": "C06",
+    "title": "Чужое событие / нет доступа",
+    "view": "workspace",
+    "expected": "Событие недоступно",
+    "archive": false
+  },
+  {
+    "id": "C07",
+    "title": "Действия организатора ограничены",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "C08",
+    "title": "Неизвестный статус / неполные даты",
+    "view": "workspace",
+    "expected": "Время требует уточнения",
+    "archive": false
+  },
+  {
+    "id": "C09",
+    "title": "Длинное название / нет афиши / большие суммы",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "C10",
+    "title": "Прямая ссылка / возврат в список",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "K01",
+    "title": "Кабинет · до начала",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "K02",
+    "title": "Граница начала события",
+    "view": "workspace",
+    "expected": "Идёт сейчас",
+    "archive": false
+  },
+  {
+    "id": "K03",
+    "title": "Кабинет · идёт сейчас",
+    "view": "workspace",
+    "expected": "Идёт сейчас",
+    "archive": false
+  },
+  {
+    "id": "K04",
+    "title": "Событие заканчивается при просмотре",
+    "view": "workspace",
+    "expected": "Идёт сейчас",
+    "archive": false
+  },
+  {
+    "id": "K05",
+    "title": "Черновик · заполнить сведения",
+    "view": "workspace",
+    "expected": "Черновик",
+    "archive": false
+  },
+  {
+    "id": "K06",
+    "title": "Событие на проверке",
+    "view": "workspace",
+    "expected": "На проверке",
+    "archive": false
+  },
+  {
+    "id": "K07",
+    "title": "Снято с публикации",
+    "view": "workspace",
+    "expected": "Снято с публикации",
+    "archive": false
+  },
+  {
+    "id": "K08",
+    "title": "Продаж ещё нет",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "K09",
+    "title": "Бесплатное событие",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "K10",
+    "title": "Все билеты распределены",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "K11",
+    "title": "Статистика недоступна",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "K12",
+    "title": "Подтверждённые и ожидаемые возвраты",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "K13",
+    "title": "Список гостей выключен",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "K14",
+    "title": "Проверка билетов недоступна",
+    "view": "workspace",
+    "expected": "Идёт сейчас",
+    "archive": false
+  },
+  {
+    "id": "E01",
+    "title": "Редактор · ошибка чтения",
+    "view": "edit",
+    "expected": "Не удалось загрузить событие",
+    "archive": false
+  },
+  {
+    "id": "E02",
+    "title": "Редактор · без изменений",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E03",
+    "title": "Несохранённые изменения → назад",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E04",
+    "title": "Правки события на проверке",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E05",
+    "title": "Ошибка названия",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E06",
+    "title": "Неверная дата / время",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E07",
+    "title": "Ночное событие · следующий день",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E08",
+    "title": "Многодневное событие",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E09",
+    "title": "Событие завершилось при редактировании",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E10",
+    "title": "Не заполнены сведения для публикации",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E11",
+    "title": "Новая афиша / отмена выбора",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E12",
+    "title": "Афиша не загрузилась",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E13",
+    "title": "Идёт сохранение",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E14",
+    "title": "Сохранение → на проверке",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E15",
+    "title": "Результат сохранения неизвестен",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E16",
+    "title": "Конфликт одновременных правок",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E17",
+    "title": "Доступ потерян при сохранении",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E18",
+    "title": "Снятие с афиши · есть билеты",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E19",
+    "title": "Перенос даты / места после продаж",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E20",
+    "title": "Изменение списка гостей",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E21",
+    "title": "Ошибка загрузки лимитов",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E22",
+    "title": "Безлимитный тип билета",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E23",
+    "title": "Лимит меньше распределённых билетов",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E24",
+    "title": "Ошибка сохранения лимита",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E25",
+    "title": "Цены билетов · только просмотр",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E26",
+    "title": "Выход / перезагрузка с правками",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E27",
+    "title": "Узкий экран / фокус на ошибках",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "A01",
+    "title": "Архив · завершённое событие",
+    "view": "archive",
+    "expected": "Завершено",
+    "archive": true
+  },
+  {
+    "id": "A02",
+    "title": "Архив · отменённое событие",
+    "view": "archive",
+    "expected": "Отменено",
+    "archive": true
+  },
+  {
+    "id": "A03",
+    "title": "Архив · бесплатное / нет продаж",
+    "view": "archive",
+    "expected": "Завершено",
+    "archive": true
+  },
+  {
+    "id": "A04",
+    "title": "Архив · подтверждённые возвраты",
+    "view": "archive",
+    "expected": "Завершено",
+    "archive": true
+  },
+  {
+    "id": "A05",
+    "title": "Архив · возвраты ещё обрабатываются",
+    "view": "archive",
+    "expected": "Отменено",
+    "archive": true
+  },
+  {
+    "id": "A06",
+    "title": "Архив · статистика недоступна",
+    "view": "archive",
+    "expected": "Завершено",
+    "archive": true
+  },
+  {
+    "id": "A07",
+    "title": "Архив · старое событие без афиши / дат",
+    "view": "archive",
+    "expected": "Завершено",
+    "archive": true
+  },
+  {
+    "id": "A08",
+    "title": "Архив · старая ссылка на редактор",
+    "view": "edit",
+    "expected": "Событие в архиве",
+    "archive": false
+  },
+  {
+    "id": "A09",
+    "title": "Архив · гости и афиша",
+    "view": "archive",
+    "expected": "Завершено",
+    "archive": true
+  },
+  {
+    "id": "A10",
+    "title": "Архив · все действия только для просмотра",
+    "view": "archive",
+    "expected": "Отменено",
+    "archive": true
+  },
+  {
+    "id": "K08-empty",
+    "title": "Нет типов билетов",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "K09-mixed",
+    "title": "Платные и бесплатные билеты",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "K10-unlimited",
+    "title": "Продажи без лимита",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "K10-notyet",
+    "title": "Продажи ещё не начались",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "K10-closed",
+    "title": "Продажи закрыты до начала события",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "K11-loading",
+    "title": "Статистика загружается",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "K11-stale",
+    "title": "Последние загруженные показатели",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "K11-mismatch",
+    "title": "Показатели другого события",
+    "view": "workspace",
+    "expected": "Опубликовано",
+    "archive": false
+  },
+  {
+    "id": "E07-missing",
+    "title": "Время окончания не задано",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E07-invalid",
+    "title": "Неверное окончание / до начала",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E08-equal",
+    "title": "Начало равно окончанию",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E12-permission",
+    "title": "Нет доступа к фотографиям",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E12-invalid",
+    "title": "Неподходящий файл афиши",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E14-published",
+    "title": "Успех · статус сохранён",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E14-draft",
+    "title": "Успех · сохранён черновик",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E15-error",
+    "title": "Известная ошибка сохранения",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E15-not-saved",
+    "title": "Неизвестный результат → не сохранено",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E21-loading",
+    "title": "Лимиты загружаются",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E21-empty",
+    "title": "Типов билетов нет",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E22-zero",
+    "title": "Нулевой лимит без распределённых мест",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E23-invalid",
+    "title": "Лимит · неверное число",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E23-race",
+    "title": "Места распределили во время правки",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E24-saving",
+    "title": "Лимит сохраняется отдельно",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E24-denied",
+    "title": "Нет доступа к изменению лимита",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "E17-archive",
+    "title": "Архивирование во время сохранения",
+    "view": "edit",
+    "expected": "Правка события",
+    "archive": false
+  },
+  {
+    "id": "C07-editor",
+    "title": "Нет права редактировать",
+    "view": "edit",
+    "expected": "Редактирование недоступно",
+    "archive": false
+  },
+  {
+    "id": "C02-editor",
+    "title": "Сессия истекла в редакторе",
+    "view": "edit",
+    "expected": "Войдите в свой аккаунт",
+    "archive": false
+  },
+  {
+    "id": "C08-no-end",
+    "title": "Начало прошло, окончание неизвестно",
+    "view": "workspace",
+    "expected": "Время требует уточнения",
+    "archive": false
+  }
+]

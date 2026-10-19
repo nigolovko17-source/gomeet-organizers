@@ -1,0 +1,24 @@
+{
+  "baseCommit": "17a3161292d824fd2fb412714c4172700beaaf3a",
+  "baseFile": "_expo/static/js/web/index-88fe7795f566d2b110ae3a1f23b58008.js",
+  "baseSha256": "8707f7216bd49aa809d6cc34934d594bf832a27618be51543bd68161ea823372",
+  "bundle": "_expo/static/js/web/index-3f63bcbdbbc5e90a74c520415437d0fa.js",
+  "bundleSha256": "d6b7c1d71189956dc80c5c5bf2b927e7c615667c4c45f995cbcfbe9543d48de1",
+  "style": "maintenance/organizer-profile-release-20261020/profile-f0e72015f045abb7.css",
+  "styleSha256": "f0e72015f045abb7862317f130fe44931b8024af243846fefba2659fabf382d0",
+  "changedModules": [
+    1006,
+    1494,
+    1529,
+    1640
+  ],
+  "addedModules": [
+    1641
+  ],
+  "byteIdenticalModules": 1637,
+  "mode": "ru default org; existing canOrganize/Auth guard preserved",
+  "externalScenarioControls": false,
+  "previewFetchOverride": false,
+  "newSections": "explicit demo, RAM only; existing backend untouched",
+  "publication": "NOT RUN"
+}

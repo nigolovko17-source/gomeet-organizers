@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "groups": [
+    {
+      "name": "domain: pending/editability/doc availability/bank validation",
+      "status": "PASS"
+    },
+    {
+      "name": "11 new screens render",
+      "status": "PASS"
+    },
+    {
+      "name": "18 focused scenario variants render",
+      "status": "PASS"
+    },
+    {
+      "name": "bank validation/save remains unverified, RAM only",
+      "status": "PASS"
+    },
+    {
+      "name": "unknown outcome locks retry until readback, retains form",
+      "status": "PASS"
+    },
+    {
+      "name": "dirty guard retains input",
+      "status": "PASS"
+    },
+    {
+      "name": "read-only network guard blocks known/unknown RPC, insert, upload, logout and PATCH; allows reads and existing sign-in",
+      "status": "PASS"
+    }
+  ],
+  "serverWrites": 0,
+  "published": false
+}

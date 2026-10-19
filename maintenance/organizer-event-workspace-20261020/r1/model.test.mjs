@@ -1,0 +1,27 @@
+import assert from'node:assert/strict';
+import{NOW,baseEvent,liveEvent,pastEvent,clone,scenarios,setup,phase,archived,canEdit,formOf,dirty,validate,applyForm,quotaError,money,parseDate}from'./model.mjs';
+let n=0;function test(name,fn){fn();n++;console.log('PASS',name)}
+test('minute before start / exact start / exact end',()=>{assert.equal(phase(baseEvent,baseEvent.start-1),'upcoming');assert.equal(phase(baseEvent,baseEvent.start),'live');assert.equal(phase(baseEvent,baseEvent.end),'ended')});
+test('cancelled future is archived',()=>assert.equal(archived({...baseEvent,status:'cancelled'}),true));
+test('persisted archive cannot reopen by future date',()=>assert.equal(canEdit({...pastEvent,start:NOW+99*864e5,end:NOW+100*864e5}),false));
+test('unknown end is explicit and not editable as live',()=>{const e={...liveEvent,end:null};assert.equal(phase(e),'unknown');assert.equal(canEdit(e),false)});
+test('invalid duration never becomes live or archived by guess',()=>assert.equal(phase({...baseEvent,end:baseEvent.start-1}),'unknown'));
+test('unknown status cannot self-authorize edit',()=>assert.equal(canEdit({...baseEvent,status:'legacy'}),false));
+test('access restriction blocks edit but is independent of lifecycle',()=>{assert.equal(canEdit(baseEvent,{mutationDenied:true}),false);assert.equal(phase(baseEvent),'upcoming')});
+test('ordinary pending edit preserves pending',()=>{const e={...baseEvent,status:'pending'},f=formOf(e);f.title='Новое название';assert.equal(applyForm(e,f).status,'pending')});
+test('ordinary removed edit preserves removed',()=>{const e={...baseEvent,status:'removed'};assert.equal(applyForm(e,formOf(e)).status,'removed')});
+test('multi-day end timestamp survives unrelated edit',()=>{const e={...baseEvent,end:baseEvent.start+3*864e5},f=formOf(e);f.title='Другое название';assert.equal(applyForm(e,f).end,e.end)});
+test('overnight event has explicit next date',()=>{const e=setup('E07').event;assert.notEqual(formOf(e).date,formOf(e).endDate);assert.equal(Object.keys(validate(formOf(e),'published')).length,0)});
+test('empty end remains null, not a guessed duration',()=>{const e={...baseEvent,end:null};assert.equal(applyForm(e,formOf(e)).end,null)});
+test('calendar overflow and invalid clock rejected',()=>{assert.equal(parseDate('31.02.2026','12:00'),null);assert.equal(parseDate('03.11.2026','25:00'),null)});
+test('equal or earlier ending rejected',()=>{const f=formOf(baseEvent);f.endDate=f.date;f.endTime=f.time;assert.ok(validate(f,'published').endDate)});
+test('draft can remain incomplete while publish request cannot',()=>{const e={...baseEvent,start:null,end:null,cover:null,description:'',age:'',venue:'',address:''},f=formOf(e);assert.deepEqual(validate(f,'draft'),{});assert.ok(validate(f,'pending').cover);assert.ok(validate(f,'pending').venue)});
+test('dirty tracking excludes separately persisted quota',()=>{const e=clone(baseEvent),f=formOf(e);e.quota=160;assert.equal(dirty(f,e),false);f.title='Правки';assert.equal(dirty(f,e),true)});
+test('saving metadata retains independent quota change',()=>{const e={...baseEvent,quota:160},f=formOf(e);f.title='Правки';assert.equal(applyForm(e,f).quota,160)});
+test('finite quota cannot undershoot allocated and accepts exact',()=>{assert.ok(quotaError('77',false,78));assert.equal(quotaError('78',false,78),null)});
+test('zero quota valid only without allocations',()=>{assert.equal(quotaError('0',false,0),null);assert.ok(quotaError('0',false,1))});
+test('quota rejects negative, fractional, overflow; unlimited is explicit',()=>{for(const v of['-1','1.5','2147483648',''])assert.ok(quotaError(v,false,0));assert.equal(quotaError('',true,78),null)});
+test('money distinguishes unknown / zero and retains kopecks',()=>{assert.notEqual(money(null),money(0));assert.match(money(6240050),/62\s400,50/)});
+test('scenario ids unique and every family covered',()=>{assert.equal(new Set(scenarios.map(s=>s.id)).size,scenarios.length);for(let i=1;i<=10;i++)assert.ok(scenarios.some(s=>s.id==='C'+String(i).padStart(2,'0')));for(let i=1;i<=14;i++)assert.ok(scenarios.some(s=>s.id==='K'+String(i).padStart(2,'0')));for(let i=1;i<=27;i++)assert.ok(scenarios.some(s=>s.id==='E'+String(i).padStart(2,'0')));for(let i=1;i<=10;i++)assert.ok(scenarios.some(s=>s.id==='A'+String(i).padStart(2,'0')))});
+test('setups are isolated and never mutate reference fixtures',()=>{const a=setup('K01');a.event.title='changed';assert.notEqual(setup('K01').event.title,'changed');assert.equal(baseEvent.title,'Новый круг знакомств')});
+console.log(JSON.stringify({passed:n,scenarios:scenarios.length,publication:'NOT RUN'}));

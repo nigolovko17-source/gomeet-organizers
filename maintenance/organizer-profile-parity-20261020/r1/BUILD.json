@@ -1,0 +1,39 @@
+{
+  "environment": "LOCAL ONLY",
+  "published": false,
+  "baseCommit": "17a3161292d824fd2fb412714c4172700beaaf3a",
+  "baseFile": "_expo/static/js/web/index-88fe7795f566d2b110ae3a1f23b58008.js",
+  "baseSha256": "8707f7216bd49aa809d6cc34934d594bf832a27618be51543bd68161ea823372",
+  "bundleSha256": "dcc7784f1740ac8d66a41acd9309b6fcf5640555325166470ef8e4f77441a893",
+  "changedModules": [
+    1494,
+    1529
+  ],
+  "localBootstrapModule": 1006,
+  "addedModule": 1641,
+  "byteIdenticalModules": 1638,
+  "anchors": {
+    "followers": 1,
+    "entry": 1,
+    "settings": 1,
+    "logout": 1,
+    "host": 1,
+    "bootstrap": 1
+  },
+  "preservedOriginalDeclarations": [
+    "1494:F",
+    "1494:SettingsRow",
+    "1494:ProfileQrCard",
+    "1494:useSettingsReturn",
+    "1494:style styles",
+    "1529:M",
+    "1529:V",
+    "1529:_",
+    "1529:MeBody",
+    "1529:style U",
+    "1529:style ME"
+  ],
+  "existingEntryFilesChanged": false,
+  "newOperations": "RAM-only scenarios; no server writes",
+  "existingProfileStyle": "All original styles unchanged"
+}

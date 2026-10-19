@@ -1,0 +1,5 @@
+{
+  "status": "INHERITED_R1_NOT_RERUN",
+  "reference": "../r1/TEST.json",
+  "r2Tests": "STAGES-TEST.json; BUILD.json; design r2 PROFILE-STATES.json"
+}

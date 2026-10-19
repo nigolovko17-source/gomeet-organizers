@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>GOMEET</title>
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  <link rel="icon" href="/favicon.ico" /><link data-organizer-events rel="stylesheet" href="/maintenance/organizer-events-release-20261020/organizer-events-3be95f6517d8dff7.css" /><link rel="stylesheet" href="/maintenance/organizer-profile-parity-20261020/r6/additions.css"></head>
+
+  <body>
+    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <!-- The root element for your Expo app. -->
+    <script>/* LOCAL PREVIEW ONLY. Keep published Auth/handlers intact while blocking product writes in this review. */
+(function(){
+const original=window.fetch,readRPC=new Set(['payout_capabilities','my_profile_for_mode','public_organizer_profile','public_user_profile','organizer_metric_audience','organizer_metric_buyers','organizer_metric_conversion','organizer_metric_overview','organizer_metric_refunds','organizer_metric_sales','organizer_promos','reward_badge_progress','reward_program_status','reward_wallet','my_referrals','service_fee_rate','event_chat_previews','event_guest_list','event_social_proof','payment_checkout_config','support_context','support_queue','support_stats','support_thread_messages','moderation_queue','review_queue','get_my_payout_history','check_in_preview']);
+window.fetch=function(input,options){const url=typeof input==='string'?input:input.url,method=(options?.method||input.method||'GET').toUpperCase(),u=new URL(url,location.href),rpc=u.pathname.split('/rpc/')[1],read=['GET','HEAD','OPTIONS'].includes(method),auth=method==='POST'&&u.pathname.endsWith('/auth/v1/token'),query=method==='POST'&&rpc&&readRPC.has(rpc);if(!read&&!auth&&!query)return Promise.resolve(new Response(JSON.stringify({message:'Локальный просмотр: запись на сервер отключена',code:'LOCAL_PREVIEW_READ_ONLY'}),{status:403,headers:{'Content-Type':'application/json'}}));return original.apply(this,arguments)};
+})();
+</script><div id="root"></div><script>history.replaceState(null,"","/profile")</script>
+  <script src="/maintenance/organizer-profile-parity-20261020/r6/preview-bundle.js" defer></script>
+</body>
+</html>
