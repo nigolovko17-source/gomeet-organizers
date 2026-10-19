@@ -1,0 +1,20 @@
+{
+  "baseCommit": "7c23466172c3d74f9329475dcd6fa8f2c4e9976e",
+  "baseFile": "_expo/static/js/web/index-3d82274800e84d3d137035c4a04da486.js",
+  "baseSha256": "6eeb37ae70a06480579818d3cf535958c27117f9978e3d332ee0c308fef3204e",
+  "bundle": "_expo/static/js/web/index-88fe7795f566d2b110ae3a1f23b58008.js",
+  "bundleSha256": "8707f7216bd49aa809d6cc34934d594bf832a27618be51543bd68161ea823372",
+  "style": "maintenance/organizer-events-release-20261020/organizer-events-3be95f6517d8dff7.css",
+  "styleSha256": "3be95f6517d8dff70003c2f89245248dee8e9add945cb7a595343136bf743cbd",
+  "replacedModules": [
+    1331,
+    1549,
+    1559
+  ],
+  "addedModules": [
+    1640
+  ],
+  "byteIdenticalModules": 1637,
+  "backendMigrations": 0,
+  "publication": "NOT RUN"
+}

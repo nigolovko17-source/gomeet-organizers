@@ -1,0 +1,13 @@
+# Organizer events .ru release — 20 October 2026
+
+Authorization: user explicitly requested publishing the accepted changes to gomeet-organizers.ru. Scope: events list, current event workspace, editor, read-only archived workspace. No .su publication, backend migrations, account/permission changes, monetary operations, or changes to adjacent Create/GuestList/Scan/public EventDetail routes.
+
+Accepted: organizer header without brand/avatar/notifications; My events; Events/Archive tabs; start date/time and future countdown; live arrivals without end countdown; uniform archive without arrivals/countdown/edit/scan; ticket revenue label and disclosure distinguishing it from payout. Removed old ticket quota progress.
+
+Runtime: published static Expo baseline 7c23466. Replace factories 1331/1549/1559, add1640; other1637 byte identical. Use existing auth/mode/linking, owner-filtered event reads, current organizer_metric_overview RPC, existing published demo metrics overlay and unchanged saveEvent/Covers APIs. Do not deploy local scenario viewers/fixtures/clock/simulators. Quota columns verified read-only; set_ticket_sales_limit RPC availability is not proven. If unavailable, show explicit server-version error and disable further attempts. No claim that this introduces a backend capability.
+
+Guardrails: owner filter and current-event re-read before editing; archive and conflict preflight; pending/removed preserved by normal save; actual returned moderation status shown; separate publish/unpublish actions; dirty/busy navigation guard; unknown save requires readback before retry; reuse uploaded cover on retry; exact untouched timestamps preserved, explicit multiday end supported. Existing start+6h archive fallback remains unchanged; missing live end is presented as time needing clarification. These are client controls, not proof of atomic authorization/version locking on the server.
+
+Legal trace: GOV-001/002/003 and RT-001 (DEC governance), ORG-001/RT-013 (DOC/runtime ownership), PD-07/RT-005 (DOC private guest list). Financial document conditions and OPEN ORG-009 remain unresolved, as documented in the local workspace SPEC. No new payout/refund promises or consent/acceptance flows. Environment .ru existing demo; no legal compliance certification.
+
+Verification: production model/screen render tests and mocked API tests cover dates, archive/live constraints, owner filters, save/conflict/unknown/readback/upload reuse. Local CUA uses actual existing .ru demo account data, no event/venue/ticket writes. Real save/upload/moderation/quota end-to-end and native acceptance NOT RUN. HTTPS/live checks recorded separately after publication. Rollback: restore three HTML entry files to 7c23466 (old hashed bundle retained).

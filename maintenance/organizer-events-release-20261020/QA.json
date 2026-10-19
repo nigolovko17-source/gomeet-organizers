@@ -1,0 +1,18 @@
+{
+  "modelAndRender": "PASS",
+  "mockedApi": "PASS owner filters/save/conflict/unknown/readback/upload reuse/archive",
+  "localCUA": [
+    "current list",
+    "current workspace",
+    "edit loading/form/date values",
+    "dirty exit confirmation",
+    "discard without write",
+    "back to events",
+    "archive six cards",
+    "archive workspace no arrivals/countdown/edit/scan"
+  ],
+  "realProductWrites": 0,
+  "realWriteEndToEnd": "NOT RUN",
+  "native": "NOT RUN",
+  "unchangedModules": 1637
+}
