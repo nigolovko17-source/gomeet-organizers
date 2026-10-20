@@ -1,0 +1,12 @@
+{
+  "previousAssets": "maintenance/organizer-entry-copy-20261020/ui-6775ecee63c6c53b",
+  "assetDir": "maintenance/organizer-team-access-20261020/ui-76fd3550e863361e",
+  "assetHashes": {
+    "app.html": "151ea2a1af8d6f48271247f4c223451c18ea8f06519829961a74f6467fc23108",
+    "app.js": "ac1f88e19b0080d2b0f98b08f2f2573c692d2eb4234e69545fdd1f77042abe16",
+    "style.css": "1f2912d16808be3630bce9cbc717672da0a606f4bc3d88cf87aca85dd8099530",
+    "model.js": "2d2eccbfc55a0ce3a9d09328fec675b875ade62a36b05c5508fb68d226a0637c",
+    "cases.js": "dab15baf0c0a69fcc159672fa9a24eec5aba5456850538d8f8d714d00f474bd9"
+  },
+  "realOperations": 0
+}
