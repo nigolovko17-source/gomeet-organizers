@@ -1,0 +1,27 @@
+{
+  "baseCommit": "0f6fa16ec495e85084ee9a0c3f9d91d0677bbabe",
+  "baseFile": "_expo/static/js/web/index-3f63bcbdbbc5e90a74c520415437d0fa.js",
+  "baseSha256": "d6b7c1d71189956dc80c5c5bf2b927e7c615667c4c45f995cbcfbe9543d48de1",
+  "bundle": "_expo/static/js/web/index-27ea54a2f6756616089da31fac4efdcd.js",
+  "bundleSha256": "ff2485788619f07e630fc48630f49608078e042a9b9ddd6621ee2b6ccc1be5fc",
+  "assetDir": "maintenance/organizer-event-create-release-20261020/ui-d1c008009fb67fc3",
+  "assetHashes": {
+    "app.html": "2d6e846e4010ae90984885d092a56ceb5c479f7641d0966297d307d00bd21bdb",
+    "app.js": "d8314d5dc5d2263bb92888c7abfbbf4245fefa361100238869a3eba50cc1412e",
+    "model.js": "9ca15224cf2729ce3e8c9e21edb241f125ea4a994e46407e919ce2d139251b5f",
+    "cases.js": "e71983d844e4621954a4ddc1cf4a6b192927cd4b12a21681d68375d6cf6ba37d",
+    "style.css": "3cf60b4924fc7435d5557dd99f1a26076635a619c090597cc0e94d6d851940df",
+    "hall.css": "cb31977d39d704141c756932acb031835a0daca031cd23e1e9e5447fd3617d64",
+    "hall-ui.js": "85eef8575c5488d8a8a92a4f21caf2780028415b0e4ec5d8c4423ec7e8f6029e",
+    "hall-model.js": "205877efeeab9bacc02c460391045e3f712e8554bfddd191034949080b4d1d3e"
+  },
+  "replacedModules": [
+    1552
+  ],
+  "byteIdenticalModules": 1641,
+  "moduleCount": 1642,
+  "sourceRevision": "r5 bright palette",
+  "backendWrites": 0,
+  "serverSubmit": false,
+  "publication": "NOT RUN"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "bundleHash": true,
+  "byteIdenticalModules": 1641,
+  "assetHashesAndSyntax": 8,
+  "entrypoints": 3,
+  "demoNoNetwork": true,
+  "zeroAndEmptyPrice": true,
+  "palette": true,
+  "photoLimit": 15,
+  "published": false
+}
