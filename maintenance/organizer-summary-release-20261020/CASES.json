@@ -1,0 +1,614 @@
+[
+  {
+    "id": "S01",
+    "title": "Обзор · все события",
+    "tab": "overview",
+    "event": "all",
+    "state": "normal",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S02",
+    "title": "Обзор · событие впереди",
+    "tab": "overview",
+    "event": "e1",
+    "state": "normal",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S03",
+    "title": "Обзор · событие идёт",
+    "tab": "overview",
+    "event": "e2",
+    "state": "normal",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S04",
+    "title": "Обзор · событие завершено",
+    "tab": "overview",
+    "event": "e3",
+    "state": "normal",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S05",
+    "title": "Нет событий",
+    "tab": "overview",
+    "event": "all",
+    "state": "empty",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S06",
+    "title": "Нет продаж в периоде",
+    "tab": "overview",
+    "event": "e1",
+    "state": "no-sales",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S07",
+    "title": "Только бесплатные билеты",
+    "tab": "overview",
+    "event": "e1",
+    "state": "free",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S08",
+    "title": "Платные и бесплатные",
+    "tab": "overview",
+    "event": "e2",
+    "state": "normal",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S09",
+    "title": "Без лимита",
+    "tab": "overview",
+    "event": "e1",
+    "state": "unlimited",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S10",
+    "title": "Исторический лимит неизвестен",
+    "tab": "overview",
+    "event": "e3",
+    "state": "unknown-capacity",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S11",
+    "title": "Сводка загружается",
+    "tab": "overview",
+    "event": "all",
+    "state": "loading",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S12",
+    "title": "Ошибка загрузки",
+    "tab": "overview",
+    "event": "all",
+    "state": "error",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S13",
+    "title": "Сохранённые данные устарели",
+    "tab": "overview",
+    "event": "all",
+    "state": "stale",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S14",
+    "title": "Нет сети и сохранённых данных",
+    "tab": "overview",
+    "event": "all",
+    "state": "offline",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S15",
+    "title": "Нет доступа к сводке",
+    "tab": "overview",
+    "event": "all",
+    "state": "forbidden",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S16",
+    "title": "Событие отменено",
+    "tab": "overview",
+    "event": "e1",
+    "state": "cancelled",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S17",
+    "title": "Дата события не указана",
+    "tab": "overview",
+    "event": "e1",
+    "state": "no-date",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S18",
+    "title": "Все места проданы",
+    "tab": "overview",
+    "event": "e1",
+    "state": "sold-out",
+    "period": "all",
+    "compare": "period"
+  },
+  {
+    "id": "S19",
+    "title": "Сравнение · рост",
+    "tab": "overview",
+    "event": "e1",
+    "state": "trend-up",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S20",
+    "title": "Сравнение · снижение",
+    "tab": "overview",
+    "event": "e1",
+    "state": "trend-down",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S21",
+    "title": "Сравнение · без изменений",
+    "tab": "overview",
+    "event": "e1",
+    "state": "trend-equal",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S22",
+    "title": "Сравнение · нет предыдущего периода",
+    "tab": "overview",
+    "event": "e1",
+    "state": "no-previous",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S23",
+    "title": "Сравнение · предыдущий период нулевой",
+    "tab": "overview",
+    "event": "e1",
+    "state": "previous-zero",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S24",
+    "title": "Сравнение · нет предыдущего события",
+    "tab": "overview",
+    "event": "e1",
+    "state": "no-previous-event",
+    "period": "week",
+    "compare": "event"
+  },
+  {
+    "id": "S25",
+    "title": "Сравнение · разные этапы продаж",
+    "tab": "overview",
+    "event": "e1",
+    "state": "not-comparable",
+    "period": "week",
+    "compare": "event"
+  },
+  {
+    "id": "S26",
+    "title": "Сравнение · за всё время",
+    "tab": "overview",
+    "event": "all",
+    "state": "all-time",
+    "period": "all",
+    "compare": "period"
+  },
+  {
+    "id": "S27",
+    "title": "Конверсия · сбор ещё не начат",
+    "tab": "overview",
+    "event": "e1",
+    "state": "no-tracking",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S28",
+    "title": "Конверсия · нет открытий",
+    "tab": "overview",
+    "event": "e1",
+    "state": "zero-views",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S29",
+    "title": "Конверсия · открытия без покупок",
+    "tab": "overview",
+    "event": "e1",
+    "state": "zero-conversion",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S30",
+    "title": "Конверсия · ошибка",
+    "tab": "overview",
+    "event": "e1",
+    "state": "conversion-error",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S31",
+    "title": "Конверсия · загрузка",
+    "tab": "overview",
+    "event": "e1",
+    "state": "conversion-loading",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S32",
+    "title": "Возвраты · отсутствуют",
+    "tab": "overview",
+    "event": "e1",
+    "state": "no-refunds",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S33",
+    "title": "Возвраты · частичный",
+    "tab": "overview",
+    "event": "e1",
+    "state": "partial-refund",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S34",
+    "title": "Возвраты · полный",
+    "tab": "overview",
+    "event": "e1",
+    "state": "full-refund",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S35",
+    "title": "Возврат ещё не подтверждён",
+    "tab": "overview",
+    "event": "e1",
+    "state": "refund-pending",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S36",
+    "title": "Возвраты · источник недоступен",
+    "tab": "overview",
+    "event": "e1",
+    "state": "refund-unavailable",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S37",
+    "title": "Возвраты · ошибка",
+    "tab": "overview",
+    "event": "e1",
+    "state": "refund-error",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S38",
+    "title": "Возвраты · загрузка",
+    "tab": "overview",
+    "event": "e1",
+    "state": "refund-loading",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S39",
+    "title": "Явка · никто ещё не вошёл",
+    "tab": "overview",
+    "event": "e1",
+    "state": "normal",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S40",
+    "title": "Явка · часть группы вошла",
+    "tab": "overview",
+    "event": "e2",
+    "state": "partial-entry",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S41",
+    "title": "Явка · все действующие билеты погашены",
+    "tab": "overview",
+    "event": "e2",
+    "state": "all-entered",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S42",
+    "title": "Явка · офлайн-отметки ждут подтверждения",
+    "tab": "overview",
+    "event": "e2",
+    "state": "pending-entry",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S43",
+    "title": "Аудитория · новые и вернувшиеся",
+    "tab": "audience",
+    "event": "all",
+    "state": "normal",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S44",
+    "title": "Аудитория · только новые",
+    "tab": "audience",
+    "event": "e1",
+    "state": "all-new",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S45",
+    "title": "Аудитория · только вернувшиеся",
+    "tab": "audience",
+    "event": "e1",
+    "state": "all-returning",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S46",
+    "title": "Аудитория · нет покупателей",
+    "tab": "audience",
+    "event": "e1",
+    "state": "no-sales",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S47",
+    "title": "Аудитория · нет сохранений",
+    "tab": "audience",
+    "event": "e1",
+    "state": "no-saves",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S48",
+    "title": "Аудитория · нет подписчиков",
+    "tab": "audience",
+    "event": "all",
+    "state": "no-followers",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S49",
+    "title": "Аудитория · ошибка",
+    "tab": "audience",
+    "event": "all",
+    "state": "audience-error",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S50",
+    "title": "Аудитория · загрузка",
+    "tab": "audience",
+    "event": "all",
+    "state": "audience-loading",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S51",
+    "title": "Ссылки · переходы и покупки",
+    "tab": "growth",
+    "event": "all",
+    "state": "normal",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S52",
+    "title": "Ссылки · ещё не созданы",
+    "tab": "growth",
+    "event": "e1",
+    "state": "no-links",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S53",
+    "title": "Ссылки · нет переходов",
+    "tab": "growth",
+    "event": "e1",
+    "state": "no-clicks",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S54",
+    "title": "Ссылки · переходы без покупок",
+    "tab": "growth",
+    "event": "e1",
+    "state": "no-link-sales",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S55",
+    "title": "Ссылки · неизвестный источник",
+    "tab": "growth",
+    "event": "e1",
+    "state": "unknown-source",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S56",
+    "title": "Ссылки · ошибка",
+    "tab": "growth",
+    "event": "e1",
+    "state": "links-error",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S57",
+    "title": "Ссылки · загрузка",
+    "tab": "growth",
+    "event": "e1",
+    "state": "links-loading",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S58",
+    "title": "Рефералы · никто не привёл друзей",
+    "tab": "audience",
+    "event": "e1",
+    "state": "no-referrers",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S59",
+    "title": "Рефералы · профиль удалён",
+    "tab": "audience",
+    "event": "e1",
+    "state": "deleted-referrer",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S60",
+    "title": "Рефералы · ошибка",
+    "tab": "audience",
+    "event": "e1",
+    "state": "referrers-error",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S61",
+    "title": "Промокоды · список пуст",
+    "tab": "growth",
+    "event": "all",
+    "state": "no-promos",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S62",
+    "title": "Промокод · активен",
+    "tab": "growth",
+    "event": "e1",
+    "state": "normal",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S63",
+    "title": "Промокод · срок истёк",
+    "tab": "growth",
+    "event": "e1",
+    "state": "promo-expired",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S64",
+    "title": "Промокод · отключён",
+    "tab": "growth",
+    "event": "e1",
+    "state": "promo-disabled",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S65",
+    "title": "Промокод · лимит исчерпан",
+    "tab": "growth",
+    "event": "e1",
+    "state": "promo-limit",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S66",
+    "title": "Промокоды · ошибка",
+    "tab": "growth",
+    "event": "e1",
+    "state": "promos-error",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S67",
+    "title": "Промокоды · загрузка",
+    "tab": "growth",
+    "event": "e1",
+    "state": "promos-loading",
+    "period": "week",
+    "compare": "period"
+  },
+  {
+    "id": "S68",
+    "title": "Событие ещё не открыло продажи",
+    "tab": "overview",
+    "event": "e1",
+    "state": "not-on-sale",
+    "period": "week",
+    "compare": "period"
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "baseCommit": "15c429998975cb757a43e58d673143b2727f7fc9",
+  "source": "maintenance/organizer-summary-20261020/r3",
+  "baseFile": "_expo/static/js/web/index-b7dd4714a1f615101f2a86046bd40751.js",
+  "baseSha256": "36575ef60e947311c90c41c7474d8a7a4683e53beb429916a106874c273e2177",
+  "bundle": "_expo/static/js/web/index-f0953a7a3cd57808d82c8af852395f5e.js",
+  "bundleSha256": "a5e346e65b2c725c3528f95dbd3deb6b07530be1bff242ae0bfe5ea88f510c2c",
+  "assetDir": "maintenance/organizer-summary-release-20261020/ui-705fc04a8f5ed22b",
+  "assetHashes": {
+    "app.html": "f2b5a6e231cd4bd06f51e274cd38386833303804dab972c4f0de4f13f08cc67a",
+    "app.js": "8d6fcd8b06ced90ef404fa8139dd6242b9fbfa94d1dbca01b1cad0e4caa366f8",
+    "model.js": "810f6da9e2b2addbcb22a1b0447d25d285b9f98636df0dc1cd90c1483c9e4fd6",
+    "style.css": "fa6aa6b331d30fa8bee3ad9f5b878a71b8b732a63ff07198825fe9bf34c192b5"
+  },
+  "replacedModules": [
+    1339,
+    1033
+  ],
+  "directRoute": 1,
+  "byteIdenticalModules": 1640,
+  "nativeFooterRetained": true,
+  "profileSettingsAuthModeEventsEntryCreationUnchanged": true,
+  "scenarios": 68,
+  "entrypoints": [
+    "profile/index.html",
+    "Create/index.html",
+    "OrgScan/index.html",
+    "OrgSummary/index.html",
+    "404.html"
+  ],
+  "serverWrites": 0,
+  "realAnalytics": false,
+  "publication": "NOT RUN"
+}
