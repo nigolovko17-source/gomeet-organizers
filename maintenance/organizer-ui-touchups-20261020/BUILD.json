@@ -1,0 +1,30 @@
+{
+  "baseCommit": "17352beb0596ce047aa0fe3d598e8f9740fa12d2",
+  "baseFile": "_expo/static/js/web/index-7327a09bb68e3824bae0844d0f1e87d6.js",
+  "baseSha256": "2b7bea0f842a89c54f088e641191601a616eb3caa3396424062e01054072e0ed",
+  "bundle": "_expo/static/js/web/index-357d0be53c4078e325fd1ccea64bac7f.js",
+  "bundleSha256": "a6e97b7f45eca5d66d4bd033b4864764aef904fb103b7e207fbee8345868d489",
+  "assetDir": "maintenance/organizer-ui-touchups-20261020/create-28d6c394dc1d60c5",
+  "assetHashes": {
+    "app.html": "2d6e846e4010ae90984885d092a56ceb5c479f7641d0966297d307d00bd21bdb",
+    "app.js": "e9e8a7643fa486f20e5d74462480bb6162d324ee94f8635972f6c9175a4fdec5",
+    "style.css": "7f682b2d424d53e1ea2fa791acecc35b386487daff8d55f2112f4633a2d04dbf",
+    "hall.css": "1b2255adf6860ac1b12ef9f8d2706b1ee22608865832fbcd72f2c0b14038f07c",
+    "hall-ui.js": "c0ecbdde86a10317bd24842febcc017be56a62137c5e124855fa43a555b2906a",
+    "hall-model.js": "205877efeeab9bacc02c460391045e3f712e8554bfddd191034949080b4d1d3e",
+    "model.js": "9ca15224cf2729ce3e8c9e21edb241f125ea4a994e46407e919ce2d139251b5f",
+    "cases.js": "e71983d844e4621954a4ddc1cf4a6b192927cd4b12a21681d68375d6cf6ba37d"
+  },
+  "style": "maintenance/organizer-ui-touchups-20261020/settings-f4524251c1fb2aba.css",
+  "styleSha256": "f4524251c1fb2aba9fa93a6e6a72b982d23338b65e82ac154b486443275b4ba6",
+  "replacedModules": [
+    1494,
+    1641,
+    1552
+  ],
+  "byteIdenticalModules": 1639,
+  "financeMenuRowsRemoved": 1,
+  "settingsScope": 1,
+  "serverWrites": 0,
+  "publication": "NOT RUN"
+}
