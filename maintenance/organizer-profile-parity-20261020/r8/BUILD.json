@@ -1,0 +1,16 @@
+{
+  "environment": "LOCAL ONLY",
+  "published": false,
+  "baseCommit": "7b9a2dc56fbaada2556e3d96c97ebaa200b0b96e",
+  "baseFile": "_expo/static/js/web/index-a8d417524b49e3e65aa64c5956dd4926.js",
+  "baseSha256": "5f311798c8397e898f65128caaeae86d6a11c3f4572e9ad0ccd8e9547d37fe14",
+  "bundleSha256": "a773975fe7614eff736d35db9eb22fb0c34971029d5ca50b8ddd07738d7b1648",
+  "changes": [
+    1641
+  ],
+  "localPreviewBootstrap": false,
+  "teamMoved": "ProfileEntry -> SettingsSection organizer group",
+  "achievementUnchanged": true,
+  "actualPublishedSettingsPreserved": true,
+  "serverWrites": 0
+}
