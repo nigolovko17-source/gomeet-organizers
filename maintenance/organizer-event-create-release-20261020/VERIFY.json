@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "bundleHash": true,
-  "byteIdenticalModules": 1641,
+  "byteIdenticalModules": 1640,
   "assetHashesAndSyntax": 8,
   "entrypoints": 3,
   "demoNoNetwork": true,

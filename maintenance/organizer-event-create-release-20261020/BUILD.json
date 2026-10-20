@@ -2,8 +2,8 @@
   "baseCommit": "0f6fa16ec495e85084ee9a0c3f9d91d0677bbabe",
   "baseFile": "_expo/static/js/web/index-3f63bcbdbbc5e90a74c520415437d0fa.js",
   "baseSha256": "d6b7c1d71189956dc80c5c5bf2b927e7c615667c4c45f995cbcfbe9543d48de1",
-  "bundle": "_expo/static/js/web/index-27ea54a2f6756616089da31fac4efdcd.js",
-  "bundleSha256": "ff2485788619f07e630fc48630f49608078e042a9b9ddd6621ee2b6ccc1be5fc",
+  "bundle": "_expo/static/js/web/index-e3b6b82c17d247b3ba349d12a8ebef54.js",
+  "bundleSha256": "1fe95c66e05e41fe602a9073f2b617027080dcb66f9d9182c3eb5b269e0e7fd7",
   "assetDir": "maintenance/organizer-event-create-release-20261020/ui-d1c008009fb67fc3",
   "assetHashes": {
     "app.html": "2d6e846e4010ae90984885d092a56ceb5c479f7641d0966297d307d00bd21bdb",
@@ -16,9 +16,10 @@
     "hall-model.js": "205877efeeab9bacc02c460391045e3f712e8554bfddd191034949080b4d1d3e"
   },
   "replacedModules": [
-    1552
+    1552,
+    1033
   ],
-  "byteIdenticalModules": 1641,
+  "byteIdenticalModules": 1640,
   "moduleCount": 1642,
   "sourceRevision": "r5 bright palette",
   "backendWrites": 0,
