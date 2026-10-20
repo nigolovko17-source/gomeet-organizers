@@ -1,0 +1,15 @@
+{
+  "baseFile": "_expo/static/js/web/index-28aa4733a668eab0744f755aa93f6814.js",
+  "baseSha256": "ef2b66484ddca45bf7d039eebd110e76420214b4775369e6f11e3d687173bb7f",
+  "profileBundleSha256": "b6601ada10eee6fb2a686fbb5a4fdb5b9892047d1f499789036c6b351291484b",
+  "changedModules": [
+    1641
+  ],
+  "localPreviewBootstrap": false,
+  "byteIdenticalModules": 1641,
+  "teamCardsInserted": 1,
+  "profileShowcase1529Unchanged": true,
+  "settings1494Unchanged": true,
+  "published": false,
+  "serverProductWritesBlocked": true
+}

@@ -1,0 +1,24 @@
+{
+  "baseCommit": "7060b14c867609ee6890e9068d42937dfd3481d8",
+  "previousAssets": "maintenance/organizer-entry-team-release-20261020/ui-ccbbde3794bc0451",
+  "assetDir": "maintenance/organizer-entry-copy-20261020/ui-6775ecee63c6c53b",
+  "assetHashes": {
+    "app.html": "151ea2a1af8d6f48271247f4c223451c18ea8f06519829961a74f6467fc23108",
+    "app.js": "205f2e5d6c288a43738f3edaf2b4f2b93a63167c245b3c3b45f2e544257a4836",
+    "style.css": "1f2912d16808be3630bce9cbc717672da0a606f4bc3d88cf87aca85dd8099530",
+    "model.js": "2d2eccbfc55a0ce3a9d09328fec675b875ade62a36b05c5508fb68d226a0637c",
+    "cases.js": "ca6ee27314ac652d29e2a4bf2ed1fea6cc1ab6c2bf9ea24134b1eae3902a41e8"
+  },
+  "changedAssetFiles": [
+    "app.js",
+    "style.css"
+  ],
+  "unchangedAssetFiles": [
+    "app.html",
+    "model.js",
+    "cases.js"
+  ],
+  "published": false,
+  "realCheckins": false,
+  "serverWrites": 0
+}
