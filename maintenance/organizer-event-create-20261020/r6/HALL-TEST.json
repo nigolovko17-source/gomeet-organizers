@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "groups": [
+    "capacity and category counts",
+    "unique assignment and locked seats",
+    "geometry reconcile",
+    "curved rows and aisles",
+    "physical aisle exclusion",
+    "overlap",
+    "standing capacity",
+    "missing zones and prices",
+    "form integration",
+    "zero price and invalid price boundaries"
+  ],
+  "serverWrites": 0,
+  "published": false
+}
