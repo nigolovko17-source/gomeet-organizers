@@ -1,0 +1,27 @@
+{
+  "baseCommit": "196c40c4f3dff8cee2a229ce87b15e54aee8bfa5",
+  "baseFile": "_expo/static/js/web/index-357d0be53c4078e325fd1ccea64bac7f.js",
+  "baseSha256": "a6e97b7f45eca5d66d4bd033b4864764aef904fb103b7e207fbee8345868d489",
+  "bundle": "_expo/static/js/web/index-28aa4733a668eab0744f755aa93f6814.js",
+  "bundleSha256": "ef2b66484ddca45bf7d039eebd110e76420214b4775369e6f11e3d687173bb7f",
+  "assetDir": "maintenance/organizer-event-create-r7-release-20261020/ui-94d65f196d0689be",
+  "assetHashes": {
+    "app.html": "2d6e846e4010ae90984885d092a56ceb5c479f7641d0966297d307d00bd21bdb",
+    "app.js": "c656f3ed7153389552148759e108ad0b145d0f9663bc3049a7ea7ada641249dc",
+    "model.js": "9ca15224cf2729ce3e8c9e21edb241f125ea4a994e46407e919ce2d139251b5f",
+    "cases.js": "684d3eccf2e6c04650ec428ea4670ef054500b09c93c2c9a8600fa166ce43a64",
+    "style.css": "68eec6ae832feed25341dcdb603bb00ac275dcaeb6b900483350eb2945dedf10",
+    "hall.css": "7899d2724f829cbbcb3d4f63b347d29b205fc84ed605cbc61ef0c8a29d385eae",
+    "hall-ui.js": "5e32a62a9330ffa7160af64f281001767a1b55a26de6be9bfae52e96341f0860",
+    "hall-model.js": "205877efeeab9bacc02c460391045e3f712e8554bfddd191034949080b4d1d3e"
+  },
+  "replacedModules": [
+    1552
+  ],
+  "byteIdenticalModules": 1641,
+  "sourceRevision": "r7 approved large buttons, poster/photo carousel and preview return",
+  "productionDraftKey": "gomeet-ru-demo-create-20261020",
+  "backendWrites": 0,
+  "serverSubmit": false,
+  "publication": "NOT RUN"
+}
