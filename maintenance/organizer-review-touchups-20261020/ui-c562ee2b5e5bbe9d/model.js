@@ -1,0 +1,95 @@
+(function(g){
+'use strict';
+const DAY=86400000,NOW=Date.parse('2026-10-20T16:00:00Z'); // 19:00 Moscow; frozen review clock.
+const events=[
+{id:'e1',title:'Новый круг знакомств',start:'2026-10-22T16:00:00Z',end:'2026-10-22T21:00:00Z',capacity:140,paidCapacity:110},
+{id:'e2',title:'Музыка после заката',start:'2026-10-20T15:00:00Z',end:'2026-10-20T20:00:00Z',capacity:160,paidCapacity:125},
+{id:'e3',title:'Встреча без повода',start:'2026-10-10T16:00:00Z',end:'2026-10-10T21:00:00Z',capacity:150,paidCapacity:120},
+{id:'e4',title:'Вечер в кругу своих',start:'2026-09-22T16:00:00Z',end:'2026-09-22T21:00:00Z',capacity:150,paidCapacity:120}];
+const scenarios=[
+['S01','Обзор · все события','overview','all','normal'],['S02','Обзор · событие впереди','overview','e1','normal'],['S03','Обзор · событие идёт','overview','e2','normal'],['S04','Обзор · событие завершено','overview','e3','normal'],
+['S05','Нет событий','overview','all','empty'],['S06','Нет продаж в периоде','overview','e1','no-sales'],['S07','Только бесплатные билеты','overview','e1','free'],['S08','Платные и бесплатные','overview','e2','normal'],['S09','Без лимита','overview','e1','unlimited'],['S10','Исторический лимит неизвестен','overview','e3','unknown-capacity'],
+['S11','Сводка загружается','overview','all','loading'],['S12','Ошибка загрузки','overview','all','error'],['S13','Сохранённые данные устарели','overview','all','stale'],['S14','Нет сети и сохранённых данных','overview','all','offline'],['S15','Нет доступа к сводке','overview','all','forbidden'],['S16','Событие отменено','overview','e1','cancelled'],['S17','Дата события не указана','overview','e1','no-date'],['S18','Все места проданы','overview','e1','sold-out'],
+['S19','Сравнение · рост','overview','e1','trend-up'],['S20','Сравнение · снижение','overview','e1','trend-down'],['S21','Сравнение · без изменений','overview','e1','trend-equal'],['S22','Сравнение · нет предыдущего периода','overview','e1','no-previous'],['S23','Сравнение · предыдущий период нулевой','overview','e1','previous-zero'],['S24','Сравнение · нет предыдущего события','overview','e1','no-previous-event'],['S25','Сравнение · разные этапы продаж','overview','e1','not-comparable'],['S26','Сравнение · за всё время','overview','all','all-time'],
+['S27','Конверсия · сбор ещё не начат','overview','e1','no-tracking'],['S28','Конверсия · нет открытий','overview','e1','zero-views'],['S29','Конверсия · открытия без покупок','overview','e1','zero-conversion'],['S30','Конверсия · ошибка','overview','e1','conversion-error'],['S31','Конверсия · загрузка','overview','e1','conversion-loading'],
+['S32','Возвраты · отсутствуют','overview','e1','no-refunds'],['S33','Возвраты · частичный','overview','e1','partial-refund'],['S34','Возвраты · полный','overview','e1','full-refund'],['S35','Возврат ещё не подтверждён','overview','e1','refund-pending'],['S36','Возвраты · источник недоступен','overview','e1','refund-unavailable'],['S37','Возвраты · ошибка','overview','e1','refund-error'],['S38','Возвраты · загрузка','overview','e1','refund-loading'],
+['S39','Явка · никто ещё не вошёл','overview','e1','normal'],['S40','Явка · часть группы вошла','overview','e2','partial-entry'],['S41','Явка · все действующие билеты погашены','overview','e2','all-entered'],['S42','Явка · офлайн-отметки ждут подтверждения','overview','e2','pending-entry'],
+['S43','Аудитория · новые и вернувшиеся','audience','all','normal'],['S44','Аудитория · только новые','audience','e1','all-new'],['S45','Аудитория · только вернувшиеся','audience','e1','all-returning'],['S46','Аудитория · нет покупателей','audience','e1','no-sales'],['S47','Аудитория · нет сохранений','audience','e1','no-saves'],['S48','Аудитория · нет подписчиков','audience','all','no-followers'],['S49','Аудитория · ошибка','audience','all','audience-error'],['S50','Аудитория · загрузка','audience','all','audience-loading'],
+['S51','Ссылки · переходы и покупки','growth','all','normal'],['S52','Ссылки · ещё не созданы','growth','e1','no-links'],['S53','Ссылки · нет переходов','growth','e1','no-clicks'],['S54','Ссылки · переходы без покупок','growth','e1','no-link-sales'],['S55','Ссылки · неизвестный источник','growth','e1','unknown-source'],['S56','Ссылки · ошибка','growth','e1','links-error'],['S57','Ссылки · загрузка','growth','e1','links-loading'],
+['S58','Рефералы · никто не привёл друзей','audience','e1','no-referrers'],['S59','Рефералы · профиль удалён','audience','e1','deleted-referrer'],['S60','Рефералы · ошибка','audience','e1','referrers-error'],
+['S61','Промокоды · список пуст','growth','all','no-promos'],['S62','Промокод · активен','growth','e1','normal'],['S63','Промокод · срок истёк','growth','e1','promo-expired'],['S64','Промокод · отключён','growth','e1','promo-disabled'],['S65','Промокод · лимит исчерпан','growth','e1','promo-limit'],['S66','Промокоды · ошибка','growth','e1','promos-error'],['S67','Промокоды · загрузка','growth','e1','promos-loading'],['S68','Событие ещё не открыло продажи','overview','e1','not-on-sale']
+].map(([id,title,tab,event,state])=>({id,title,tab,event,state,period:['all-time','sold-out'].includes(state)?'all':'week',compare:['no-previous-event','not-comparable'].includes(state)?'event':'period'}));
+const links=[{id:'telegram',title:'Telegram · основной канал',url:'gomeet.su/l/tg-main'}, {id:'poster',title:'Афиша · QR на плакате',url:'gomeet.su/l/poster'}, {id:'partners',title:'Партнёры · рассылка',url:'gomeet.su/l/partners'}];
+function range(period,now=NOW){if(period==='all')return [-Infinity,now];const dayStart=Date.parse(new Date(now+3*3600000).toISOString().slice(0,10)+'T00:00:00+03:00');return [period==='today'?dayStart:dayStart-6*DAY,now]}
+const inRange=(t,r)=>t>=r[0]&&t<=r[1];
+function fixture(state='normal'){
+ const es=events.map(e=>({...e}));const e1=es[0];if(state==='unlimited')e1.capacity=e1.paidCapacity=null;if(state==='unknown-capacity')es[2].capacity=es[2].paidCapacity=undefined;if(state==='no-date')e1.start=e1.end=null;if(state==='cancelled')e1.cancelled=true;
+ const orders=[];
+ for(const [ei,e]of es.entries())for(let i=0;i<30;i++){
+  const start=Date.parse(e.start||events[ei].start);const paidAt=Math.min(start-(29-i)*DAY,NOW-(29-i)*DAY/10);const free=state==='free'||i%6===0;const qty=i%4===0?3:1,price=free?0:1000+ei*100+(i%3)*100,discount=free?0:i%5===0?Math.round(price*qty*.1):0;
+  const o={id:e.id+'-'+i,event:e.id,buyer:'b'+((i+ei*6)%24),paidAt,qty,free,gross:price*qty-discount,discount,source:i%7===0?'unknown':links[i%3].id,clickAt:paidAt-DAY*(i%9),promo:!free&&i%5===0?'FRIENDS':null,referrer:i%4===0?'ref1':i%7===0?'ref2':null,refunded:0,returned:0,entered:Date.parse(e.start)<=NOW?Math.min(qty,i%3===0?qty:1):0};
+  orders.push(o);
+ }
+ let refunds=[];
+ for(const e of es){const paid=orders.filter(o=>o.event===e.id&&!o.free);const o=paid[2];if(!o)continue;o.refunded=Math.round(o.gross/o.qty);o.returned=1;refunds.push({id:'r-'+e.id,order:o.id,event:e.id,at:NOW-DAY,amount:o.refunded,qty:1,status:'confirmed'});o.entered=Math.min(o.entered,o.qty-o.returned)}
+ if(['no-refunds','refund-pending','partial-refund','full-refund'].includes(state)){for(const o of orders){o.refunded=0;o.returned=0}refunds=[];const o=orders.find(o=>o.event==='e1'&&!o.free&&o.qty===3);if(state!=='no-refunds'){const full=state==='full-refund',amount=full?o.gross:o.gross/3;refunds=[{id:'r-case',order:o.id,event:'e1',at:NOW-DAY,amount:Math.round(amount),qty:full?3:1,status:state==='refund-pending'?'pending':'confirmed'}];if(state!=='refund-pending'){o.refunded=Math.round(amount);o.returned=full?3:1}}}
+ if(state==='partial-entry'){const o=orders.find(o=>o.event==='e2'&&o.qty===3&&!o.returned);o.entered=2}
+ if(state==='all-entered')for(const o of orders)o.entered=o.qty-o.returned;
+ if(['no-sales','not-on-sale'].includes(state))for(let i=orders.length-1;i>=0;i--)if((state==='not-on-sale'||orders[i].paidAt>=range('week')[0])&&orders[i].event==='e1')orders.splice(i,1);
+ if(state==='sold-out')e1.paidCapacity=orders.filter(o=>o.event==='e1'&&!o.free).reduce((n,o)=>n+o.qty-o.returned,0);
+ if(state==='all-new')for(const o of orders)if(o.event==='e1')o.buyer='new-'+o.id;
+ if(state==='all-returning'){for(const buyer of new Set(orders.filter(o=>o.event==='e1'&&!o.free).map(o=>o.buyer))){orders.push({id:'history-'+buyer,event:'e4',buyer,paidAt:Date.parse('2026-08-01T10:00:00Z'),qty:1,free:false,gross:1000,discount:0,source:'unknown',clickAt:0,promo:null,referrer:null,refunded:0,returned:0,entered:1})}}
+ if(state==='empty')return {events:[],orders:[],refunds:[],state};
+ return {events:es,orders,refunds:refunds.filter(r=>orders.some(o=>o.id===r.order)),state};
+}
+function aggregate(orders){const paid=orders.filter(o=>!o.free),activePaid=paid.filter(o=>o.qty>o.returned);return {gross:paid.reduce((n,o)=>n+o.gross,0),refund:paid.reduce((n,o)=>n+o.refunded,0),revenue:paid.reduce((n,o)=>n+o.gross-o.refunded,0),paidOrders:activePaid.length,orders:orders.length,tickets:orders.reduce((n,o)=>n+o.qty-o.returned,0),paid:paid.reduce((n,o)=>n+o.qty-o.returned,0),free:orders.filter(o=>o.free).reduce((n,o)=>n+o.qty-o.returned,0),buyers:new Set(activePaid.map(o=>o.buyer)).size,avg:activePaid.length?Math.round(activePaid.reduce((n,o)=>n+o.gross-o.refunded,0)/activePaid.length):null}}
+function delta(current,previous,status='ready'){if(status!=='ready')return {status};if(previous===0)return {status:'zero',previous,current};return {status:'ready',previous,current,percent:(current-previous)/previous*100}}
+function sumLimit(events,key){if(events.some(e=>e[key]===undefined))return undefined;if(events.some(e=>e[key]===null))return null;return events.reduce((n,e)=>n+e[key],0)}
+function eventStatus(e){if(e.cancelled)return 'cancelled';if(!e.start)return 'no-date';if(Date.parse(e.start)>NOW)return 'upcoming';if(e.end&&Date.parse(e.end)<NOW)return 'ended';return 'live'}
+function data(event='all',period='week',state='normal',compare='period'){
+ const f=fixture(state),chosen=f.events.filter(e=>event==='all'||e.id===event),ids=new Set(chosen.map(e=>e.id)),r=range(period),all=f.orders.filter(o=>ids.has(o.event)),current=all.filter(o=>inRange(o.paidAt,r)),t=aggregate(current),lifetime=aggregate(f.orders),eventLife=aggregate(all);
+ t.capacity=sumLimit(chosen,'capacity');t.paidCapacity=sumLimit(chosen,'paidCapacity');
+ let previous=[],comparisonStatus='ready',previousEvent=null,basis='Предыдущие 7 дней';
+ if(compare==='period'){
+  if(period==='all')comparisonStatus='all-time';else {const span=7*DAY;previous=all.filter(o=>inRange(o.paidAt,[r[0]-span,r[1]-span]));basis=period==='today'?'Вчера, к тому же времени':'Предыдущие 7 дней, к тому же времени';if(period==='today'){const yesterday=[r[0]-DAY,r[1]-DAY];previous=all.filter(o=>inRange(o.paidAt,yesterday))}}
+ }else{
+  const e=chosen.length===1?chosen[0]:null;if(!e)comparisonStatus='choose-event';else if(!e.start)comparisonStatus='no-date';else {previousEvent=f.events.filter(x=>x.start&&Date.parse(x.start)<Date.parse(e.start)).sort((a,b)=>Date.parse(b.start)-Date.parse(a.start))[0];if(!previousEvent)comparisonStatus='missing';else {const distance=NOW-Date.parse(e.start),cutoff=Date.parse(previousEvent.start)+distance;const span=period==='all'?Infinity:r[1]-r[0];previous=f.orders.filter(o=>o.event===previousEvent.id&&o.paidAt<=cutoff&&o.paidAt>=cutoff-span);basis=previousEvent.title+' · тот же этап продаж'}}
+ }
+ if(state==='no-previous'||state==='no-previous-event')comparisonStatus='missing';if(state==='not-comparable')comparisonStatus='not-comparable';
+ let p=aggregate(previous);
+ if(state==='previous-zero')p=aggregate([]);
+ // Deterministic comparison fixtures; copied records retain units and distinct buyers.
+ if(['trend-up','trend-down','trend-equal'].includes(state)){const k=state==='trend-up'?.8:state==='trend-down'?1.25:1;p=aggregate(current.map(o=>({...o,gross:Math.round(o.gross*k),refunded:Math.round(o.refunded*k)})))}
+ const trend=delta(t.revenue,p.revenue,comparisonStatus),ticketTrend=delta(t.paid,p.paid,comparisonStatus),buyerTrend=delta(t.buyers,p.buyers,comparisonStatus),avgTrend=delta(t.avg,p.avg,comparisonStatus==='ready'&&(t.avg===null||p.avg===null)?'missing':comparisonStatus);
+ const eligible=current.filter(o=>!o.free&&o.qty>o.returned);let returning=0;
+ const firstByBuyer=new Map();for(const o of eligible.sort((a,b)=>a.paidAt-b.paidAt||a.id.localeCompare(b.id)))if(!firstByBuyer.has(o.buyer))firstByBuyer.set(o.buyer,o);
+ for(const [buyer,first]of firstByBuyer){if(f.orders.some(o=>o.buyer===buyer&&!o.free&&o.qty>o.returned&&(o.paidAt<first.paidAt||o.paidAt===first.paidAt&&o.id<first.id)))returning++}
+ 
+ const confirmed=all.reduce((n,o)=>n+Math.min(o.entered,o.qty-o.returned),0),pending=state==='pending-entry'?3:0;
+ const refundRows=f.refunds.filter(x=>ids.has(x.event)&&inRange(x.at,r)),done=refundRows.filter(x=>x.status==='confirmed'),waiting=refundRows.filter(x=>x.status==='pending');
+ const trackingStart=Date.parse('2026-09-01T00:00:00+03:00');
+ const sessions=all.flatMap(o=>Array.from({length:8},(_,i)=>({id:o.id+'-session-'+i,event:o.event,openedAt:o.paidAt-(i+1)*6*60000,order:i===0?o:null}))).filter(v=>v.openedAt>=trackingStart&&inRange(v.openedAt,r));
+ const conversion={status:state==='no-tracking'?'missing':state==='conversion-error'?'error':state==='conversion-loading'?'loading':'ready',since:'1 сентября 2026',opens:state==='zero-views'?0:sessions.length,converted:state==='zero-views'||state==='zero-conversion'?0:sessions.filter(v=>v.order&&!v.order.free&&v.order.qty>v.order.returned&&v.order.paidAt<=NOW&&v.order.paidAt-v.openedAt<=30*60000).length,scope:'Уникальные сессии'};
+ if(conversion.opens===0&&conversion.status==='ready')conversion.status='no-sample';
+ const sourceRows=links.map(l=>({...l,orders:0,clicks:0,revenue:0}));let unknown=0;const attributedOrders=new Set();
+ for(const o of eligible){const valid=o.source!=='unknown'&&o.paidAt-o.clickAt<=7*DAY&&o.clickAt<=o.paidAt;const row=valid&&sourceRows.find(l=>l.id===o.source);if(!row||state==='unknown-source'||state==='no-link-sales'||state==='no-clicks'||state==='no-links'){unknown++;continue}row.orders++;row.revenue+=o.gross-o.refunded;attributedOrders.add(o.id)}
+ for(const row of sourceRows){row.clicks=state==='no-clicks'?0:row.orders*4+(current.length?3:0)}
+ const refMap=new Map();for(const o of eligible){if(o.referrer&&o.referrer!==o.buyer&&o.paidAt-o.clickAt<=7*DAY&&o.clickAt<=o.paidAt){if(!refMap.has(o.referrer))refMap.set(o.referrer,new Set());refMap.get(o.referrer).add(o.buyer)}}
+ const refs=[...refMap].map(([id,buyers],i)=>({id,name:state==='deleted-referrer'&&i===0?'Профиль удалён':i===0?'Анна':'Максим',count:buyers.size,deleted:state==='deleted-referrer'&&i===0}));
+ const uses=current.filter(o=>!o.free&&o.promo==='FRIENDS');const promos=state==='no-promos'?[]:[{id:'FRIENDS',name:'FRIENDS',group:'Для друзей',discount:'10%',uses:uses.length,saved:uses.reduce((n,o)=>n+o.discount,0),status:state==='promo-expired'?'expired':state==='promo-disabled'?'disabled':state==='promo-limit'?'limit':'active',limit:state==='promo-limit'?uses.length:100},{id:'EARLY',name:'EARLY',group:'Ранние покупки',discount:'200 ₽',uses:0,saved:0,status:'active',limit:50}];
+ return {fixture:f,chosen,range:r,current,all,totals:t,lifetime,eventLife,trend,ticketTrend,buyerTrend,avgTrend,basis,previousEvent,conversion,attendance:{confirmed,pending,total:eventLife.tickets,paid:all.filter(o=>!o.free).reduce((n,o)=>n+Math.min(o.entered,o.qty-o.returned),0),free:all.filter(o=>o.free).reduce((n,o)=>n+Math.min(o.entered,o.qty-o.returned),0)},refunds:{status:state==='refund-unavailable'?'missing':state==='refund-error'?'error':state==='refund-loading'?'loading':'ready',count:done.length,amount:done.reduce((n,x)=>n+x.amount,0),tickets:done.reduce((n,x)=>n+x.qty,0),pending:waiting.length},audience:{status:state==='audience-error'?'error':state==='audience-loading'?'loading':'ready',buyers:t.buyers,returning,new:t.buyers-returning,followers:state==='no-followers'?0:1240,saves:state==='no-saves'?0:chosen.length*103},sources:{status:state==='links-error'?'error':state==='links-loading'?'loading':'ready',rows:state==='no-links'?[]:sourceRows,unknown,total:eligible.length},refs:{status:state==='referrers-error'?'error':'ready',rows:state==='no-referrers'?[]:refs},promos:{status:state==='promos-error'?'error':state==='promos-loading'?'loading':'ready',rows:promos}};
+}
+function series(d,period,grain='day',mode='calendar'){
+ const e=d.chosen.length===1?d.chosen[0]:null;if(mode==='before'&&(!e||!e.start))return [];
+ const map=new Map();for(const o of d.current){const date=new Date(o.paidAt+3*3600000).toISOString();let key,label;if(mode==='before'){const eventDay=Math.floor((Date.parse(e.start)+3*3600000)/DAY),saleDay=Math.floor((o.paidAt+3*3600000)/DAY),offset=saleDay-eventDay;key=String(offset).padStart(4,'0');label=offset<0?'За '+Math.abs(offset)+' дн.':offset===0?'День события':'После +'+offset;key=offset}else if(period==='today'){key=date.slice(0,13);label=date.slice(11,13)+':00'}else if(grain==='month'){key=date.slice(0,7);label=new Intl.DateTimeFormat('ru-RU',{month:'short',timeZone:'Europe/Moscow'}).format(o.paidAt)}else{key=date.slice(0,10);label=new Intl.DateTimeFormat('ru-RU',{day:'numeric',month:'short',timeZone:'Europe/Moscow'}).format(o.paidAt)}if(!map.has(key))map.set(key,{key,label,revenue:0,tickets:0});const row=map.get(key);row.revenue+=o.free?0:o.gross-o.refunded;row.tickets+=o.free?0:o.qty-o.returned}
+ const allKeys=[...map.keys()];
+ if(allKeys.length){
+  if(mode==='before'){for(let k=Math.min(...allKeys);k<=Math.max(...allKeys);k++)if(!map.has(k))map.set(k,{key:k,label:k<0?'За '+Math.abs(k)+' дн.':k===0?'День события':'После +'+k,revenue:0,tickets:0})}
+  else {let start=period==='all'?Math.min(...d.current.map(o=>o.paidAt)):d.range[0],end=d.range[1];let cursor=new Date(start+3*3600000);if(grain==='month'&&period!=='today')cursor=new Date(cursor.toISOString().slice(0,7)+'-01T00:00:00Z');else if(period!=='today')cursor=new Date(cursor.toISOString().slice(0,10)+'T00:00:00Z');else cursor=new Date(cursor.toISOString().slice(0,13)+':00:00Z');
+   for(let guard=0;cursor.getTime()<=end+3*3600000&&guard<1000;guard++){const date=cursor.toISOString();const key=period==='today'?date.slice(0,13):grain==='month'?date.slice(0,7):date.slice(0,10);const label=period==='today'?date.slice(11,13)+':00':new Intl.DateTimeFormat('ru-RU',grain==='month'?{month:'short',timeZone:'UTC'}:{day:'numeric',month:'short',timeZone:'UTC'}).format(cursor);if(!map.has(key))map.set(key,{key,label,revenue:0,tickets:0});if(period==='today')cursor=new Date(cursor.getTime()+3600000);else if(grain==='month')cursor.setUTCMonth(cursor.getUTCMonth()+1);else cursor=new Date(cursor.getTime()+DAY)}
+  }
+ }
+ return [...map.values()].sort((a,b)=>typeof a.key==='number'?a.key-b.key:String(a.key).localeCompare(String(b.key)));
+}
+const api={DAY,NOW,events,scenarios,links,range,fixture,data,aggregate,delta,eventStatus,series};if(typeof module!=='undefined')module.exports=api;else g.SummaryModel=api;
+})(typeof window==='undefined'?{}:window);

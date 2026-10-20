@@ -1,0 +1,30 @@
+{
+  "renderChecks": [
+    {
+      "state": "upcoming",
+      "guestList": true,
+      "scanShortcut": false,
+      "details": false
+    },
+    {
+      "state": "live",
+      "guestList": true,
+      "scanShortcut": false,
+      "details": false
+    },
+    {
+      "state": "archive",
+      "guestList": true,
+      "scanShortcut": false,
+      "details": false
+    }
+  ],
+  "summaryCUA": [
+    "S01 overview: buyer card absent, lifetime bottom",
+    "Audience retained"
+  ],
+  "setupError": "initial Mode stub omitted setMode; fixed stub and reran",
+  "localHostAuth": "unavailable; isolated summary checked, real host deferred to live read-only check",
+  "full68Rerun": false,
+  "modelUnchanged": true
+}

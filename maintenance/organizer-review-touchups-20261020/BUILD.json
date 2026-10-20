@@ -1,0 +1,34 @@
+{
+  "baseCommit": "5e20f63aceb24eaff603fc7814a789801bce0eba",
+  "baseFile": "_expo/static/js/web/index-f0953a7a3cd57808d82c8af852395f5e.js",
+  "baseSha256": "a5e346e65b2c725c3528f95dbd3deb6b07530be1bff242ae0bfe5ea88f510c2c",
+  "bundle": "_expo/static/js/web/index-a8d417524b49e3e65aa64c5956dd4926.js",
+  "bundleSha256": "5f311798c8397e898f65128caaeae86d6a11c3f4572e9ad0ccd8e9547d37fe14",
+  "assetDir": "maintenance/organizer-review-touchups-20261020/ui-c562ee2b5e5bbe9d",
+  "assetHashes": {
+    "app.html": "f2b5a6e231cd4bd06f51e274cd38386833303804dab972c4f0de4f13f08cc67a",
+    "app.js": "68463d2c57c44c815a656a2a60096d050dfec0dda65a11e7f38e31c20a407328",
+    "model.js": "810f6da9e2b2addbcb22a1b0447d25d285b9f98636df0dc1cd90c1483c9e4fd6",
+    "style.css": "2921a18be2938b2a28bf111030806e04310c7907db39f103ff7e36817c9dd910"
+  },
+  "changedModules": [
+    1339,
+    1640
+  ],
+  "byteIdenticalModules": 1640,
+  "entries": [
+    "profile/index.html",
+    "Create/index.html",
+    "OrgScan/index.html",
+    "OrgSummary/index.html",
+    "404.html"
+  ],
+  "removedScanShortcut": 1,
+  "removedDetails": 1,
+  "guestListRetained": true,
+  "lifetimeMetricMoved": "Money section bottom",
+  "buyersOverviewRemoved": true,
+  "modelUnchanged": true,
+  "serverWrites": 0,
+  "publication": "NOT RUN"
+}
