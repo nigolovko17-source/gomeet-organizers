@@ -1,0 +1,11 @@
+{
+  "scenarios": 68,
+  "filterAndComparisonCases": 1632,
+  "seriesReconciliations": 5664,
+  "averagesIndependent": true,
+  "uniqueBuyerNotOrders": true,
+  "refundsAndAdmissionUnits": true,
+  "sourceSharesReconcile": true,
+  "comparisonZeroSafe": true,
+  "passed": true
+}

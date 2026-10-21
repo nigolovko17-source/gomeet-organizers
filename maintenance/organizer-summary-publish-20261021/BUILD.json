@@ -1,0 +1,31 @@
+{
+  "baseCommit": "7b9a2dc56fbaada2556e3d96c97ebaa200b0b96e",
+  "baseFile": "_expo/static/js/web/index-a8d417524b49e3e65aa64c5956dd4926.js",
+  "baseSha256": "5f311798c8397e898f65128caaeae86d6a11c3f4572e9ad0ccd8e9547d37fe14",
+  "source": "maintenance/organizer-summary-20261020/r8",
+  "bundle": "_expo/static/js/web/index-e145af36a6954945766fa4047efa1814.js",
+  "bundleSha256": "b7a387943199b3ffd0af46af9dbcc501ec9c9202daaf35ff92618b853a136459",
+  "assetDir": "maintenance/organizer-summary-publish-20261021/ui-f87a014adfbf9e1e",
+  "assetHashes": {
+    "app.html": "4e1a4adf4fd4dd8f290938bf3909897ecf569159e470cf890eba299fd27837cf",
+    "app.js": "1b9ff5791d86242296ca01a437711223b32542709d8dbdd14f031cebb48f0e37",
+    "model.js": "d0ca8f843a36d13f0469cbf0e844479c474bc992d3f7b4274ce8493dbd79cb9d",
+    "style.css": "137ea17394650a2e38d195d2b0ebc2904be540ad85e82cb201664d9b4c4f2632",
+    "refinement.css": "75040d6f0ea4a7bf086949024aabfba27477d7f0785a553ee8b5fe8f74b381cb"
+  },
+  "changedModules": [
+    1339
+  ],
+  "byteIdenticalModules": 1641,
+  "entries": [
+    "profile/index.html",
+    "Create/index.html",
+    "OrgScan/index.html",
+    "OrgSummary/index.html",
+    "404.html"
+  ],
+  "hostAuthModeAndNavigationUnchanged": true,
+  "realAnalytics": false,
+  "serverWrites": 0,
+  "publication": "NOT RUN"
+}
