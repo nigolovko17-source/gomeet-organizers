@@ -1,0 +1,24 @@
+{
+  "version": "r6",
+  "environment": "local synthetic",
+  "publication": "NOT RUN",
+  "model": "QA-model.json",
+  "regression": "QA-regression.json",
+  "browser": {
+    "390": [
+      "four series default",
+      "individual toggle",
+      "all hidden",
+      "restore all",
+      "expand details",
+      "month filter"
+    ],
+    "320": [
+      "visual chart and exact values"
+    ]
+  },
+  "limits": [
+    "No real API or financial acceptance",
+    "68 named fixtures preserved; not all combinations browser-tested"
+  ]
+}
