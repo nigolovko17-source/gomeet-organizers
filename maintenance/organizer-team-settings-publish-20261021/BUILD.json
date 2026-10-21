@@ -1,0 +1,27 @@
+{
+  "baseCommit": "6afaadd58c1ba6edf1a58ef3346f45c0aa15e5a1",
+  "baseFile": "_expo/static/js/web/index-e145af36a6954945766fa4047efa1814.js",
+  "baseSha256": "b7a387943199b3ffd0af46af9dbcc501ec9c9202daaf35ff92618b853a136459",
+  "source": "maintenance/organizer-profile-parity-20261020/r8/current-module-1641.js",
+  "sourceSha256": "45fdd0d5138e1436688cfc31c3751fb4c5517f79752564126296cb34cde6c662",
+  "bundle": "_expo/static/js/web/index-69da6b4cc3b3805ed8dceae9a5a475f3.js",
+  "bundleSha256": "ad7e9c55cbf59a8356645090ca6aeafaa7f7fd4887488b6d0453e2cdc6988cfd",
+  "changedModules": [
+    1641
+  ],
+  "byteIdenticalModules": 1641,
+  "entries": [
+    "profile/index.html",
+    "Create/index.html",
+    "OrgScan/index.html",
+    "OrgSummary/index.html",
+    "404.html"
+  ],
+  "teamLocation": "SettingsSection organizer group",
+  "achievementsLocation": "profile unchanged",
+  "summaryUnchanged": true,
+  "authModeAndBackendUnchanged": true,
+  "previewGuardNotIncluded": true,
+  "serverWrites": 0,
+  "publication": "NOT RUN"
+}
