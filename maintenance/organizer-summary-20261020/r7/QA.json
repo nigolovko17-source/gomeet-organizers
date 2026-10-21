@@ -1,0 +1,23 @@
+{
+  "version": "r7",
+  "acceptedBaseline": "r6",
+  "scope": "local visual refinement",
+  "modelIdenticalToR6": true,
+  "inheritedModelEvidence": [
+    "QA-model.json",
+    "QA-regression.json"
+  ],
+  "browserChecked": [
+    "390 initial layout",
+    "320 chart and readouts",
+    "390 independent metric toggle",
+    "390 expand/collapse detail",
+    "390 restore four series"
+  ],
+  "notRun": [
+    "real API",
+    "all68 browser renders",
+    "publication"
+  ],
+  "publication": "NOT RUN"
+}
